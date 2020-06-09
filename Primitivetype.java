@@ -15,7 +15,7 @@ public class Main{
       		//we always store a char in between single quotes
       		char letter = 'a';
       		//we store a str in between double quotes
-      		string myProperty= "This is my property.";
+      		String myProperty= "This is my property.";
       		boolean isEligibleForLoan=true;
       		/*
       		Date Type Notes:

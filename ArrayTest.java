@@ -2,7 +2,7 @@ package com.domainName
 import java.utils.Arrays
 //the utils.Arrays library implementation is used to be able to use array functions in java
 	
-public class Arrays{
+public class ArrayTest{
 	public static void main(String [] args)
 	{
 		//old fashioned way array declaration always we must use the new keyword

@@ -1,7 +1,7 @@
 package com.ramo;
 
 
-public class Main{
+public class PrimitiveType{
 	public static void main(String [] args) 
     	{
 		//declaration of variable

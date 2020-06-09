@@ -12,7 +12,7 @@ public class MultidimArrs{
 		//declaring an Array
 		int [] numbers= {2,3,5,1,4};
     
-		Arrays.sort(numbers); {1,2,3,4,5}
+		Arrays.sort(numbers); //{1,2,3,4,5}
 		//To print the actual items within the array I must import the java.utils.Arrays library.
 		//Arrays.toString(numbers)//prints the string representation of the array
 		//System.out.println(numbers)//prints the address of the object in memory

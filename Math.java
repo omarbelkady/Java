@@ -1,6 +1,6 @@
 package com.omarbelkady;
 
-public class Main{
+public class Math{
 	public static void main(String [] args)
 	{
 		//the round method in the math class is overloaded depending on the input
@@ -9,7 +9,7 @@ public class Main{
 		int result = Math.round(1.1F);
 		int result2= (int)Math.ceil(1.1F);
 		//result2 operation performs a ceiling to the value meaning round it up
-    System.out.println(result);
+    		System.out.println(result);
 	}
 
 }

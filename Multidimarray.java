@@ -1,4 +1,4 @@
-package com.amneziahookahlounge
+package com.domainname
 import java.utils.Arrays
 	
 public class Main{

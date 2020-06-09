@@ -1,4 +1,4 @@
-public class Omar{
+public class Javaprogramarchitecture{
 
 	public static void Main(String [] args)
 	{

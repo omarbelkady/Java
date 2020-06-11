@@ -1,4 +1,4 @@
-### The break statement terminates the loop and the continue statement restarts at the beginning of the loop
+/*The break statement terminates the loop and the continue statement restarts at the beginning of the loop*/
 package com.omarbelkady;
 import java.util.Scanner;
 

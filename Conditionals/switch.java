@@ -11,7 +11,7 @@ public class Main
 
           case "admin”:
           {
-             System.out.println(“Hello Sir”);
+             System.out.println("Hello Sir");
              break;
           }
 
@@ -23,7 +23,7 @@ public class Main
 
           default:
           {
-            System.out.println(“You are a guest”);
+            System.out.println("You are a guest");
           }
       }
   }

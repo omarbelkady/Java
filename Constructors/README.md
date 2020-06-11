@@ -1,4 +1,4 @@
-### Constructor
+# Constructor
 ## Sometimes when we setup a class we want to send it different pieces of information to setup the class
 ## So my cat class gets name, age and food. However, say I want
 ## name and age

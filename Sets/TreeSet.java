@@ -1,6 +1,4 @@
-//A tree set is ordered in a tree data structure
-//TREE SET
-//package tutorial;
+//package myPackage;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.HashSet;

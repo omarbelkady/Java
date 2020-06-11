@@ -6,7 +6,7 @@ Maps are similar to key-value pairs unlike arrays, instead of indexing keys by a
 Unlike, treeMap and linkedHashMap, a Hash Map does not retain an order. All the elements will contain unique elements/keys.
 */
 
-package tutorial
+package myPackage;
 
 import java.util.ArrayList;
 import java.util.HashMap;

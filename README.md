@@ -175,49 +175,39 @@ To fix this piece of code, I simply add a closing curly brace for the main metho
     } 
 ```
 
-### 6- incompatible types
+### 7- incompatible types
 
-incompatible types error is raise when we are facing with data type errors. We can overcome this, by converting say a char to an int. We can convert a double to an integer with typecasting. BUt WE CANNOT convert between primitive types and objects. A primitive type is say a: null, undefined, boolean, number, string or char. However objects can be: Arrays, Maps, Sets, Functions, Regular Expression or Date..
+The incompatible types error is raised when we are facing with data type errors. We can overcome this, by converting say a char to an int. We can convert a double to an integer with typecasting. BUt WE CANNOT convert between primitive types and objects. A primitive type is say a: null, undefined, boolean, number, string or char. However objects can be: Arrays, Maps, Sets, Functions, Regular Expression or Date..
 ```
-incompatible types
-
-This error occurs when there are type issues with your program. It is possible to convert between some kinds of types; for example, you can freely convert a char to an int and vice versa, and you can also convert a double to an int with some typecasting. However, you can not convert between primitive types and objects such as String. For example:
     public class Test {
         public static void main(String[] args) {
             int num = "Hello, world!";
         }
     }
-
-    
-    1 error found:
-    File: Test.java  [line: 3]
-    Error: Test.java:3: incompatible types
-    found   : java.lang.String
-    required: int
-	
-Typically, you cannot "fix" this error as you can for most other errors. This is not a syntax error, but rather an error in type logic. It usually does not make sense to try to put a String into an integer type. However, there are some applications where you need to do something like a String to int conversion, such as when the String is a representation of a number:
+```
+The above code is an error because we are assigning the string Hello World to the variable num of type int.
+To fix this error I must put a integer within the quotes and use the ParseInt method. This is not a syntax error but a logical error.
+Step 1: Change the String value from Hello, world! to 500
+```
     public class Test {
         public static void main(String[] args) {
             int num = "500";
         }
     }
+```
 	
-    
-    1 error found:
-    File: Test.java  [line: 3]
-    Error: Test.java:3: incompatible types
-    found   : java.lang.String
-    required: int
-	
-To fix something like this, you might be able to depend on Java classes such as the Integer class, which is capable of taking a String that represents a number and converting it to an integer type:
+Step 2: Use parsing to convert the string to an integer
+```
     public class Test {
         public static void main(String[] args) {
             int num = Integer.parseInt("500");
         }
     }
-However, this kind of solution to an "incompatible types" error is the exception and not the rule, as this error usually comes from a mistake in logic.
+```
+	
 
-invalid method declaration; return type required
+
+### 8- invalid method declaration; return type required
 
 Every method in Java requires that you explicitly state the return type of the method. Even methods that do not return a value must explicitly say void in the method signature, just as the main method does.
 When a method declaration does not contain a return type, this error will occur:

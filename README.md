@@ -109,7 +109,7 @@ public class Thebest
 ## SOOO, I save the file and I name it Lemon.java well, it will error because our class is Thebest so that means our file name should be Thebest.java
 
 
-### 4- < identifier> expected
+### 5- < identifier> expected
 This error is raised when I try to write code outside of a method which is unintentionally done.
 ```
     public class Test { 
@@ -132,9 +132,10 @@ To fix I just place the print Statement of hello inside of main
     }
 ```
 
-### 5- illegal start of expression
+### 6- illegal start of expression
 
-An "illegal start of expression" error occurs when the compiler encounters an inappropriate statement in the code. Consider the following example:
+An "illegal start of expression" error occurs when the compiler when we start a expression before closing the previous one.
+```
     public class Test {
         public static void main(String[] args) {
             my_method();
@@ -157,21 +158,27 @@ An "illegal start of expression" error occurs when the compiler encounters an in
     Error: Test.java:6: ';' expected
     File: Test.java  [line: 9]
     Error: Test.java:9: reached end of file while parsing
-	
-Here, there is a missing closing curly brace for the main method. Since the main method is not closed, the compiler is expecting the line after the call to my_method to be a part of the main method's code. However, it instead encounters public static void my_method() {, which is not a valid statement inside a method.
-The "illegal start of expression" error message is not as helpful as the "... expected" error message that we encountered above. For this error (and for many other errors), it may be necessary to look at the lines that come before the error to see where the problem is. In this case, we simply need to add a curly brace to close the main method on the line before where the compiler issued the warning. After recompiling, all of the errors are resolved.
+```
 
+To fix this piece of code, I simply add a closing curly brace for the main method. To know we are doing the right thing, just look at the lines of code before the error, there may be a missing closing paranthesis or a missing closing curly brace. This would give us what the error is.
+```
     public class Test {
-        public static void main(String[] args) {
+        public static void main(String[] args) 
+	{
             my_method();
         }   
     
-        public static void my_method() {
-            System.out.println("Hello, world!");
+        public static void my_method() 
+	{
+            System.out.println("Hello, EVERYONEEEE!");
         }
     } 
-For "illegal start of expression" errors, try looking at the lines preceding the error for a missing ')' or '}'.
+```
 
+### 6- incompatible types
+
+incompatible types error is raise when we are facing with data type errors. We can overcome this, by converting say a char to an int. We can convert a double to an integer with typecasting. BUt WE CANNOT convert between primitive types and objects. A primitive type is say a: null, undefined, boolean, number, string or char. However objects can be: Arrays, Maps, Sets, Functions, Regular Expression or Date..
+```
 incompatible types
 
 This error occurs when there are type issues with your program. It is possible to convert between some kinds of types; for example, you can freely convert a char to an int and vice versa, and you can also convert a double to an int with some typecasting. However, you can not convert between primitive types and objects such as String. For example:

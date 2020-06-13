@@ -109,4 +109,223 @@ public class Thebest
 ## SOOO, I save the file and I name it Lemon.java well, it will error because our class is Thebest so that means our file name should be Thebest.java
 
 
+<identifier> expected
 
+This error occurs when code is written outside of a method; it is typically caused by a mistake in curly braces. Consider the following example:
+    public class Test { 
+        System.out.println("Hello!");
+    
+        public static void main(String[] args) {
+            System.out.println("World!");
+        }
+    }
+
+ 
+    2 errors found:
+    File: Test.java  [line: 2]
+    Error: <identifier> expected
+    File: Test.java  [line: 2]
+    Error: illegal start of type
+	
+In this case, it is somewhat clear that the first print statement must be inside the main method for the code to compile. However, when there is more than one method and a curly brace error, the "<identifier> expected" error can be harder to see:
+    public class Test {     
+        public static void main(String[] args) {
+            System.out.println("Hello!");}
+            System.out.println("World!");
+        }
+    }
+
+ 
+    3 errors found:
+    File: Test.java  [line: 4]
+    Error: <identifier> expected
+    File: Test.java  [line: 4]
+    Error: illegal start of type
+    File: Test.java  [line: 6]
+    Error: class, interface, or enum expected
+	
+There is an extra curly brace in the code above, but the code is not properly indented so it is difficult to see. The effect of this is to end the main method immediately after the line that prints "Hello!," which leaves the print statement that prints "World!" outside of any method. To fix the error above, simply remove the curly brace at the end of the third line:
+    public class Test {     
+        public static void main(String[] args) {
+            System.out.println("Hello!");
+            System.out.println("World!");
+        }
+    }
+
+
+illegal start of expression
+
+An "illegal start of expression" error occurs when the compiler encounters an inappropriate statement in the code. Consider the following example:
+    public class Test {
+        public static void main(String[] args) {
+            my_method();
+    
+    
+        public static void my_method() {
+            System.out.println("Hello, world!");
+        }
+    } 
+
+    
+    5 errors found:
+    File: Test.java  [line: 6]
+    Error: Test.java:6: illegal start of expression
+    File: Test.java  [line: 6]
+    Error: Test.java:6: illegal start of expression
+    File: Test.java  [line: 6]
+    Error: Test.java:6: ';' expected
+    File: Test.java  [line: 6]
+    Error: Test.java:6: ';' expected
+    File: Test.java  [line: 9]
+    Error: Test.java:9: reached end of file while parsing
+	
+Here, there is a missing closing curly brace for the main method. Since the main method is not closed, the compiler is expecting the line after the call to my_method to be a part of the main method's code. However, it instead encounters public static void my_method() {, which is not a valid statement inside a method.
+The "illegal start of expression" error message is not as helpful as the "... expected" error message that we encountered above. For this error (and for many other errors), it may be necessary to look at the lines that come before the error to see where the problem is. In this case, we simply need to add a curly brace to close the main method on the line before where the compiler issued the warning. After recompiling, all of the errors are resolved.
+
+    public class Test {
+        public static void main(String[] args) {
+            my_method();
+        }   
+    
+        public static void my_method() {
+            System.out.println("Hello, world!");
+        }
+    } 
+For "illegal start of expression" errors, try looking at the lines preceding the error for a missing ')' or '}'.
+
+incompatible types
+
+This error occurs when there are type issues with your program. It is possible to convert between some kinds of types; for example, you can freely convert a char to an int and vice versa, and you can also convert a double to an int with some typecasting. However, you can not convert between primitive types and objects such as String. For example:
+    public class Test {
+        public static void main(String[] args) {
+            int num = "Hello, world!";
+        }
+    }
+
+    
+    1 error found:
+    File: Test.java  [line: 3]
+    Error: Test.java:3: incompatible types
+    found   : java.lang.String
+    required: int
+	
+Typically, you cannot "fix" this error as you can for most other errors. This is not a syntax error, but rather an error in type logic. It usually does not make sense to try to put a String into an integer type. However, there are some applications where you need to do something like a String to int conversion, such as when the String is a representation of a number:
+    public class Test {
+        public static void main(String[] args) {
+            int num = "500";
+        }
+    }
+	
+    
+    1 error found:
+    File: Test.java  [line: 3]
+    Error: Test.java:3: incompatible types
+    found   : java.lang.String
+    required: int
+	
+To fix something like this, you might be able to depend on Java classes such as the Integer class, which is capable of taking a String that represents a number and converting it to an integer type:
+    public class Test {
+        public static void main(String[] args) {
+            int num = Integer.parseInt("500");
+        }
+    }
+However, this kind of solution to an "incompatible types" error is the exception and not the rule, as this error usually comes from a mistake in logic.
+
+invalid method declaration; return type required
+
+Every method in Java requires that you explicitly state the return type of the method. Even methods that do not return a value must explicitly say void in the method signature, just as the main method does.
+When a method declaration does not contain a return type, this error will occur:
+
+    public class Test {
+        public static void main(String[] args) {
+            int x = getValue();
+            System.out.println(x);
+        }
+    
+        public static getValue() {
+            return 10;
+        }
+    }
+
+	
+    1 error found:
+    File: Test.java  [line: 7]
+    Error: Test.java:7: invalid method declaration; return type required
+	
+To fix this, simply insert the appropriate return type in the method signature:
+    public class Test {
+        public static void main(String[] args) {
+            int x = getValue();
+            System.out.println(x);
+        }
+    
+        public static int getValue() {
+            return 10;
+        }
+    }
+
+java.lang.ArrayIndexOutOfBoundsException: <X>
+
+An ArrayIndexOutOfBoundsException is thrown when an attempt is made to access an index in an array that is not valid. The only valid indices for an array arr are in the range [0, arr.length - 1]; any attempt to access an index outside of this range will result in this error. For example:
+    public class Test {
+        public static void main(String[] args) {
+            int[] arr = {1, 2, 3};
+            for (int i = 0; i <= arr.length; i++) {
+                System.out.println(arr[i]);
+            }
+        }
+    }
+	
+    
+    java.lang.ArrayIndexOutOfBoundsException: 3
+	at Test.main(Test.java:5)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at edu.rice.cs.drjava.model.compiler.JavacCompiler.runCommand(JavacCompiler.java:272)
+	
+This error is quite similar to the java.lang.StringIndexOutOfBoundsException: String index out of range: <X> error that we have previously discussed. The error message for this kind of error is similarly irrelevant toward the end of the message. However, the first line lets you know that a problem with an array index was encountered, and the index in error was 3, in this case. The next line tells you that it encountered this error on line 5 of Test.java, inside the main method.
+In this case, the error occurred because the for loop iterates too many times; the value of the loop index, i, reaches 4 and is therefore out of bounds. Instead, the upper bound should use the < boolean operator, or an equivalent statement.
+
+    public class Test {
+        public static void main(String[] args) {
+            int[] arr = {1, 2, 3};
+            for (int i = 0; i < arr.length; i++) {
+                System.out.println(arr[i]);
+            }
+        }
+    }
+When dealing with an ArrayIndexOutOfBoundsException, it is usually helpful to print out the value of the index variable that is accessing the array and try to trace through to code to find out why it is reaching that (invalid) value.
+java.lang.StringIndexOutOfBoundsException: String index out of range: v
+
+A StringIndexOutOfBoundsException is thrown when an attempt is made to access an index in the String that is not valid. The only valid indices for a String str are in the range [0, str.length() - 1]; any attempt to access an index outside of this range will result in this error. For example:
+    public class Test {
+        public static void main(String[] args) {
+            String str = "Hello, world!";
+
+            String a = str.substring(-1, 3);
+            String b = str.charAt(str.length());
+            String c = str.substring(0, 20);
+        }
+    }
+	
+    
+    java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+        at java.lang.String.substring(Unknown Source)
+        at Test.main(Test.java:5)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at edu.rice.cs.drjava.model.compiler.JavacCompiler.runCommand(JavacCompiler.java:271)
+	
+The error message for this kind of error becomes less relevant towards the end. However, the first line lets you know that a problem with a String index was encountered, and the index in error was -1. The next line tells you that it encountered this error while trying to perform the substring routine, which was called from the Test class on line 5. This "backtrace" of the error tells you the line numbers of the method calls involved so that you can trace your error to the source and correct it.
+Note that all of a, b, and c would have thrown this error, but the program was halted after the first occurred.
+
+This is not a compile-time error, but rather a runtime error. In other words, the compiler will accept this kind of error because it is a logical error. Additionally, it may not be known before the program is run that the error will occur. To fix this error, you often have to correct the logic of your program to ensure that the program will not try to access an invalid index.
+
+
+
+
+### 6- illegal start of expression

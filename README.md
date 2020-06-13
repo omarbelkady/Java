@@ -109,9 +109,9 @@ public class Thebest
 ## SOOO, I save the file and I name it Lemon.java well, it will error because our class is Thebest so that means our file name should be Thebest.java
 
 
-<identifier> expected
-
-This error occurs when code is written outside of a method; it is typically caused by a mistake in curly braces. Consider the following example:
+### 4- < identifier> expected
+This error is raised when I try to write code outside of a method which is unintentionally done.
+```
     public class Test { 
         System.out.println("Hello!");
     
@@ -119,41 +119,20 @@ This error occurs when code is written outside of a method; it is typically caus
             System.out.println("World!");
         }
     }
-
+```
  
-    2 errors found:
-    File: Test.java  [line: 2]
-    Error: <identifier> expected
-    File: Test.java  [line: 2]
-    Error: illegal start of type
-	
-In this case, it is somewhat clear that the first print statement must be inside the main method for the code to compile. However, when there is more than one method and a curly brace error, the "<identifier> expected" error can be harder to see:
-    public class Test {     
-        public static void main(String[] args) {
-            System.out.println("Hello!");}
-            System.out.println("World!");
-        }
-    }
+To fix I just place the print Statement of hello inside of main
 
- 
-    3 errors found:
-    File: Test.java  [line: 4]
-    Error: <identifier> expected
-    File: Test.java  [line: 4]
-    Error: illegal start of type
-    File: Test.java  [line: 6]
-    Error: class, interface, or enum expected
-	
-There is an extra curly brace in the code above, but the code is not properly indented so it is difficult to see. The effect of this is to end the main method immediately after the line that prints "Hello!," which leaves the print statement that prints "World!" outside of any method. To fix the error above, simply remove the curly brace at the end of the third line:
-    public class Test {     
+```
+    public class Test { 
         public static void main(String[] args) {
             System.out.println("Hello!");
-            System.out.println("World!");
+	    System.out.println("World!");
         }
     }
+```
 
-
-illegal start of expression
+### 5- illegal start of expression
 
 An "illegal start of expression" error occurs when the compiler encounters an inappropriate statement in the code. Consider the following example:
     public class Test {

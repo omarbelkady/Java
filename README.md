@@ -281,10 +281,9 @@ public class Test {
 ```
 
 
-### 10- The exception StringIndexOutOfBoundsException is thrown to the console when an attempt is made to access an index in 
-### the String that is not valid. The only valid index of the String we can access is from 0 to the (length of the String-1). 
-### This means that if the array 8 elements. The biggest number I can access is 7 not 8. 
-### If we enter any number greater than 7 for access will throws an outofBoundsException.
+### 10- StringIndexOutOfBoundsException 
+The exception StringIndexOutOfBoundsException is thrown to the console when an attempt is made to access an index in 
+the String that is not valid. The only valid index of the String we can access is from 0 to the (length of the String-1). This means that if the array 8 elements. The biggest number I can access is 7 not 8. If we enter any number greater than 7 for access will throws an outofBoundsException. This is an error in runtime not compile-time. It is accepted by the compiler because it is a logical error
 ``` 
 public class Test 
 {
@@ -297,16 +296,40 @@ public class Test
             String c = str.substring(0, 20);
         }
 }
-```	
-  
+
 ```
+
+To fix this I simply change the String a declaration in line 7 from index -1 to 1. Then another error, will raise because str.length output is 13. The last index we can access is 12. Then, we must change the datatype of b because the operation will output a character not a string. The fourth change we must make is change 20. The biggest index we can access is 12.
+Therefore the bottom code is bug free
+
+``` 
+public class Test 
+{
+        public static void main(String[] args)
+	{
+            String str = "Hello, world!";
+
+            String a = str.substring(1, 3);
+            char b = str.charAt((str.length())-1);
+            String c = str.substring(0, 6);
+        }
+}
+
+```
+
+
+### 11- illegal start of expression
+``` 
+method <X> in class <Y> cannot be applied to given types
+
+    public class Test {     
+        public static void main(String[] args) {
+            myMethod(1.0, 2, "Hello!");
+        }
     
-The error message for this kind of error becomes less relevant towards the end. However, the first line lets you know that a problem with a String index was encountered, and the index in error was -1. The next line tells you that it encountered this error while trying to perform the substring routine, which was called from the Test class on line 5. This "backtrace" of the error tells you the line numbers of the method calls involved so that you can trace your error to the source and correct it.
-Note that all of a, b, and c would have thrown this error, but the program was halted after the first occurred.
-
-This is not a compile-time error, but rather a runtime error. In other words, the compiler will accept this kind of error because it is a logical error. Additionally, it may not be known before the program is run that the error will occur. To fix this error, you often have to correct the logic of your program to ensure that the program will not try to access an invalid index.
-
-
-
-
-### 6- illegal start of expression
+        public static void myMethod(double d, String s, int x) {
+            System.out.println(s + " " + d + " " + x);
+        }
+    }
+    
+```

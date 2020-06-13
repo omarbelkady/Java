@@ -228,7 +228,8 @@ When a method declaration does not contain a return type, this error will occur:
     File: Test.java  [line: 7]
     Error: Test.java:7: invalid method declaration; return type required
 	
-To fix this, simply insert the appropriate return type in the method signature:
+To fix this, simply insert the appropriate return type in the method signature and the error will go away:
+```
     public class Test {
         public static void main(String[] args) {
             int x = getValue();
@@ -239,7 +240,7 @@ To fix this, simply insert the appropriate return type in the method signature:
             return 10;
         }
     }
-
+```
 java.lang.ArrayIndexOutOfBoundsException: <X>
 
 An ArrayIndexOutOfBoundsException is thrown when an attempt is made to access an index in an array that is not valid. The only valid indices for an array arr are in the range [0, arr.length - 1]; any attempt to access an index outside of this range will result in this error. For example:

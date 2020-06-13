@@ -106,8 +106,7 @@ public class Thebest
      }
 }
 ```  
-## SOOO, I save the file and I name it Lemon.java well, it will error because our class is Thebest so that means
-## our file name should be Thebest.java
+## SOOO, I save the file and I name it Lemon.java well, it will error because our class is Thebest so that means our file name should be Thebest.java
 
 
 

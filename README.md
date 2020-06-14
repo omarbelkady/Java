@@ -145,19 +145,6 @@ An "illegal start of expression" error occurs when the compiler when we start a 
             System.out.println("Hello, world!");
         }
     } 
-
-    
-    5 errors found:
-    File: Test.java  [line: 6]
-    Error: Test.java:6: illegal start of expression
-    File: Test.java  [line: 6]
-    Error: Test.java:6: illegal start of expression
-    File: Test.java  [line: 6]
-    Error: Test.java:6: ';' expected
-    File: Test.java  [line: 6]
-    Error: Test.java:6: ';' expected
-    File: Test.java  [line: 9]
-    Error: Test.java:9: reached end of file while parsing
 ```
 
 To fix this piece of code, I simply add a closing curly brace for the main method. To know we are doing the right thing, just look at the lines of code before the error, there may be a missing closing paranthesis or a missing closing curly brace. This would give us what the error is.

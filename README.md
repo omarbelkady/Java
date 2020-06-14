@@ -347,86 +347,140 @@ public class Omar
 ### 12- Left out return statement
 ```
  public class Omar 
- 	{
-		public static void main(String[] args) 
-		{
-		 	int x = doubleMyNum(5);
-		    	System.out.println(x);
-        	}
-    
-        	public static int doubleMyNum(int m) 
-		{
-            		int value = 2 * m;
-        	}
-   	 }
+{
+	public static void main(String[] args) 
+	{
+		int x = doubleMyNum(5);
+		System.out.println(x);
+	}
+
+	public static int doubleMyNum(int m) 
+	{
+		int value = 2 * m;
+	}
+ }
 ```
 The above code errors because I have made the function behave like a void but my 3rd keyword indicates my return type should 
 be of type int. To fix this, after storing the computation in a variable. I use the return keyword to return to the console. The output of the computation performed by the method.
 ```
 public class Omar 
- 	{
-		public static void main(String[] args) 
-		{
-		 	int x = doubleMyNum(5);
-		    	System.out.println(x);
-        	}
-    
-        	public static int doubleMyNum(int m) 
-		{
-            		int value = 2 * m;
-			return value;
-        	}
-   	 }
+{
+	public static void main(String[] args) 
+	{
+		int x = doubleMyNum(5);
+		System.out.println(x);
+	}
+
+	public static int doubleMyNum(int m) 
+	{
+		int value = 2 * m;
+		return value;
+	}
+ }
 ```
 
 
 ### - Left out return statement in CASE#2
 ```
  public class Omar 
- 	{
-		public static void main(String[] args) 
+{
+	public static void main(String[] args) 
+	{
+		int x = myAwesomeAbsVal(-5);
+		System.out.println(x);
+	}
+
+	public static int myAwesomeAbsVal(int m) 
+	{
+		if(m<0)
 		{
-		 	int x = myAwesomeAbsVal(-5);
-		    	System.out.println(x);
-        	}
-    
-        	public static int myAwesomeAbsVal(int m) 
+			return -m;
+		}
+
+		if(m>0)
 		{
-            		if(m<0)
-			{
-				return -m;
-			}
-			
-			if(m>0)
-			{
-				return m;
-			}
-        	}
-   	 }
+			return m;
+		}
+	}
+ }
 ```
-The above line of code has an error in logic. We should switch the code to this:
+The above lines of code have an error in logic. We should switch the code to this:
  ```
- public class Omar 
- 	{
-		public static void main(String[] args) 
+public class Omar 
+{
+	public static void main(String[] args) 
+	{
+		int x = myAwesomeAbsVal(-5);
+		System.out.println(x);
+	}
+
+	public static int myAwesomeAbsVal(int m) 
+	{
+		if(m<0)
 		{
-		 	int x = myAwesomeAbsVal(-5);
-		    	System.out.println(x);
-        	}
-    
-        	public static int myAwesomeAbsVal(int m) 
+			return -m;
+		}
+
+		else
 		{
-            		if(m<0)
-			{
-				return -m;
-			}
-			
-			else
-			{
-				return m;
-			}
-        	}
-   	 }
+			return m;
+		}
+	}
+}
 ```
 
 ### 13 - possible loss of precision
+```
+public class Omar 
+{
+        public static void main(String[] args)
+	{
+            int theAwesomePi = 3.14159;
+            System.out.println("The value of pi is: " + theAwesomePi);
+        }
+ }
+```
+There is an error above being raised being we are store double in an integer. An integer can only store 4
+4 bytes in main memory. The value we are storing in it is a double which has a memory size of 8 bytes. The way to solve this issue. We will explictly cast the variable theAwesomePi to an int.
+```
+public class Omar 
+{
+        public static void main(String[] args)
+	{
+            int theAwesomePi = (int)3.14159;
+            System.out.println("The value of pi is: " + theAwesomePi);
+        }
+ }
+```
+
+### 14 - Reached end of file while parsing
+```
+public class Omar 
+{
+        public static void main(String[] args)
+	{
+        	myWonderfulMethod();
+        }
+	
+	public static void myWonderfulMethod()
+	{
+		System.out.println("How Awesome do you think my Method is?");
+ 	}
+```
+There is an error above being raised being we are not properly closing our class. To solve this issue we add a closing
+curly brace. After, the closing curly brace of my method.
+```
+public class Omar 
+{
+        public static void main(String[] args)
+	{
+        	myWonderfulMethod();
+        }
+	
+	public static void myWonderfulMethod()
+	{
+		System.out.println("How Awesome do you think my Method is?");
+ 	}
+}
+```
+

@@ -343,3 +343,90 @@ public class Omar
             System.out.println(a + " " + b + " " + c);
         }
 }
+```
+### 12- Left out return statement
+```
+ public class Omar 
+ 	{
+		public static void main(String[] args) 
+		{
+		 	int x = doubleMyNum(5);
+		    	System.out.println(x);
+        	}
+    
+        	public static int doubleMyNum(int m) 
+		{
+            		int value = 2 * m;
+        	}
+   	 }
+```
+The above code errors because I have made the function behave like a void but my 3rd keyword indicates my return type should 
+be of type int. To fix this, after storing the computation in a variable. I use the return keyword to return to the console. The output of the computation performed by the method.
+```
+public class Omar 
+ 	{
+		public static void main(String[] args) 
+		{
+		 	int x = doubleMyNum(5);
+		    	System.out.println(x);
+        	}
+    
+        	public static int doubleMyNum(int m) 
+		{
+            		int value = 2 * m;
+			return value;
+        	}
+   	 }
+```
+
+
+### - Left out return statement in CASE#2
+```
+ public class Omar 
+ 	{
+		public static void main(String[] args) 
+		{
+		 	int x = myAwesomeAbsVal(-5);
+		    	System.out.println(x);
+        	}
+    
+        	public static int myAwesomeAbsVal(int m) 
+		{
+            		if(m<0)
+			{
+				return -m;
+			}
+			
+			if(m>0)
+			{
+				return m;
+			}
+        	}
+   	 }
+```
+The above line of code has an error in logic. We should switch the code to this:
+ ```
+ public class Omar 
+ 	{
+		public static void main(String[] args) 
+		{
+		 	int x = myAwesomeAbsVal(-5);
+		    	System.out.println(x);
+        	}
+    
+        	public static int myAwesomeAbsVal(int m) 
+		{
+            		if(m<0)
+			{
+				return -m;
+			}
+			
+			else
+			{
+				return m;
+			}
+        	}
+   	 }
+```
+
+### 13 - possible loss of precision

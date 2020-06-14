@@ -469,3 +469,41 @@ public class Omar
 }
 ```
 
+### 15 - unreachable statement
+
+An "unreachable statement" error occurs when the compiler detects that it is impossible to reach a given statement during the flow of a program. This error is often caused by placing statements after return or break. For example:
+    public class Test {
+        public static void main(String[] args) {
+            int value = twice(5);
+            System.out.println(value);
+        }
+    
+        public static int twice(int x) {
+            int twice = 2 * x;
+            return twice;
+            System.out.println("Returning " + twice);
+        }
+    }
+	
+    2 errors found:
+    File: Test.java  [line: 10]
+    Error: Test.java:10: unreachable statement
+    File: Test.java  [line: 11]
+    Error: Test.java:11: missing return statement
+	
+The compiler gives two errors: one to indicate that the line System.out.println("Returning " + twice); is an unreachable statement, and another because it assumes that if we can get to that print statement, then we would need a return statement somewhere after it.
+We can fix this by placing the print statement before the return so it can be executed:
+
+    public class Test {
+        public static void main(String[] args) {
+            int value = twice(5);
+            System.out.println(value);
+        }
+    
+        public static int twice(int x) {
+            int twice = 2 * x;
+            System.out.println("Returning " + twice);
+            return twice;
+        }
+    }
+

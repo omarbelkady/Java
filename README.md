@@ -503,4 +503,39 @@ To fix this error I simply
             return twice;
         }
     }
+### 16 - Variable might not have been initialized 
+An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code. 
+```
+    public class Omar {
+        public static void main(String[] args) {
+            int theAwesomeNum = doubleMe(6);
+            System.out.println(theAwesomeNum);
+        }
+    
+        public static int doubleMe(int a) {
+            int doubleMe = 2 * a;
+            return doubleMe;
+            System.out.println("Returning " + doubleMe);
+        }
+    }
+```
+
+The compiler will generate a number of errors. The first one to be listed is that it is unable to reach the print statement.
+This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
+To fix this error I simply reverse the print statement with the return statement
+
+    public class Omar {
+        public static void main(String[] args) {
+            int theAwesomeNum = doubleMe(6);
+            System.out.println(value);
+        }
+    
+        public static int doubleMe(int a) {
+            int doubleMe = 2 * a;
+            System.out.println("Returning " + doubleMe);
+            return doubleMe;
+        }
+    }
+
+
 

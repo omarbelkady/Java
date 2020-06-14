@@ -233,9 +233,7 @@ public class Test
         }
 }
 
-    1 error found:
-    File: Test.java  [line: 7]
-    Error: Test.java:7: invalid method declaration; return type required
+
  ```
 To fix this, simply insert the appropriate return type in the method signature and the error will go away:
 

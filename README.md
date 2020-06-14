@@ -471,28 +471,25 @@ public class Omar
 
 ### 15 - unreachable statement
 
-An "unreachable statement" error occurs when the compiler detects that it is impossible to reach a given statement during the flow of a program. This error is often caused by placing statements after return or break. For example:
-    public class Test {
+An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code. 
+```
+    public class Omar {
         public static void main(String[] args) {
-            int value = twice(5);
-            System.out.println(value);
+            int theAwesomeNum = doubleMe(5);
+            System.out.println(theAwesomeNum);
         }
     
-        public static int twice(int x) {
-            int twice = 2 * x;
-            return twice;
-            System.out.println("Returning " + twice);
+        public static int doubleMe(int a) {
+            int doubleMe = 2 * x;
+            return doubleMe;
+            System.out.println("Returning " + doubleMe);
         }
     }
-	
-    2 errors found:
-    File: Test.java  [line: 10]
-    Error: Test.java:10: unreachable statement
-    File: Test.java  [line: 11]
-    Error: Test.java:11: missing return statement
-	
-The compiler gives two errors: one to indicate that the line System.out.println("Returning " + twice); is an unreachable statement, and another because it assumes that if we can get to that print statement, then we would need a return statement somewhere after it.
-We can fix this by placing the print statement before the return so it can be executed:
+```
+
+The compiler will generate a number of errors. The first one to be listed is that it is unable to reach the print statement.
+This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
+To fix this error I simply 
 
     public class Test {
         public static void main(String[] args) {

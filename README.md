@@ -480,7 +480,7 @@ An "unreachable statement" error takes place when the compiler sees that it is i
         }
     
         public static int doubleMe(int a) {
-            int doubleMe = 2 * x;
+            int doubleMe = 2 * a;
             return doubleMe;
             System.out.println("Returning " + doubleMe);
         }
@@ -493,14 +493,14 @@ To fix this error I simply
 
     public class Omar {
         public static void main(String[] args) {
-            int value = twice(5);
-            System.out.println(value);
+            int theAwesomeNum = doubleMe(5);
+            System.out.println(theAwesomeNum);
         }
     
-        public static int twice(int x) {
-            int twice = 2 * x;
-            System.out.println("Returning " + twice);
-            return twice;
+        public static int doubleMe(int a) {
+            int doubleMe = 2 * a;
+            System.out.println("Returning " + doubleMe);
+            return doubleMe;
         }
     }
 ### 16 - Variable might not have been initialized 

@@ -473,13 +473,13 @@ public class Omar
 
 An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code. 
 ```
-    public class Omar 
-    {
-        public static void main(String[] args) 
+public class Omar 
+{
+	public static void main(String[] args) 
 	{
-            int theAwesomeNum = doubleMe(5);
-            System.out.println(theAwesomeNum);
-        }
+	    int theAwesomeNum = doubleMe(5);
+	    System.out.println(theAwesomeNum);
+	}
     
         public static int doubleMe(int a)
 	{
@@ -487,62 +487,55 @@ An "unreachable statement" error takes place when the compiler sees that it is i
             return doubleMe;
             System.out.println("Returning " + doubleMe);
         }
-    }
+}
 ```
 
 The compiler will generate a number of errors. The first one to be listed is that it is unable to reach the print statement.
 This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
 To fix this error I simply reverse the order of the print statement and the return statement.
 ```
-    public class Omar 
-    {
-        public static void main(String[] args) 
+public class Omar 
+{
+	public static void main(String[] args) 
 	{
-            int theAwesomeNum = doubleMe(5);
-            System.out.println(theAwesomeNum);
-        }
-    
-        public static int doubleMe(int a)
+	    int theAwesomeNum = doubleMe(5);
+	    System.out.println(theAwesomeNum);
+	}
+
+	public static int doubleMe(int a)
 	{
-            int doubleMe = 2 * a;
-            System.out.println("Returning " + doubleMe);
-            return doubleMe;
-        }
-    }
+	    int doubleMe = 2 * a;
+	    System.out.println("Returning " + doubleMe);
+	    return doubleMe;
+	}
+}
 ```    
 ### 16 - Variable might not have been initialized 
-An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code. 
+An variable might not have been initialized error is triggered when we declare a variable and specify its type but
+never give it an initial value;
 ```
-    public class Omar {
+   public class Omar 
+   {
         public static void main(String[] args) {
-            int theAwesomeNum = doubleMe(6);
-            System.out.println(theAwesomeNum);
+            int myNum = 16;
+            int myNum2;
+            System.out.println(myNum + myNum2);
         }
-    
-        public static int doubleMe(int a) {
-            int doubleMe = 2 * a;
-            return doubleMe;
-            System.out.println("Returning " + doubleMe);
-        }
-    }
+    } 
 ```
 
-The compiler will generate a number of errors. The first one to be listed is that it is unable to reach the print statement.
-This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
-To fix this error I simply reverse the print statement with the return statement
-
-    public class Omar {
-        public static void main(String[] args) {
-            int theAwesomeNum = doubleMe(6);
-            System.out.println(value);
-        }
-    
-        public static int doubleMe(int a) {
-            int doubleMe = 2 * a;
-            System.out.println("Returning " + doubleMe);
-            return doubleMe;
-        }
-    }
-
+The compiler will generate the error  variable myNum2 might not have been initialized  because we declared it with
+the specified data type but never gave it an initial value. To solve this, I simply give it an initial value.
+```
+public class Omar 
+{
+	public static void main(String[] args) 
+	{
+	    int myNum = 16;
+	    int myNum2=3;
+	    System.out.println(myNum + myNum2);
+	}
+} 
+```
 
 

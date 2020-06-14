@@ -491,7 +491,7 @@ The compiler will generate a number of errors. The first one to be listed is tha
 This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
 To fix this error I simply 
 
-    public class Test {
+    public class Omar {
         public static void main(String[] args) {
             int value = twice(5);
             System.out.println(value);

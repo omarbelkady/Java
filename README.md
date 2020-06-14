@@ -473,13 +473,16 @@ public class Omar
 
 An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code. 
 ```
-    public class Omar {
-        public static void main(String[] args) {
+    public class Omar 
+    {
+        public static void main(String[] args) 
+	{
             int theAwesomeNum = doubleMe(5);
             System.out.println(theAwesomeNum);
         }
     
-        public static int doubleMe(int a) {
+        public static int doubleMe(int a)
+	{
             int doubleMe = 2 * a;
             return doubleMe;
             System.out.println("Returning " + doubleMe);
@@ -491,13 +494,16 @@ The compiler will generate a number of errors. The first one to be listed is tha
 This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
 To fix this error I simply 
 
-    public class Omar {
-        public static void main(String[] args) {
+    public class Omar 
+    {
+        public static void main(String[] args) 
+	{
             int theAwesomeNum = doubleMe(5);
             System.out.println(theAwesomeNum);
         }
     
-        public static int doubleMe(int a) {
+        public static int doubleMe(int a)
+	{
             int doubleMe = 2 * a;
             System.out.println("Returning " + doubleMe);
             return doubleMe;

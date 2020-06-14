@@ -320,16 +320,26 @@ public class Test
 
 ### 11- illegal start of expression
 ``` 
-method <X> in class <Y> cannot be applied to given types
-
-    public class Test {     
+    public class Omar {     
         public static void main(String[] args) {
-            myMethod(1.0, 2, "Hello!");
+            omarMethod(1.0, 2, "Hello!");
         }
     
-        public static void myMethod(double d, String s, int x) {
-            System.out.println(s + " " + d + " " + x);
+        public static void omarMethod(double a, String b, int c) {
+            System.out.println(a + " " + b + " " + c);
         }
     }
     
 ```
+This errors because I have called the methods with the specified data types in the wrong order. I must call it in the right order
+```
+public class Omar 
+{     
+        public static void main(String[] args) {
+            omarMethod(1.0,"YOLO!", 2);
+        }
+    
+        public static void omarMethod(double a, String b, int c) {
+            System.out.println(a + " " + b + " " + c);
+        }
+}

@@ -3,7 +3,7 @@ package com.omarbelkady;
 import java.util.Scanner;
 
 
-public class Main
+public class Breakorcontinue
 {
 	public static void main(String[] args) 
 	{

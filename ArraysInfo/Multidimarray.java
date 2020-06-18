@@ -1,5 +1,5 @@
 package com.domainname
-import java.utils.Arrays
+import java.utils.Arrays;
 	
 public class Multidimarray{
 	public static void main(String [] args)

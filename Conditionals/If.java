@@ -1,6 +1,6 @@
 package com.omarbelkady;
 
-public class Main
+public class If
 {
     public static void main(String[] args) {
       Integer temperature=32;

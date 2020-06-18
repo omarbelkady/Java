@@ -30,18 +30,18 @@ ArrayList<DT>name = new ArrayList<DT>();
 <> means generic it is used to work with many types(classes, objects, primitives…)
 	
 ```
-	public class GenericMethodTest {
+public class GenericMethodTest {
    	// generic method printArray
-		public static < E > void printArray( E[] inputArray)
+	public static < E > void printArray( E[] inputArray)
+	{
+		// Display array elements
+		for(E element : inputArray)
 		{
-			// Display array elements
-			for(E element : inputArray)
-			{
-				System.out.printf("%s ", element);
-			}
-			System.out.println();
+			System.out.printf("%s ", element);
 		}
+		System.out.println();
 	}
+}
 ```
 
 We put the data type wrapper class not INT

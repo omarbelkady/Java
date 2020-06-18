@@ -5,12 +5,12 @@ package com.omarbelkady;
 	
 import java.awt.*;
 	
-public class Main{
+public class ReferenceType2{
 	public static void main(String [] args)
 	{
 		byte age=35;
 		Date now = new Date();
-		System.out.println(“now: ”+now);
+		System.out.println("now: "+now);
 		byte x=1;
 		byte y=x;
 		//x and y are at different memory locations

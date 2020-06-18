@@ -26,10 +26,6 @@ public class Switch2
                 System.out.println("Nelan Squad");
                 break;
             
-            case "LitMajor":
-                System.out.println("Terrible");
-                break;
-            
             case "Government":
                 System.out.println("Horrible");
                 break;
@@ -38,6 +34,18 @@ public class Switch2
                 System.out.println("Death in a nutshell");
                 break;
             
+            case "H8sToRead":
+                System.out.println("CS&Logic doesn't require you to read to understand WTF we are trying to point out!. You are a Winner. You learn by doing!");
+                break;
+                
+            case "Likes2Read":
+                System.out.println("Good luck digging a hole you cannot get out of. This is an infectious world that is very hard to cure.");
+                break;
+                
+            case "LitMajor":
+                System.out.println("Terrible");
+                break;
+             
             case "CS":
                 System.out.println("Winner");
                 break;

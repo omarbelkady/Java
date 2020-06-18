@@ -1,4 +1,4 @@
-public class Main
+public class Booleanif
 {
 	public static void main(String[] args) {
 		int income = 120_000;

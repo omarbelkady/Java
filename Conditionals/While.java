@@ -2,7 +2,7 @@ package com.omarbelkady;
 import java.util.Scanner;
 
 
-public class While3
+public class While
 {
 	public static void main(String[] args) {
 	    Scanner scanner= new Scanner(System.in);

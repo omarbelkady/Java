@@ -30,8 +30,6 @@ ArrayList<DT>name = new ArrayList<DT>();
 <> means generic it is used to work with many types(classes, objects, primitives…)
 	
 ```
-	
-	
 	public class GenericMethodTest {
    	// generic method printArray
 		public static < E > void printArray( E[] inputArray)

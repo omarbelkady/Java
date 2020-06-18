@@ -1,7 +1,7 @@
 package com.domainname
 import java.utils.Arrays
 	
-public class Main{
+public class Multidimarray{
 	public static void main(String [] args)
 	{
 		

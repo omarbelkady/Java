@@ -25,3 +25,40 @@ public class ArraySort
       }
 }
 ```
+## Array List
+ArrayList<DT>name = new ArrayList<DT>();
+<> means generic it is used to work with many types(classes, objects, primitives…)
+
+We put the data type wrapper class not INT
+
+To append to the array list name.add(); to push to the array list
+
+To obtain a value from AL name.get(indexGOESHERE)
+
+To update a value from AL name.set(index,newVal)
+
+To obtain the size of the AL name.size() DO NOT FORGET THE PARENTHESIS BECAUSE ITS A METHOD
+
+To get the key of the Al System.out.println(name.indexOf(7));
+
+If you pass in a value that doesn’t exist in the Al you get -1 returned to you NOT ERROR!!!
+
+The .contains method returns a boolean if the value exists it returns true if it doesn’t exist it returns false.
+
+To check if the value exists within the arraylist to execute a condition
+if(nameOfArrList.contains(Value))
+{
+//execute this bit of code
+}
+
+
+If you try to run the nameOfArrList.get(valueGoesHere) and the value doesn’t exist you get an Index out of Bounds error thrown to the console.
+
+To remove an element in an array list we can use a while loop
+while(!nameOfArrList.isEmpty())
+{
+	System.out.println(nameOfArrList.remove(0))
+}
+
+To remove the entire content of an Arr List
+nameOfArrList.clear();

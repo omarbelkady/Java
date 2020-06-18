@@ -1,4 +1,4 @@
-package com.domainname
+package com.domainname;
 import java.utils.Arrays;
 	
 public class Multidimarray{

@@ -1,9 +1,9 @@
-The break statement terminates the loop and the continue statement restarts at the beginning of the loop
-package com.amneziahookahlounge;
+//The break statement terminates the loop and the continue statement restarts at the beginning of the loop
+package com.omarbelkady;
 import java.util.Scanner;
 
 
-public class Main
+public class ForEach
 {
 	public static void main(String[] args) 
 	{

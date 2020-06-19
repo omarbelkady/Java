@@ -18,3 +18,70 @@ Person x = new Person();
 
 ### A Class is a structure/blue print and object is an instance of the class. The above has a class name Person. Person here, is what's called a custom type
 ### x is the identifier. When we instantiate we can create n number of objects say: Alan, Waleed, Neha, Michael, Juan
+
+
+### A field is just a variable within a class
+The person class has two elements:
+Name: This is a field 
+talk(): 
+
+### A field is essentially a variable that we can assign a value to. 
+### When we instantiate the class into an object we can assign a value to the field name such as “Angela”
+```
+public class Vars
+{
+	//Variables outside of a method and within a class are called FIELDS!
+	public int testFie=6;
+
+	//So when some make an instance of the class Stupid Program the field testFie
+	//Would be available for anyone and it would have a default value of 6.
+	
+    public class Main 
+    { 
+      // Instance Variables 
+      String name; 
+      String major; 
+      String year; 
+
+      // Constructor Declaration of Class 
+      public Main(String name, String major, String year) 
+      { 
+          this.name = name; 
+          this.major = major; 
+          this.year = year; 
+      } 
+
+      // method 1 
+      public String getName() 
+      { 
+          return name; 
+      } 
+
+      // method 2 
+      public String getMajor() 
+      { 
+          return major; 
+      } 
+
+      // method 3 
+      public String getYear() 
+      { 
+          return year; 
+      } 
+
+      @Override
+      public String toString() 
+      { 
+          return("Hi my name is "+ this.getName()+ 
+                 ".\nMy major is " + 
+                 this.getMajor()+", and I am a " + this.getYear());
+      } 
+  
+      public static void main(String[] args) 
+      { 
+          Main carolina = new Main("carolina","CS", "Senior"); 
+          System.out.println(carolina.toString()); 
+      }
+    }
+} 
+```

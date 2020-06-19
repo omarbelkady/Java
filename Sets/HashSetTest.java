@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Set;
 import java.util.HashSet;
-public class Main
+public class HashSetTest
 {
     //main method
     public static void main (String[] args)

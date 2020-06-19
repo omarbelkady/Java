@@ -5,6 +5,11 @@ After, performing research I found out java is very popular and use a lot in the
 Thank you 6342 56837. Java is Method Naming Camel case= blaBlaBla. 
 Java Class Naming is Pascal Case=BlaBlaBla
 
+## How to compile and run Java on terminal
+
+- $javac *.java
+- $java <MAIN_CLASS>
+ 
 ## Error Codes and Meaning
 
 ### 1- cannot find symbol PART 1

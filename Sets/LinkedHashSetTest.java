@@ -1,21 +1,28 @@
-//package myPackage;
+//A linked hash set is similar to a tree set except that it is faster in certain operations. 
+//There are 3 hash sets: linked hash set, regular hash set, tree hash set
+
+//package tutorial;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.HashSet;
-public class Main
+import java.util.TreeSet;
+
+public class LinkedHashSetTest
 {
     //main method
     public static void main (String[] args)
     {
         //Syntax: Set<Datatype> nameofSet = new TreeSet<datatype>()
-        Set<Integer> t = new TreeSet<Integer>();
+        Set<Integer> t = new LinkedHashSet<Integer>();
         
         //To append to a Set
         t.add(5);
         t.add(8);
         t.add(5);
         t.add(9);
-        System.out.println(t);//print 5, 8, 9
+        System.out.println(t);//prints 5, 8, 9
         t.add(-8);
         t.remove(8);
         

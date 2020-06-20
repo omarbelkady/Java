@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.*;
 
 public class Objects
@@ -11,6 +10,7 @@ public class Objects
         ramo("WHAT\'s UUUUUUUUP!",7);
         System.out.println(add2(9,1666));
         System.out.println(str("Have a terrible day\n"));
+        sc.close();
     }
     
     

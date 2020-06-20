@@ -1,4 +1,4 @@
-public class Cat extends Dog
+public class Cat extends Animal
 {
     //Here Dog is the Base Class and the Cat is the Derived Class
     //Whenever we inherit and want to use the functions within that Class
@@ -15,13 +15,18 @@ public class Cat extends Dog
     }
     
     //We want to override the speak method
-    public void speak(){
-        System.out.println("Meow my name is "+ this.name + " and I get fed " + this.food);
+    @Override
+    public void speak()
+    {
+        System.out.println("called from Dog");
+        System.out.println("I am "+getName()+" and I am "+ getAge()+ " years old");
     }
     
     public void eat(int x)
     {
         this.food -= x;
     }
+
+    public int getFood(){return food;}
 }
 

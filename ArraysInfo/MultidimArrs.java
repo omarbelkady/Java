@@ -1,13 +1,12 @@
-package com.omarbelkady;
-import java.utils.Arrays
+import java.util.*;
 	
 public class MultidimArrs{
 	public static void main(String [] args)
 	{
 		//new trend to declare arrays
-		int [] numbers= {};
-		numbers[0]= 1;
-		numbers[1]=2;
+		// int [] numbers= {};
+		// numbers[0]= 1;
+		// numbers[1]=2;
     
 		//declaring an Array
 		int [] numbers= {2,3,5,1,4};
@@ -23,6 +22,6 @@ public class MultidimArrs{
 		
     		//set the value of the matrix in the 2nd row 2nd column to 3
 		funNumsPart2[1][1]=3;
-		System.out.println(Arrays.deepToString(numbers));
+		System.out.println(Arrays.toString(numbers));
 	}
 }

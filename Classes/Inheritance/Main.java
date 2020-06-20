@@ -1,5 +1,4 @@
 /*An object is essentially an instance of a class*/
-import java.util.ArrayList;
 
 
 public class Main
@@ -24,15 +23,14 @@ public class Main
        //I want to invoke the speak method
        yorkie.speak();
        
-       //We invoke the setAge method 
-       yorkie.setAge(3);
-       
        
        yorkie.speak();
        
        
        Cat carla= new Cat("Carla", 19, 13);
        carla.speak();
+       carla.eat(3);
+       System.out.println(carla.getFood());
     }
     
 }

@@ -1,8 +1,8 @@
-package com.omarbelkady;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class Main{
+public class Part2
+{
 	public static void main(String [] args)
 	{
 		//Creating a scanner object. The parameters we pass in, specifies where we 
@@ -10,16 +10,20 @@ public class Main{
     //Terminal window: System.in
     //File
 		Scanner scanner= new Scanner(System.in);
-		System.out.print(“Age:  ”);
-		//byte age= scanner.nextByte();
+		System.out.print("Welcome enter your age ");		//byte age= scanner.nextByte();
+		int age=scanner.nextInt();
 		//To read a string
-		String age=scanner.next();
-		System.out.println(“Welcome: ”);
-		String name=scanner.nextLine().trim();
-    System.out.println(“How is it going? ” + name);
+
+		System.out.print("Welcome enter your name ");
+		String name=scanner.next();
     //Anytime I write to the console next it reads the next token
     //Say I write for name input Omar Belkady it will say Hi Omar
     //Not Hi Omar Belkady because the next method reads one token at a time
     //To read Omar Belkady we use the method nextLine
+		System.out.println("Name: "+name);
+		System.out.println("Age: "+age);
+
+		scanner.close();
 
 	}
+}

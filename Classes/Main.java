@@ -6,9 +6,7 @@ An attribute is similar to variables in that they hold information for us. We wa
 for our dog class the Name and the age.
 */
 
-MAIN.java
 /*An object is essentially an instance of a class*/
-import java.util.ArrayList;
 
 
 public class Main

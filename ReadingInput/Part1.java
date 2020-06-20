@@ -1,8 +1,8 @@
-package com.omarbelkady;
 
 import java.util.Scanner;
 
-public class Main{
+public class Part1
+{
     public static void main(String [] args)
     {
       //Creating a scanner object. The parameters we pass in, specifies where we 
@@ -18,4 +18,6 @@ public class Main{
       //I am converting the age of type byte to a string to have the string printed 
       //out to the console
       System.out.println("My friend you are: " + age);
+      scanner.close();
     }
+  }

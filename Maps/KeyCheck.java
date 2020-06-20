@@ -1,14 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.*;
 
 public class KeyCheck
 {
@@ -16,7 +6,7 @@ public class KeyCheck
     public static void main (String[] args)
     {
 	        
-            Map h = new HashMap();
+            Map<Object, Object> h = new HashMap<>(); //allows for any key and any value
             h.put("Timothy",5);
             h.put("Joey","x");
             //h.put(11,99) this implementation will cause the program to error since the keys

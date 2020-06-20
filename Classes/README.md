@@ -85,3 +85,12 @@ public class Vars
     }
 } 
 ```
+
+### One of the big three in OOP. There is Encapsulation, Inheritance and Polymorphism.
+### Encapsulation is the process by which we hide the inner details of something. This way will enable us to not expose everything to the whole world.
+### Encapsulation takes place a lot when working with class level variables/fields. So we created a variable within the class method not within the method. This 
+### variable will be accessible all throughout the class. When we instantiate an object of the class. When we work with the variable we are using encapsulation
+### when working with getter and setter methods of that variable. To get the value of the variable we have to go through the getter and this will output the value 
+### back to us in the console. If we want to set the value of the variable we have to go through the setter and it will update the value.
+### Within the methods, we can modify and tweak it a little bit. Think of a service you are providing to people we can use encapsulation that way we hide the inner 
+### workings and the user will not be able to see it. We can swap the inner workings without affecting the interface.

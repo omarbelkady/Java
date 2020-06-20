@@ -1,12 +1,15 @@
-package com.domainName
-import java.utils.Arrays
+import java.util.*;
 //the utils.Arrays library implementation is used to be able to use array functions in java
 	
-public class ArrayTest{
+public class ArrayTest
+{
 	public static void main(String [] args)
 	{
 		//old fashioned way array declaration always we must use the new keyword
-		int [] numbers= new int [5];
+		//int [] numbers= new int [5];
+		
+		//new trend to declare arrays
+		int [] numbers = {2,3,5,1,4};
 		numbers[0]= 1;
 		numbers[1]=2;
 		Arrays.sort(numbers);
@@ -15,8 +18,6 @@ public class ArrayTest{
 		//System.out.println(numbers)//prints the address of the object in memory
 		System.out.println(Arrays.toString(numbers));
 		
-
-		//new trend to declare arrays
-		int [] numbers= {2,3,5,1,4};
+		
 	}
 }

@@ -1,4 +1,4 @@
-public class omarsArrayProblem
+public class OmarsArrayProblem
 {
 	public static void main(String [] args){
 		int [] grades = {9, 9, 4, 13, 34, 21, 3, 41, 94, 1};

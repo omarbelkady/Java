@@ -26,7 +26,7 @@ public class User
 
 	public String output()
 	{
-		return "Hi, my name is "+ firstName + " " + lastName + '.";
+		return "Hi, my name is "+ firstName + " " + lastName + ".";
 	}
 }
 

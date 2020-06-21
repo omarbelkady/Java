@@ -6,6 +6,8 @@ Thank you 6342 56837. Java is Method Naming Camel case= blaBlaBla.
 Java Class Naming is Pascal Case=BlaBlaBla
 Angela loves Omar
 
+Learn git and github
+
 ## How to compile and run Java on terminal
 
 - $javac *.java

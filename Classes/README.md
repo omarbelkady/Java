@@ -7,8 +7,7 @@
 ## - a talk method
 
 
-### The above idea is a structure of a person which is known as a class. To create a new person, all we have to do is instantiate the class. This process is called 
-### an object. The class is the blueprint and the object is the specific example. A class allows us to create different entities which are similar in structure. 
+### The above idea is a structure of a person which is known as a class. To create a new person, all we have to do is instantiate the class. When we instantiate a class we are creating what's called an object. The class is the blueprint and the object is the specific example. A class allows us to create different entities which are similar in structure. 
 ### Classes will defined within a file and objects will be defined as variables.
 ```
 Person x = new Person();

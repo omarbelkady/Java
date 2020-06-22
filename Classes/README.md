@@ -1,8 +1,7 @@
 ### A class is essentially a data type. Whenever we create an instance of a class we declare it so say I want to declare 10 dog ages i would go and say
 ### int dogAge1= 3; and say int dogAge2=12; This is inefficient and is a waste of time.
 ### Within a class we have methods and we have attributes. An attribute is similar to variables in that they hold information for us.
-### We want to have 2 attributes for our dog class the Name and the age. Classes allow us to build very large application without having to code 
-### every small bit by ourselves. We have a blue print of how sth might look. Say I have a person Class and wanted to describe a specific the person the details are  ### what’s called attributes. If we wanted to build a large scale application we do not want to describe every single person specifically using a bunch of different ### variables. This would be a waste of time. Instead, we create a blueprint of what a person might look like.
+### We want to have 2 attributes for our dog class the Name and the age. Classes allow us to build very large application without having to code every small bit by ourselves. We have a blue print of how sth might look. Say I have a person Class and wanted to describe a specific the person the details are  ### what’s called attributes. If we wanted to build a large scale application we do not want to describe every single person specifically using a bunch of different ### variables. This would be a waste of time. Instead, we create a blueprint of what a person might look like.
 ### We can say two fields:
 ## - a name variable
 ## - a talk method

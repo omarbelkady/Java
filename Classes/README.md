@@ -18,8 +18,8 @@ Person x = new Person();
 
 ### A Class is a structure/blue print and object is an instance of the class. The above has a class name Person. Person here, is what's called a custom type
 ### x is the identifier. When we instantiate we can create n number of objects say: Alan, Waleed, Neha, Michael, Juan. These are all instances which are different
-### from static methods. A static method is attached to a class rather than an instance of a class / an object. When wanting to use a static method of the class unlike an instance method, it has to declare an instance of the class in order for it to use the instance method. A static method can use the he method as soon 
-### as it wants. We create instances of the class which create us branches. These branches are referred to as objects. Anytime we create a method within the class. 
+### from static methods. A static method is attached to a class rather than an instance of a class / an object. When wanting to use a static method of the class unlike an instance method, it has to declare an instance of the class in order for it to use the instance method. A static method can use the method as soon as it wants. 
+### We create instances of the class which create us branches. These branches are referred to as objects. Anytime we create a method within the class. 
 ### we create an instance of the class, the method we created is made available for use to us. An instance method is the complete opposite of a static method. An instance method is attached to the instances.
 ### Say I do this
 

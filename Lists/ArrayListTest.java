@@ -2,20 +2,15 @@
 //and we do not want to be bounded by a certain number.
 //package Omar;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
-public class Main
+public class ArrayListTest
 {
    
     public static void main (String[] args)
     {
         //When defining the type for a list always use the keyword Integer NOOOOOT Int	
-                 ArrayList<Integer> t = new ArrayList<Integer>(); 
+        ArrayList<Integer> t = new ArrayList<Integer>(); 
         //to add t.add();   and to remove t.remove();
         //TO GET THE INDEX OF AN ELEMENT t.get(5);
         //TO APPEND TO THE SET t.set(INDEX, ELEMENT)

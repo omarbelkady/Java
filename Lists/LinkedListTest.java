@@ -1,14 +1,9 @@
 //A linked list is faster in certain operations than an Array List.
 
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
-public class Main
+public class LinkedListTest
 {
    
     public static void main (String[] args)

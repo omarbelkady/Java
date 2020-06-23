@@ -137,20 +137,20 @@ public class User
 		return "  " + getFullName() + "]";
 	}
 
-    //Intended to put obj in a hash table ∴ turn the hash code into a number
-    @Override
-    public int hashCode()
-    {
+	//Intended to put obj in a hash table ∴ turn the hash code into a number
+	@Override
+	public int hashCode()
+	{
 		final int prime = 19;
 		int res = 1;
 		res= prime * res + ((firstName==null) ? 0 : firstName.hashCode());
 		res= prime * res + ((lastName==null) ? 0 : lastName.hashCode());
 		return res;
-    }
+	 }
 
-    @Override
-    public boolean equals(Object obj)
-    {
+    	@Override
+    	public boolean equals(Object obj)
+    	{
 		if(this == obj)
 			return true;
 		if(obj == null)
@@ -176,7 +176,7 @@ public class User
 		{
 			if(other.lastName != null)
 				return false; 
-    	}	 
+    		}	 
     
 		else if(!lastName.equals(other.lastName))
 			return false;

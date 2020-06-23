@@ -1,0 +1,29 @@
+Same method but different variations for example a different number of parameters but the same variable name.
+For example
+public void test(int x) ⇒ a
+
+public void test(String x) ⇒ b
+
+public void test(int x, int y) ⇒ c
+
+The return type doesn’t matter,the access modifier doesn’t matter, the static keyword doesn’t matter. ONLY THE PARAMETERS MATTER!
+Overloading at compile time.
+Overriding is figured out at runtime.
+The method that gets invoked depends on how we invoke the method.
+If I call the following method:
+test(5); This would call the method a, because 5 is an integer.
+
+test("5"); This would call the method b, because “5” is a string. 
+
+Remember the return type does not depend on the method signature. The method signature tells us whether the method is unique or not.
+Remember, having a different return type does not change the signature.
+
+This would fail however:
+
+public void test(int x) ⇒ a
+
+public int test(int x) ⇒ b
+
+
+B would not be a valid overload because the parameter of b is the same as a. So we have to overload in it different way. 
+Or change the name of the method and do not make it an overload.

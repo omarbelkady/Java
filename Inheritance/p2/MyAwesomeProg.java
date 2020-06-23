@@ -16,7 +16,7 @@ public class MyAwesomeProg
 	public static void main(String [] args)
 	{
 		Student m = new Student();
-		m.major = “Computer Science”;
+		m.major = "Computer Science";
 		logln(m.major);
 	}
 }

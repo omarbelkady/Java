@@ -76,6 +76,12 @@ public class User
 			logln(o.getFullName());
 		}
 	}
+	
+	//Overload search and pass in this time a USER OBJECT
+    	public static int searchList(List<User> users, User u)
+    	{
+        	return searchList(users, u.getFullName());
+    	}
 
 	public static int searchList(List<User> users, String fN, String lN)
 	{

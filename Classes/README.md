@@ -25,7 +25,9 @@ Animal bear = new Animal();
 bear.talk();
 ```
 
-### A static method on the other hand is attached to the class unlike an instance method we do not have to use the class instance to use the instance method. We can do it directly on the class.
+### A static method on the other hand is attached to the class unlike an instance method we do not have to use the class instance to use the instance method. We can do it directly on the class. Static methods CANNOT call instance methods the opposite however, is true. Instance methods an call Static Methods
+
+#### THANK YOU 2526
 
 
 

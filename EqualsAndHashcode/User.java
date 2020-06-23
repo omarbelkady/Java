@@ -4,16 +4,16 @@ public class User
 {
 	private String firstName;
 	public String lastName;
-	
+
 	static void log(Object o)
-    {
-   		System.out.print(o);
+	{
+		System.out.print(o);
 	}
 
-    static void logln(Object o)
-    {
-        System.out.println(o);
-    }
+	static void logln(Object o)
+	{
+		System.out.println(o);
+	}
 
 
 
@@ -26,7 +26,7 @@ public class User
 	{
 		return "Hi, my name is "+ getFirstName() + " "  + getLastName() + ".";
 	}
-	
+
 	//Now I will overload output
 	public String output(boolean nice)
 	{
@@ -37,7 +37,7 @@ public class User
 		}
 		return "You\'re an idiot"+ " "  + getFullName() + ".";
 	}
-	
+
 	public String getFirstName()
 	{
 		return firstName;
@@ -51,7 +51,7 @@ public class User
 		//the .trim at the end will raise a null pointer exception because 
 		//it doesn't know what are we referencing
 		//the .strip remove any whitespaces before output.
-		
+
 	}
 
 	public String getLastName()
@@ -65,7 +65,7 @@ public class User
 		//Assigning the lN value we pass in to the field lastName
 		lN=lastName;
 	}
-	
+
 
 	public static void printUsers(List<User> users)
 	{
@@ -76,12 +76,12 @@ public class User
 			logln(o.getFullName());
 		}
 	}
-	
+
 	//Overload search and pass in this time a USER OBJECT
-    	public static int searchList(List<User> users, User u)
-    	{
-        	return searchList(users, u.getFullName());
-    	}
+	public static int searchList(List<User> users, User u)
+	{
+		return searchList(users, u.getFullName());
+	}
 
 	public static int searchList(List<User> users, String fN, String lN)
 	{
@@ -106,65 +106,67 @@ public class User
 	}
 
 
-   //Now I will override the ToString
-    @Override
-    public String toString()
-    {
-        //To override remember to give the method to override the same name
-        return "  " + getFullName() + "]";
-    }
+	//Now I will override the ToString
+	@Override
+	public String toString()
+	{
+	//To override remember to give the method to override the same name
+		return "  " + getFullName() + "]";
+	}
 
-    //Intended to put obj in a hash table ∴ turn the hash code into a number
-    @Override
-    public int hashCode()
-    {
-    	final int prime = 19;
-    	int res = 1;
-    	res= prime * res + ((firstName==null) ? 0 : firstName.hashCode());
-    	res= prime * res + ((lastName==null) ? 0 : lastName.hashCode());
-    	return res;
-    }
+	//Intended to put obj in a hash table ∴ turn the hash code into a number
+	@Override
+	public int hashCode()
+	{
+		final int prime = 19;
+		int res = 1;
+		res= prime * res + ((firstName==null) ? 0 : firstName.hashCode());
+		res= prime * res + ((lastName==null) ? 0 : lastName.hashCode());
+		return res;
+	}
 
-    @Override
-    public boolean equals(Object obj)
-    {
-    	if(this == obj)
-        {
-    		return true;
-        }
-    	if(obj == null)
-    	{
-    		return false;
-    	}
-    	if(getClass() != obj.getClass())
-    	{
-            return false;
-    	}
+	@Override
+	public boolean equals(Object obj)
+	{
+		if(this == obj)
+		{
+			return true;
+		}
+		if(obj == null)
+		{
+			return false;
+		}
+		if(getClass() != obj.getClass())
+		{
+			return false;
+		}
 
-        User other = (User) obj;
+		User other = (User) obj;
 
-        if(firstName == null){
-            if(other.firstName != null)
-            {
-                return false; 
-            }
+		if(firstName == null)
+		{
+			if(other.firstName != null)
+			{
+				return false; 
+			}
 		} 
 		else if(!firstName.equals(other.firstName))
 		{
-	        logln(false);
-            
-            if(lastName == null)
-            {
+			logln(false);
+
+			if(lastName == null)
+			{
 			    if(other.lastName != null)
 			    {
-                    return false; 
+				return false; 
 			    }
-		    }	 
-		    else if(!lastName.equals(other.lastName))
-		    {
-				return false;
-		    }
+
+			    else if(!lastName.equals(other.lastName))
+			    {
+					return false;
+			    }
+			}
 		}
-		 return true;
-    }
+		return true;
+	}
 }

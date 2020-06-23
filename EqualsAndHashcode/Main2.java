@@ -3,7 +3,7 @@ import java.util.*;
 public class Main2
 {
 	public static void log(Object o)
-    {       
+	{       
    		System.out.print(o);
 	}
 
@@ -30,7 +30,7 @@ public class Main2
 		users.add(myself);
 		users.add(him);
 
-        logln(myself.hashCode() == him.hashCode());       
+        User.searchList(users, him);       
 	}
 	
 }

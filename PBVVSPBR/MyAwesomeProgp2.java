@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MyAwesomeProg2
+public class MyAwesomeProgp2
 {
 	public static void log(Object o)
    	{       

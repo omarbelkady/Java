@@ -545,6 +545,9 @@ public class Omar
 	}
 } 
 ```
+### 17 - constructor X in class X cannot be applied to given types
+Invoke the super method in your subclass constructor.
+super()
 
 ### Default Values For DT:
 #### 1- byte: 0

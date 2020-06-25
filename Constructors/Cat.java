@@ -37,4 +37,3 @@ public class Cat extends Dog
 }
 
 
-Say if I use the protected keyword what happens say to the protected String name. Well, only items within the same package or are sub classes of the class will be able to access this variable name. Therefore, in our case, Main and Cat will be the only ones able to use the function. However, say I create a 2nd package this package will not be able to see this.

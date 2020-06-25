@@ -8,7 +8,7 @@ public class MyAwesomeProg
         System.out.print(o);
     }
     
-	  public static void logln(Object o)
+	public static void logln(Object o)
     {
         System.out.println(o);
     }

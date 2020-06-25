@@ -32,10 +32,10 @@ public class User
 	{
 		if(nice)
 		{
-			return "You\'re an awesome person"+ " "  + getFullName() + ".";
+			return "You're an awesome person"+ " "  + getFullName() + ".";
 
 		}
-		return "You\'re an idiot"+ " "  + getFullName() + ".";
+		return "You're an idiot"+ " "  + getFullName() + ".";
 	}
 
 	public String getFirstName()
@@ -47,7 +47,7 @@ public class User
 	public void setFirstName(String fN)
 	{
 		//Assigning the fName value we pass in to the field firstName
-		fN=firstName;
+		fN = firstName;
 		//the .trim at the end will raise a null pointer exception because 
 		//it doesn't know what are we referencing
 		//the .strip remove any whitespaces before output.

@@ -7,8 +7,8 @@ invoke a constructor by using the new keyword.
 User u = new User();
 ```
 The User keyword after the new keyword is the constructor and the above line of code is how we invoke a constructor.  Notice, that it is the exact same as how we
-invoke/call a method except that the method is prefixed with the new keyword. It has the exact same implementation as a method except that 
-there is no return or return type. REMEMBER WHEN WE CREATE A CONSTRUCTOR THE NAME HAS TO MATCH THE CLASS NAME.
+invoke/call a method except that the method is prefixed with the new keyword. It has the exact same implementation as a method except that there is no return or
+return type. REMEMBER WHEN WE CREATE A CONSTRUCTOR THE NAME HAS TO MATCH THE CLASS NAME.
 
 To define what a constructor does we do this:
 ```

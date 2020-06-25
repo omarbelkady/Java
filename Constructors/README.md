@@ -25,8 +25,7 @@ User n = new User(“Nabila”);
 ```
 public User(string h)
 {
-		firstName = h;
-
+	firstName = h;
 }
 ```
 This guarantees us that at the very beginning of our implementation of the User object we ensure that the User has a valid value.

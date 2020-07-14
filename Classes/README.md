@@ -9,7 +9,7 @@
 
 ### The above idea is a structure of a person which is known as a class. To create a new person, all we have to do is instantiate the class. When we instantiate a class we are creating what's called an object. The class is the blueprint and the object is the specific example. A class allows us to create different entities which are similar in structure. 
 ### Classes will defined within a file and objects will be defined as variables.
-```
+```java
 Person x = new Person();
 ```
 ### x is what’s called an identifier
@@ -19,7 +19,7 @@ Person x = new Person();
 ### These branches are referred to as objects. Anytime we create a method within the class. We create an instance of the class, the method we created is made available for use to us. An instance method is the complete opposite of a static method. An instance method is attached to the instances.
 ### Say I do this
 
-```
+```java
 
 Animal bear = new Animal();
 bear.talk();
@@ -38,7 +38,7 @@ talk():
 
 ### A field is essentially a variable that we can assign a value to. 
 ### When we instantiate the class into an object we can assign a value to the field name such as “Angela”
-```
+```java
 public class Vars
 {
 	//Variables outside of a method and within a class are called FIELDS!

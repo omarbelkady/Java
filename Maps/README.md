@@ -13,7 +13,7 @@
     ```
       Key Order
     ```
-```
+```java
 import java.util.*;
 public class HashMap
 {
@@ -35,7 +35,7 @@ public class HashMap
 }
 ```
 ### TreeMap
-  ```
+```java
 import java.util.*;
 public class Main
 {
@@ -65,7 +65,7 @@ public class Main
       Ordered by Insertion FIFO
   ```
   
-```
+```java
 import java.util.*;
 public class Main
 {

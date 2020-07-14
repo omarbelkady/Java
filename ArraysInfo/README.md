@@ -1,5 +1,5 @@
 ## Fill with one value
-```
+```java
     int [] ramoArray= {41,14,191,1,23,190};
     Arrays.fill(ramoArray, 23);
     //When printing an array allways to String method or else it will error
@@ -8,7 +8,7 @@
 ```
 
 ## Sort
-```
+```java
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class ArraySort
 ArrayList<DT>name = new ArrayList<DT>();
 <> means generic it is used to work with many types(classes, objects, primitives…)
 	
-```
+```java
 public class GenericMethodTest {
    	// generic method printArray
 	public static < E > void printArray( E[] inputArray)
@@ -70,10 +70,13 @@ if(nameOfArrList.contains(Value))
 If you try to run the nameOfArrList.get(valueGoesHere) and the value doesn’t exist you get an Index out of Bounds error thrown to the console.
 
 To remove an element in an array list we can use a while loop
+```java
 while(!nameOfArrList.isEmpty())
 {
 	System.out.println(nameOfArrList.remove(0))
 }
-
+```
 To remove the entire content of an Arr List
+```java
 nameOfArrList.clear();
+```

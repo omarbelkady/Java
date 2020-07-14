@@ -3,7 +3,7 @@ Sometimes when we setup a class we want to send it different pieces of informati
 However, say I want: name and age or say just name. A constructor is a special type of subroutine called to create an object. It prepares the new object for use,
 often accepting arguments that the constructor uses to set required member variables. A constructor is similar to a method except we do not put a return type. We 
 invoke a constructor by using the new keyword.
-```
+```java
 User u = new User();
 ```
 The User keyword after the new keyword is the constructor and the above line of code is how we invoke a constructor.  Notice, that it is the exact same as how we
@@ -11,18 +11,18 @@ invoke/call a method except that the method is prefixed with the new keyword. It
 return type. REMEMBER WHEN WE CREATE A CONSTRUCTOR THE NAME HAS TO MATCH THE CLASS NAME.
 
 To define what a constructor does we do this. THIS IS KNOWN AS THE DEFAULT CONSTRUCTOR because it doesn't take any arguments.
-```
+```java
 public User()
 {
 
 }
 ```
 The benefit of using a constructor within our code implementation is so that we can initialize the object with certain values like below
-```
+```java
 User n = new User(“Nabila”);
 ```
 
-```
+```java
 public User(string h)
 {
 	firstName = h;

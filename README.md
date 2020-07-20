@@ -8,6 +8,19 @@ Angela loves Omar
 
 Learn git and github
 
+## Class Naming is Pascal Case:
+```java
+	class NelanForEva
+```
+
+## Method is Camel Case:
+```java
+	public void sayHello()
+	{
+		logln("Hello y\'all my major is "+ major+ ". My name is " + firstName + " " + lastName);
+	}
+```
+
 ## How to compile and run Java on terminal
 
 - $javac *.java

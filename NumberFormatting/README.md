@@ -1,5 +1,5 @@
 ### Number Formatting thanks to Nelan
-```java
+```javac
 Scanner in = new Scanner(System.in);
 System.out.print("enter double");
 double d = in.nextDouble(); //doubles

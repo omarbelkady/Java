@@ -1,5 +1,6 @@
 ### Number Formatting thanks to Nelan
-```javac
+```java
+import java.util.*;
 public class Omar{
 	public static main void(String [] args){
 		Scanner in = new Scanner(System.in);

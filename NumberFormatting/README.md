@@ -1,5 +1,5 @@
 ### Number Formatting thanks to Nelan
-```java
+```javac
 public class Omar{
 	public static main void(String [] args){
 		Scanner in = new Scanner(System.in);
@@ -23,6 +23,4 @@ public class Omar{
 		System.out.println(new DecimalFormat("#.###").format(4.567346344634));
 	}
 }
-
-
 ```

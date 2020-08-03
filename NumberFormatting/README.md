@@ -1,5 +1,5 @@
 ### Number Formatting thanks to Nelan
-```java
+```javac
 import java.util.*;
 public class Omar{
 	public static main void(String [] args){

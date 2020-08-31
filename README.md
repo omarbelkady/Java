@@ -25,7 +25,11 @@ Learn git and github
 
 - $javac *.java
 - $java <MAIN_CLASS>
- 
+
+## Way #2
+```bash
+root@omarbelkady:$~ java NameOfProgram.java CallingProgram.java
+```
 ## Error Codes and Meaning
 
 ### 1- cannot find symbol PART 1

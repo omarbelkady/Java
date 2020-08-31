@@ -13,22 +13,22 @@ public class EncapsulateThis{
 		return fullName;
 	}
 
-	public int getSNN()
+	public int getSSN()
 	{
 		return SSN;
 	}
 
-	private void setTheName(String AName)
+	public void setTheName(String AName)
 	{
 		fullName=AName;
 	}
 
-	private void setSSN(int aSSN)
+	public void setSSN(int aSSN)
 	{
 		SSN=aSSN;
 	}
 
-	private void setBankAccountNum(int bankAcctNum)
+	public void setBankAccountNum(int bankAcctNum)
 	{
 		BankAccountNum=bankAcctNum;
 	}

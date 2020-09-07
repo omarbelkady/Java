@@ -10,7 +10,7 @@ Learn git and github
 
 ## Class Naming is Pascal Case:
 ```java
-	class NelanForEva
+	class LearnShell
 ```
 
 ## Method is Camel Case:

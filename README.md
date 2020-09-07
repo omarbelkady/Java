@@ -28,7 +28,7 @@ Learn git and github
 
 ## Way #2
 ```bash
-root@omarbelkady:$~ java NameOfProgram.java
+root@omarbelkady:$~ java callingProgram.java MethodProgram.java
 ```
 ## Error Codes and Meaning
 

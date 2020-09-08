@@ -10,7 +10,7 @@ Learn git and github
 
 ## Class Naming is Pascal Case:
 ```java
-	class NelanForEva
+	class LearnShell
 ```
 
 ## Method is Camel Case:
@@ -28,7 +28,7 @@ Learn git and github
 
 ## Way #2
 ```bash
-root@omarbelkady:$~ java NameOfProgram.java CallingProgram.java
+root@omarbelkady:$~ java callingProgram.java MethodProgram.java
 ```
 ## Error Codes and Meaning
 

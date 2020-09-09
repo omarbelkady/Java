@@ -6,6 +6,8 @@ Thank you 6342 56837. Java is Method Naming Camel case= blaBlaBla.
 Java Class Naming is Pascal Case=BlaBlaBla
 Angela loves Omar
 
+6627 says that Java is the best language ever and is easier than python
+
 Learn git and github
 
 ## Class Naming is Pascal Case:

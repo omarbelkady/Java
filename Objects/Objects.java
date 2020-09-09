@@ -1,10 +1,20 @@
-public class Main{
+public class Objects
+{
+	public static void log(Object o){
+	    System.out.print(o);
+	}
+	public static void logln(Object o){
+	    System.out.println(o);
+	}
+	
 	public static void main(String [] args){
 		//Classes And Objects
 		//A Class is A blueprint
 		
 		//messi is an Object
 		SoccerPlayer messi = new SoccerPlayer("Lionel Messi", "Argentina", "FCBarcelona", false);
+		IsACLover nelan = new IsACLover("Alan Ngo", "CS");
+		nelan.Check();
 
 	}
 
@@ -26,17 +36,23 @@ public class Main{
 		}
 	}
 
-	static class IsACLover{
+	static class IsACLover
+	{
 		String fuName;
 		String major;
 		
-
-		IsACLover(String fuName, String major){
+		IsACLover(String fuName, String major)
+		{
 			this.fuName = fuName;
 			this.major = major;
 		}
 		
+		public void Check()
+		{
+		    if(fuName.equals("Alan Ngo") && major.equals("CS"))
+		    {
+		        logln("DEFINITELY A C-LOVER");
+		    }
+		}	
 	}
-
-
 }

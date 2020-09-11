@@ -51,7 +51,7 @@ public class Objects
 		{
 		    if(fuName.equals("Alan Ngo") && major.equals("CS"))
 		    {
-		        logln("DEFINITELY A C-LOVER");
+		        logln("DEFINITELY A:\n C-LOVER, \nPintos56837,\nAssembly56837, \nPHP, \nEnjoys LLP,\nSuperCS429FanBoy&&JM 56837!!!!!!!!!!!!!!!!!");
 		    }
 		}	
 	}

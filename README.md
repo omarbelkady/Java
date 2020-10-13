@@ -8,7 +8,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 
 ## Class Naming is Pascal Case:
 ```java
-	class LearnShell
+	class ReadArticles
 ```
 
 ## Method is Camel Case:

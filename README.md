@@ -26,7 +26,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 
 ## Way #2
 ```bash
-root@omarbelkady:$~ java callingProgram.java MethodProgram.java
+root@omarbelkady:$~ java callingProgram.java MethodProgram.java # this is because chromebooks suck and aren't real computers
 ```
 ## Error Codes and Meaning
 

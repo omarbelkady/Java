@@ -8,7 +8,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 
 ## Class Naming is Pascal Case:
 ```java
-	class NelanEnjoysCodingInPascalAndIsACS375FB()
+	class OmrutiLovesToReadTextbooks{}
 ```
 
 ## Method is Camel Case:

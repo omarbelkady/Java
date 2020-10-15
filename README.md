@@ -8,7 +8,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 
 ## Class Naming is Pascal Case:
 ```java
-	class LearnSQL
+	class NelanEnjoysCodingInPascal
 ```
 
 ## Method is Camel Case:
@@ -26,7 +26,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 
 ## Way #2
 ```bash
-root@omarbelkady:$~ java callingProgram.java MethodProgram.java # this is because chromebooks suck and aren't real computers
+root@omarbelkady:$~ java callingProgram.java MethodProgram.java
 ```
 ## Error Codes and Meaning
 

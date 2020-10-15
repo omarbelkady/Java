@@ -25,6 +25,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 - $java <MAIN_CLASS>
 
 ## Way #2
+- Only do this if you're using chromebooks, which are trash computers
 ```bash
 root@omarbelkady:$~ java callingProgram.java MethodProgram.java
 ```

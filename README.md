@@ -1,14 +1,14 @@
 # Java
 I created this repository because my friend who taught me C++ 
 and advanced programming concepts advised me to learn java and he is a 6342 56837.
-After, performing research I found out java is very popular and use a lot in the industry. 
+After, performing research, my favorite subject in school, I found out java is very popular and use a lot in the industry. 
 Thank you 6342 56837. Java is Method Naming Camel case= blaBlaBla. 
 Java Class Naming is Pascal Case=BlaBlaBla
 
 
 ## Class Naming is Pascal Case:
 ```java
-	class NelanLovesToWriteAssembly{}
+	class OmrutiLovesDataScience{}
 ```
 
 ## Method is Camel Case:
@@ -20,14 +20,21 @@ Java Class Naming is Pascal Case=BlaBlaBla
 ```
 
 ## How to compile and run Java on terminal
-
-- $javac *.java
-- $java <MAIN_CLASS>
+```bash
+$javac *.java
+$java <MAIN_CLASS>
+```
 
 ## Way #2
+- This method uses ecj instead of javac.
 ```bash
-root@omarbelkady:$~ java callingProgram.java MethodProgram.java
+$~ java callingProgram.java MethodProgram.java
 ```
+
+## IDE's for Java
+- https://www.jetbrains.com/idea/
+- https://www.eclipse.org/downloads/
+
 ## Error Codes and Meaning
 
 ### 1- cannot find symbol PART 1

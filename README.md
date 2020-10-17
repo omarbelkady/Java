@@ -10,7 +10,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 ```java
 	class NelanBelievesPintosIsTheBestOSInTheWorld{}
 	class NelanSaysCSThreeSeventyFiveIsTheBestCouse{}
-	class NelanEnjoysToWriteLow538352633{
+	class NelanEnjoysToWriteLow538352633{}
 ```
 
 ## Method is Camel Case:

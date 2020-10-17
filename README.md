@@ -8,15 +8,15 @@ Java Class Naming is Pascal Case=BlaBlaBla
 
 ## Class Naming is Pascal Case:
 ```java
-	class OmrutiLovesDataScience{}
+	class NelanIsCSThreeSeventyFiveFB{}
 ```
 
 ## Method is Camel Case:
 ```java
-	public void sayHello()
-	{
-		logln("Hello y\'all my major is "+ major+ ". My name is " + firstName + " " + lastName);
-	}
+public void theBestMethod()
+{
+	logln("Hello y\'all my major is "+ major+ ". My name is " + firstName + " " + lastName+" and I am obsessed with Assembly, Compilers and LLP");
+}
 ```
 
 ## How to compile and run Java on terminal

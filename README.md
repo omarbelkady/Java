@@ -577,7 +577,7 @@ Invoke the super method in your subclass constructor.
 super()
 
 
-### 18 - Cannot make a static reference to the non-static method logLn(object) from the type Main
+### 18 - Cannot make a static reference to the non-static method logLn(object) from the type Omar
 ```java
 public class Omar 
 {

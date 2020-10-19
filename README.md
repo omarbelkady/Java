@@ -576,6 +576,40 @@ public class Omar
 Invoke the super method in your subclass constructor.
 super()
 
+
+### 18 - Cannot make a static reference to the non-static method logLn(object) from the type Main
+```java
+public class Omar 
+{
+	public void logLn(object o){
+		System.out.println(o);
+	}
+
+	public static void main(String[] args) 
+	{
+	    int myNum = 16;
+	    int myNum2=3;
+	    logLn(myNum + myNum2);
+	}
+}
+```
+I am getting this error because logLn should me a static method
+```java
+public class Omar 
+{
+	public static void logLn(object o){
+		System.out.println(o);
+	}
+
+	public static void main(String[] args) 
+	{
+	    int myNum = 16;
+	    int myNum2=3;
+	    logLn(myNum + myNum2);
+	}
+}
+```
+
 ### Default Values For DT:
 #### 1- byte: 0
 #### 2- short: 0

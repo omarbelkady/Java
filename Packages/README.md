@@ -41,12 +41,12 @@ Also java package removes naming collision
 
 ### How to create a package
 ```java
-package omruti;
+package nelanthecsthreesevfb;
 ```
 
 ### How To Create subpackage
 ```java
-package omruti.fortnite;
+package nelanthecsthreesevfb.lovesllp;
 ```
 
 ### How To Compile a java package

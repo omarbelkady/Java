@@ -4,7 +4,7 @@ a package is a group/dir of similar types of classes, interfaces and sub-package
 
 ```
 some packages in java
-- java.lang: used to bundle the fundamental classes
+- java.lang: used to bundle the fundamental classes NO IMPORT REQUIRED
 - java.io: used for the classes for input, output functions which are bundled in
 this package
 ```
@@ -41,12 +41,12 @@ Also java package removes naming collision
 
 ### How to create a package
 ```java
-package nelanthecsthreesevfb;
+package omruti;
 ```
 
 ### How To Create subpackage
 ```java
-package nelanthecsthreesevfb.lovesllp;
+package omruti.fortnite;
 ```
 
 ### How To Compile a java package
@@ -58,13 +58,13 @@ javac -d directoryName javafilename.java
 ### How to instantiate a function within a package 
 ```java
 //we always write the package name before the class name
-nelanenjoysllp.favparad pintoslover = new nelanenjoysllp.printfavparad("Imperative");
+java.util.Scanner s = new Scanner(System.in);
 ```
 
 ### The above code can be tedious sometimes
 ```java
-import nelanenjoysllp.printfavparad;
-printfavparad pintoslover = new printfavparad("Imperative");
+import java.util.Scanner;
+Scanner s = new Scanner(System.in);
 ```
 
 

@@ -583,12 +583,17 @@ OutputStream myobj = mysock.getOutputStream();
 DataOutputStream doutst = new DataOuputStream(myobj);
 doutst.writeBytes();//used to send strings in the form of groups of bytes
 ```
+
+
 ## Network Programming
 
 Write Programs that execute across multiple devices or computers in which all the devices are connected to each other using a network. There are three requirements to establish a network 
 - Hardware: computers, cables, modems, hubs and much more
 - Software: programs created that will talk between the server and the clients
 - Protocol: This is the representation used to establish a connection which aides in sending and receiving data in the appropriate format. A Protocol also is used to send information from point A to point B on the network.
+
+
+
 
 ### TCP/IP Protocol
 ```

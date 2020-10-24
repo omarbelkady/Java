@@ -107,7 +107,7 @@ Raised when you are using the scanner
 public class Great{
     public static void main(String [] args)
     {
-        Scanner useInput= new Scanner();
+        Scanner useInput= new Scanner(); // scanner is not imported
         int l = useInput.nextInt();
     }
 }
@@ -119,7 +119,7 @@ import java.util.Scanner;
 public class Great{
     public static void main(String [] args)
     {
-        Scanner useInput= new Scanner();
+        Scanner useInput= new Scanner(); // scanner has no default constructor
         int l = useInput.nextInt();
     }
 }

@@ -582,7 +582,8 @@ BufferedReader br = new BufferedReader(new InputStreamReader(myobj));
 OutputStream myobj = mysock.getOutputStream();
 DataOutputStream doutst = new DataOuputStream(myobj);
 doutst.writeBytes();//used to send strings in the form of groups of bytes
-```## Network Programming
+```
+## Network Programming
 
 Write Programs that execute across multiple devices or computers in which all the devices are connected to each other using a network. There are three requirements to establish a network 
 - Hardware: computers, cables, modems, hubs and much more
@@ -590,6 +591,7 @@ Write Programs that execute across multiple devices or computers in which all th
 - Protocol: This is the representation used to establish a connection which aides in sending and receiving data in the appropriate format. A Protocol also is used to send information from point A to point B on the network.
 
 ### TCP/IP Protocol
+```
 A set of rules that every  computer on the network must follow. TCP stands for Transmission Control Protocol and IP stands for Internet Protocol which are the standard protocol models used on any network.
 TCP/IP Model has five layers:
 - Application Layer
@@ -597,6 +599,7 @@ TCP/IP Model has five layers:
 - IP Layer
 - Data Link Layer
 - Physical Layer
+```
 
 #### Application layer
 ```
@@ -716,7 +719,7 @@ Str = br.readLine();//To read data from the buffer
 br.close();//close the buffer reader connections
 mysock.close();//close the socket connection 
 /*
- To receive data from the cdserver it is better to use bufferedReader as inputStream
+ To receive data from the server it is better to use bufferedReader as inputStream
  To send data from the client I use the DataOutputStrema
 */
 ```

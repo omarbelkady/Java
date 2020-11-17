@@ -18,7 +18,7 @@
     - MongoDB: https://www.mongodb.com/try/download/enterprise
     
 ## Getting Started
-<img src="springinit.PNG">
+<img src="https://secureservercdn.net/160.153.138.163/pmk.dbe.myftpupload.com/wp-content/uploads/2020/01/Spring-Initializr-start.jpg">
 
 1. Go to https://start.spring.io/
     - Apply the following settings

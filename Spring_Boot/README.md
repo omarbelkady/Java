@@ -146,7 +146,7 @@ ExceptionControllerAdvice
 ```
 
 LoggingAspect
-```java
+``` java
 // Class Based
 @Component // denotes spring bean
 @Aspect // used for crosscutting concern

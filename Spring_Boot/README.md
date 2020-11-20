@@ -146,7 +146,7 @@ ExceptionControllerAdvice
 ```
 
 LoggingAspect
-```java
+``` java
 // Class Based
 @Component // denotes spring bean
 @Aspect // used for crosscutting concern
@@ -154,3 +154,10 @@ LoggingAspect
 // Method Based
 @AfterThrowing(pointcut = "execution(CLASS_NAME)") // will execute after throwing exception
 ```
+
+
+### Spring MVC Framework in Springboot
+- Provides what's called a model, view controller architecture which can be used to build loosely-coupled apps.
+- Model: encapsulates the application data and most will consist of POJO(Plain Old Java Object). We can think of a Model as a DB
+- View: Responsible for rendering the Model Data in HTML output
+- Controller: Responsible for processing requests, then building an appropriate model(contains the logic) which will pass it along to the view for rendering

@@ -18,7 +18,7 @@
     - MongoDB: https://www.mongodb.com/try/download/enterprise
     
 ## Getting Started
-<img src="springinit.PNG">
+<img src="https://secureservercdn.net/160.153.138.163/pmk.dbe.myftpupload.com/wp-content/uploads/2020/01/Spring-Initializr-start.jpg">
 
 1. Go to https://start.spring.io/
     - Apply the following settings
@@ -154,10 +154,3 @@ LoggingAspect
 // Method Based
 @AfterThrowing(pointcut = "execution(CLASS_NAME)") // will execute after throwing exception
 ```
-
-
-### Spring MVC Framework in Springboot
-- Provides what's called a model, view controller architecture which can be used to build loosely-coupled apps.
-- Model: encapsulates the application data and most will consist of POJO(Plain Old Java Object). We can think of a Model as a DB
-- View: Responsible for rendering the Model Data in HTML output
-- Controller: Responsible for processing requests, then building an appropriate model(contains the logic) which will pass it along to the view for rendering

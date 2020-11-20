@@ -1,6 +1,7 @@
 ### Generics
 
 - BEHAVE EXACTLY THE SAME AS TEMPLATES IN C++
+- Does not work on primitive types unlike C++
 
 #### Generic Class
 - A way for the user to implement one class that can handle all types of data
@@ -52,7 +53,7 @@ class Main {
     CallingClass call = new CallingClass();
 
     // generics method working with String
-    call.<String>genericsMethod("LLP Programming is Nelan's Fav");
+    call.<String>genericsMethod("cartoon network is omruti's favorite site");
 
     // generics method working with integer
     call.<Integer>genericsMethod(25);

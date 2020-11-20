@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 it using @RestController directive*/
 import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
+@RequestMapping("")
 public class HelloController {
     //To make the request I need to map the request/method to a function inside a Controller
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String SayHi(){
-        return "Hello There 2526, go learn 26265 the best programming language";
+        return "Hello There 6627, go learn sql the best programming language";
     }
 }

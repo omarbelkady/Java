@@ -24,7 +24,7 @@ public void theBestMethod()
 $javac *.java
 $java <MAIN_CLASS>
 ```
-(make sure you use a real computer)
+
 
 ## Way #2
 - This method uses ecj instead of javac.

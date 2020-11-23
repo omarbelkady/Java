@@ -154,3 +154,24 @@ LoggingAspect
 // Method Based
 @AfterThrowing(pointcut = "execution(CLASS_NAME)") // will execute after throwing exception
 ```
+
+
+## MVC Framework In Spring
+- M in MVC: Model. The Model is usually a DB. Since everything is an object in Java I use the term POJO(Plain Old Java Object) which is converted to a
+row in a DB/DB-Schema and I used this to talk to my application/controller/view using a model. A model essentially encapsulates the data which the 
+application uses. The Model in our case is the name of the task I must perform and the description of the task.
+
+- V is MVC: View is responsible for rendering the Model Data. It generates HTML output that the client browser can interpret. The buttons and icons 
+are essentially considered the view of the todo list. My view will be JSON which can/can't be interpretted by the browsers.
+
+- C is MVC: Controller is responsible for processing requests and building an appropriate model and passing it to the view for rendering. The 
+controler takes in the data from the model and then has the business logic/service within it and passes it to the view for rendering.
+
+
+### Summary(What Is Happenig Behind The Scenes)
+- The Spring Web MVC Framework is designed around a DispatcherServlet Class which handles all the requests&responses(HTTP) for me.
+
+### Workflow
+0- I recieve an HTTP Request(GET, POST, etc.) in my case GET 
+1- I get the data from the server in my case get all the tasks in my list
+2- The dispatcherServlet consults the handler mapping to call the appropriate controller

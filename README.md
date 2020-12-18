@@ -28,6 +28,7 @@ $java <MAIN_CLASS>
 
 ## Way #2
 - This method uses ecj instead of javac.
+- I use this way because I gave away my real computer for a chromebook which doesn't support javac
 ```bash
 $~ java callingProgram.java MethodProgram.java
 ```

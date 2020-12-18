@@ -15,7 +15,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 ```java
 public void theBestMethod()
 {
-	logln("Hello y\'all my major is "+ major+ ". My name is " + firstName + " " + lastName+" and I am obsessed with Assembly, Compilers and LLP");
+	logln("I say SU alot");
 }
 ```
 

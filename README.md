@@ -15,7 +15,7 @@ Java Class Naming is Pascal Case=BlaBlaBla
 ```java
 public void theBestMethod()
 {
-	logln("6627: harry potter and C Prog is also my fav!!!");
+	logln("6627: logln("2526: 727225, 27736259, 27429, 27375, 746867 ARE THE BEST THINGS EVER and 557 AKA LLP Prog is also my fav!!!");!!!");
 }
 ```
 

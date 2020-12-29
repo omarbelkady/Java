@@ -28,8 +28,7 @@ $java <MAIN_CLASS>
 
 
 ## Way #2
-- This method uses ecj instead of javac.
-- I use this way because I gave away my real computer for a chromebook which doesn't support javac
+- This method uses ecj instead of javac. javac is 2526 fav because 27-375 is the best course for him at UT(87) including 429
 ```bash
 $~ java callingProgram.java MethodProgram.java
 ```

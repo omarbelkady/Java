@@ -67,6 +67,39 @@ com/example/service
 com/example/utility
 ```
 
+
+## Folder Structure:
+├── .mvn
+└── src
+    ├── main
+		├── java
+    		├── com.example.ftnisthebestthingever
+				├── Application.java
+    	├── resources
+        	├── application.properties
+├── .gitignore
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── README.md
+
+## The application.properties file
+- must have the connection url to your DB
+- must have the credentials(DB Username and DB PW) to your DB
+- make sure to set the spring.jpa.show-sql to true so that Hibernate will generate it
+
+## Database name in your application.properties
+- protocol:dbtype::/localhost:portYouWishToRunYourAppOn/PathYouWantToAccess
+- PathYouWantToAccess is The Name of Your DB
+
+
+## What Is Pom.xml
+- This is your configuration file similar package.json, config.json, .yaml files etc.
+
+## What are two very important dependencies in Spring Boot JPA
+- spring-boot-starter-data-jpa
+- org.postgresql: allows us to connect to the DB
+
 ## Super Important Annotations in Spring Boot
 
 ###### API

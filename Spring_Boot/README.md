@@ -1,3 +1,4 @@
+
 ### How To Create A Spring Boot Application (the best middleware application ever)
  1. install spring tools
  2. create a new project(maven)
@@ -69,6 +70,7 @@ com/example/utility
 
 
 ## Folder Structure:
+```
 ├── .mvn
 └── src
     ├── main
@@ -82,6 +84,7 @@ com/example/utility
 ├── mvnw.cmd
 ├── pom.xml
 ├── README.md
+```
 
 ## The application.properties file
 - must have the connection url to your DB
@@ -190,9 +193,7 @@ LoggingAspect
 
 
 ## MVC Framework In Spring
-- M in MVC: Model. The Model is usually a DB. Since everything is an object in Java I use the term POJO(Plain Old Java Object) which is converted to a
-row in a DB/DB-Schema and I used this to talk to my application/controller/view using a model. A model essentially encapsulates the data which the 
-application uses. The Model in our case is the name of the task I must perform and the description of the task.
+- M in MVC: Model. The Model is usually a DB. Since everything is an object in Java I use the term POJO(Plain Old Java Object) which is converted to a row in a DB/DB-Schema and I used this to talk to my application/controller/view using a model. A model essentially encapsulates the data which the application uses. The Model in our case is the name of the task I must perform and the description of the task.
 
 - V is MVC: View is responsible for rendering the Model Data. It generates HTML output that the client browser can interpret. The buttons and icons 
 are essentially considered the view of the todo list. My view will be JSON which can/can't be interpretted by the browsers.

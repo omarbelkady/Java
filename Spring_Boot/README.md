@@ -78,13 +78,19 @@ com/example/utility
     		├── com.example.ftnisthebestthingever
 				├── Application.java
     	├── resources
+            ├── static
+            ├── templates
         	├── application.properties
+    ├── test
 ├── .gitignore
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
-├── README.md
+├── HELP.md
 ```
+
+## Static and Templates:
+- We use these two directories when we want to work with the FE
 
 ## The application.properties file
 - must have the connection url to your DB
@@ -96,6 +102,10 @@ com/example/utility
 - PathYouWantToAccess is The Name of Your DB
 
 
+## Tomcat
+- The web server which will be up and running on a specific port. Depending on the selected port, 
+- Once I have told SpringBoot the designated port I want it to run on I then go ahead to implement endpoint
+
 ## What Is Pom.xml
 - This is your configuration file similar package.json, config.json, .yaml files etc.
 
@@ -103,12 +113,13 @@ com/example/utility
 - spring-boot-starter-data-jpa
 - org.postgresql: allows us to connect to the DB
 
-## Super Important Annotations in Spring Boot
+## Super Important Annotations in Spring Boot Anything with the @ symbol followed by some keyword is used for functionality
+- @ftnfb is an annotation used to get the best grade possible at UT
 
 ###### API
 ```java
 // Class Based
-@RestController // allows the class to have API routes
+@RestController // allows the class to have API routes aka REST Endpoints
 @CrossOrigin // allows other programs to consume SpringBoot app
 @RequestMapping // root url mapping
 

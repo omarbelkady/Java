@@ -49,6 +49,72 @@
 
 ```
 
+## Spring Boot Application Is Composed Of Usually these three layers:
+- API Layer(usually consists of CRUD Methods (GET, POST, PUT DELETE))
+- Service Layer
+- Data Access Layer
+
+### We call the Java Program that has all the Resources for Your API a "Controller"
+
+
+#### Sample Rest Controller called StudentController
+```java
+package com.example.demo.student;
+import java.util.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/v1/student")
+public class StudentController
+{
+    //Using a reference from the StudentService
+    private final StudentService studentService;
+
+    //Why Do I need An Autowired Annotation Below Because I want the reference to be injected automatically into the constructor
+
+
+    //Constructor
+    @Autowired
+    public StudentController(StudentService studentService){
+        this.studentService= StudentService();
+    }
+
+    //System.out.println("2526 56837 26265 263 3436 7864 263 227243 36557");
+    @GetMapping
+    public List<Student> getStudents(){
+        return studentService.getStudents();
+    }
+}
+```
+
+### I create a Service Called StudentService.java and place the methods there
+```java
+package com.example.demo.student;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.List;
+//I must tell Spring Boot that this service should be a class that must be instantiated i.e. must be a spring bean
+
+/*Telling spring boot this is a bean and I remove the Component Annotation and tell Spring Boot that I want not a Component but a Service Specifically
+@Component
+
+By changing from Component To Service I tell the User that This class is meant to be a service class
+*/
+@Service
+public class StudentService{
+     public List<Student> getStudents(){
+        return List.of(
+            new Student(
+                1L, "Nelan","ilovecobolfortranandftn@gmail.com",LocalDate.of(2000,Month.FEBRUARY,25)
+            )
+        );
+    }
+}
+
+```
+
+
 - For projects using MongoDB
 ```xml
 <dependency>
@@ -116,23 +182,23 @@ com/example/utility
 ## Super Important Annotations in Spring Boot Anything with the @ symbol followed by some keyword is used for functionality
 - @ftnfb is an annotation used to get the best grade possible at UT
 
-###### API
+###### API Layer
 ```java
-// Class Based
+// Class Based Annotations
 @RestController // allows the class to have API routes aka REST Endpoints
 @CrossOrigin // allows other programs to consume SpringBoot app
 @RequestMapping // root url mapping
 
-// Field Based
+// Field Based Annotations
 @Autowired // dependency injection
 
-// Method Based
+// Method Based Annotations
 @GetMapping("/URL") // allows a method to be called when GET request is made w/ '/URL'
 @PostMapping("/URL") // allows a method to be called when POST request is made w/ '/URL'
 @PutMapping("/URL") // allows a method to be called when PUT request is made w/ '/URL'
 @DeleteMapping("/URL") // allows a method to be called when DELETE request is made w/ '/URL'
 
-// Method Parameter Based
+// Method Parameter Based Annotations
 @RequestBody // allows POJO to be parsed as JSON request body
 @PathVariable // used for url patterns of *./{pathVar}, method arg name must also be the same
 @QueryParam // used for url patterns of ?key=value
@@ -140,7 +206,7 @@ com/example/utility
 
 ###### DTO
 ```java
-// Class Based
+// Class Based Annotation
 @Data // constructor, getters, setters, equals, hashCode, toString 
 ```
 
@@ -202,6 +268,10 @@ LoggingAspect
 @AfterThrowing(pointcut = "execution(CLASS_NAME)") // will execute after throwing exception
 ```
 
+## How The Layers Work
+- The API Layer talks to the Service Layer and the Service Layer should also talk to the Data Access LAyer
+- The Data Access Layer should then communicate back to the API Layer and we continue to make round trips 
+- Client==> API Layer ==> Service Layer ==> Data Access Layer ==> API Layer
 
 ## MVC Framework In Spring
 - M in MVC: Model. The Model is usually a DB. Since everything is an object in Java I use the term POJO(Plain Old Java Object) which is converted to a row in a DB/DB-Schema and I used this to talk to my application/controller/view using a model. A model essentially encapsulates the data which the application uses. The Model in our case is the name of the task I must perform and the description of the task.

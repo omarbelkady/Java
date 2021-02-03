@@ -4,7 +4,7 @@ and advanced programming concepts advised me to learn java and he is a 6342 5683
 After, performing research, I found out java is very popular and use a lot in the industry. 
 Thank you 6342 56837. Java is Method Naming Camel case= blaBlaBla. 
 Java Class Naming is Pascal Case=BlaBlaBla
-Java constants are in caps lock(my favorite key) ``static final String FAVORITE_CHANNEL="nelanlovescoboland557"``
+Java constants are in caps lock(my favorite key) ``static final String FAVORITE_CHANNEL="omrutiLovesLinus"``
 
 ## Class Naming is Pascal Case:
 ```java

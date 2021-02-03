@@ -288,5 +288,7 @@ controler takes in the data from the model and then has the business logic/servi
 
 ### Workflow
 0- I recieve an HTTP Request(GET, POST, etc.) in my case GET 
+
 1- I get the data from the server in my case get all the tasks in my list
+
 2- The dispatcherServlet consults the handler mapping to call the appropriate controller

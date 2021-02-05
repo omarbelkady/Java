@@ -77,7 +77,7 @@ public class StudentController
     //Constructor
     @Autowired
     public StudentController(StudentService studentService){
-        this.studentService= StudentService();
+        this.studentService= studentService;
     }
 
     //System.out.println("2526 56837 26265 263 3436 7864 263 227243 36557");
@@ -103,13 +103,136 @@ By changing from Component To Service I tell the User that This class is meant t
 */
 @Service
 public class StudentService{
+    private final StudentRepository studentRepository;
+
+    @Autowired
+    public StudentService(StudentRepository studentRepository){
+        this.studentRepository=studentRepository;
+    }
+
      public List<Student> getStudents(){
-        return List.of(
+       /* return List.of(
             new Student(
                 1L, "Nelan","ilovecobolfortranandftn@gmail.com",LocalDate.of(2000,Month.FEBRUARY,25)
             )
         );
+        */
+        return studentRepository.findAll();
+   }
+
+   public void addNewStudent(Student student){
+       System.out.println(student);
+   }
+}
+
+```
+
+
+### I goto my Controller Because I want to Create A Method which will add Data AKA POST I use the PostMapping Annotation
+```java
+package com.example.demo.student;
+import java.util.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/v1/student")
+public class StudentController
+{
+    //Using a reference from the StudentService
+    private final StudentService studentService;
+
+    //Why Do I need An Autowired Annotation Below Because I want the reference to be injected automatically into the constructor
+
+
+    //Constructor
+    @Autowired
+    public StudentController(StudentService studentService){
+        this.studentService= studentService;
     }
+
+    //System.out.println("2526 56837 26265 263 3436 7864 263 227243 36557");
+    @GetMapping
+    public List<Student> getStudents(){
+        return studentService.getStudents();
+    }
+
+
+
+    //Method which will add Students I must use the Post MApping Annotation for it to work
+    //Taking the RequestBody and mapping it to a student
+    @PostMappping
+    public void registerNewStudent(@RequestBody Student student){
+        //I invoke the service
+        studentService.addNewStudent(student);
+    }
+}
+
+```
+
+### Next I goto my repository
+```java
+package com.example.demo.student;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframwork.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface StudentRepository
+    extends JpaRepository<Student, Long>{
+        //find students by email to transform to an SQL Command : SELECT * from student WHERE email = ilovecobolfortranandftn@gmail.com
+        //OR we can use an annotation
+        @Query("SELECT s FROM Student s WHERE s.email = ?1")
+        Optional<Student> findStudentByEmail(String email);
+    }
+```
+
+#### Now I can go back to my Service to use the StudentRepository Interface to add the Student
+```java
+package com.example.demo.student;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.List;
+//I must tell Spring Boot that this service should be a class that must be instantiated i.e. must be a spring bean
+
+/*Telling spring boot this is a bean and I remove the Component Annotation and tell Spring Boot that I want not a Component but a Service Specifically
+@Component
+
+By changing from Component To Service I tell the User that This class is meant to be a service class
+*/
+@Service
+public class StudentService{
+    private final StudentRepository studentRepository;
+
+    @Autowired
+    public StudentService(StudentRepository studentRepository){
+        this.studentRepository=studentRepository;
+    }
+
+     public List<Student> getStudents(){
+       /* return List.of(
+            new Student(
+                1L, "Nelan","ilovecobolfortranandftn@gmail.com",LocalDate.of(2000,Month.FEBRUARY,25)
+            )
+        );
+        */
+        return studentRepository.findAll();
+   }
+
+   public void addNewStudent(Student student){
+       Optional<Student> studentOptional = studentRepository
+            .findStudentByEmail(student.getEmail());
+        if(studentOptional.isPresent()){
+            throw new IllegalStateException("email taken 968 429 32!");
+        }
+
+        //Obviously I can do more complex validation i.e. checking if the email is valid
+
+        //saving the Student
+        studentRepository.save(student);
+       System.out.println(student);
+   }
 }
 
 ```
@@ -227,7 +350,7 @@ com/example/utility
 ###### Repository Layer
    - none
     
-###### Service Layer
+###### Service Layer[Responsible for the Business Logic of Your App]
 ```java
 // Class Based
 @Service // denotes service layer

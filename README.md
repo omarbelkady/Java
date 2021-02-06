@@ -29,14 +29,31 @@ $java <MAIN_CLASS>
 
 ## Way #2
 - This method uses ecj instead of javac
-- I gave away my real computer for a chromebook so I have to use this method
 ```bash
 $~ java callingProgram.java MethodProgram.java
 ```
 
-## IDE's for Java
+## IDE's for Java and 2526 56837 266745377(27-375 32)
 - https://www.jetbrains.com/idea/
 - https://www.eclipse.org/downloads/
+
+## What is the "this" keyword in Java and why do we use it
+```java
+class NelanLvsBDAndCSunAndFTN{
+	int cobolfb = 2626532;
+	int pascalfb= 72722532;
+	
+	public void setVals(int cobolfb, int pascalfb){
+		/*here is where the this keyword comes to play to tell java that I want to use the parameter
+		of my function aka local variables and not the instance variables(up top)
+		*/
+		this.cobolfb = cobolfb;
+		this.pascalfb = pascalfb;
+	}
+
+}
+```
+
 
 ## Error Codes and Meaning
 

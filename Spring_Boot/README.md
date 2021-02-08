@@ -80,7 +80,7 @@ public class StudentController
         this.studentService= studentService;
     }
 
-    //System.out.println("2526 56837 26265 263 3436 7864 263 227243 36557");
+    //System.out.println("6627 56837 43556 54889");
     @GetMapping
     public List<Student> getStudents(){
         return studentService.getStudents();
@@ -113,7 +113,7 @@ public class StudentService{
      public List<Student> getStudents(){
        /* return List.of(
             new Student(
-                1L, "Nelan","ilovecobolfortranandftn@gmail.com",LocalDate.of(2000,Month.FEBRUARY,25)
+                1L, "Omruti","igaveawaymypcforachromebook@gmail.com",LocalDate.of(2000,Month.FEBRUARY,25)
             )
         );
         */

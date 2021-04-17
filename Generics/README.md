@@ -54,7 +54,7 @@ class Main {
     CallingClass call = new CallingClass();
 
     // generics method working with String
-    call.<String>genericsMethod("cartoon network is omruti's favorite site");
+    call.<String>genericsMethod("429 and 727225 are nelan's lucky numbers");
 
     // generics method working with integer
     call.<Integer>genericsMethod(25);

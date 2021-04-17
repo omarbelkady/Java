@@ -33,6 +33,7 @@ class GenericsClass<T> {
   // variable of T type
   private T data;
 
+  //Constructor of A Generics Class
   public GenericsClass(T data) {
     this.data = data;
   }

@@ -639,3 +639,38 @@ public class Omar
 #### 6- double: 0.0d
 #### 7- String(or any obj): null
 #### 8- bool: false
+
+
+### Lombok Important Stuff In Java
+- Thanks to annotations I shorten commented out code to the next code
+```java
+/*
+
+
+private int luckyNum = 3532;
+public int getLuckyNum() {
+ return luckyNum;
+} 
+public void setLuckyNum(int luckyNum) {
+  this.luckyNum = luckyNum;
+}
+*/
+@Getter 
+@Setter 
+private int luckyNum = 3532;
+
+```
+
+#### ToString Annotation
+```java
+@ToString(exclude="f")
+public class Example
+```
+
+### Equals And Hash Code Annotation
+```java
+@EqualsAndHashCode(
+   exclude={"id1", "id2"})
+public class Example {
+}
+```

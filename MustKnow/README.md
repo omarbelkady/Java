@@ -133,5 +133,80 @@ public class Arr{
 ```
 
 ### When Wanting to Build A Dynamic Array Use:
-1. ArrayList: Grows by 50% of its size   ... synchronous aka one 7652626 thread at a time
-2. Vector: Grows by 100% of its size ... asynchronous aka multiple threads at a time
+1. ArrayList: Grows by 50% of its size everytime I add sth to it ... synchronous aka one 7652626 thread at a time
+```java
+ArrayList<E>;
+//where E is the generic key type 
+//Integer keyword is the wrapper class around the native/primitive type int
+```
+2. Vector: Grows by 100% of its size everytime I add sth to it... asynchronous aka multiple threads at a time
+
+
+### LinkedList
+
+- We use a LL when wanting to store an object in sequential||7652626 order
+- LinkedList are better than arrays because they can grow/shrink auto
+- It consists of a group of nodes in seq order. Every node has two pieces of data:
+    1. value
+    2. address of the next node in the list
+- AKA every node (points to)/references the next node in the list
+- Node[0] = Head
+- Node[n-1] = Tail
+
+#### Searching A LL value Time C
+
+- O(n) because the val we are searching for maybe stored in the last node aka n that is worst case.
+
+
+#### Searching A LL index Time C
+
+- O(n) because the val we are searching for maybe stored in the last node aka n that is worst case.
+
+
+#### Insertions at the End in a LL index Time C
+
+- It depends where we want to insert the item if we want to insert at the end then we must have our original tail of the node point to the last item
+- Then, I need the tail change reference from the old node to the new node
+- O(1)
+
+#### Insertions at the beginning of a LL Time C
+
+- O(1)
+
+
+#### Insertions at the middle of a LL Time C
+
+- e.g. insert in the tenth node
+1. find the node ==> O(n) operation
+2. update the length ==> O(1) operation
+3. Runtime: O(1)+O(n)=O(n)
+
+
+
+### Deleting
+
+From The Beginning:
+0. Make the head of the LL point to the second node = O(1)
+1. Remove the link from the previous head so there is no more reference = 
+Failure to do so will make Java's garbage collector think this link is still in use
+2. That's why I must unlink this object from the second object
+
+
+From The End:
+O(n)
+0. I goto the tail but first I must know the preceding node to have the tail now point to the preceding node instead of the last node
+1. Traverse the list from the head all the way to the tail as soon as I get to the second to last node I keep a ref to it
+2. I unlink the second to last node from the last node
+3. Have the tail point to the second to last node
+4. Therefore the runtime Complexity: O(n)
+
+From The Middle:
+O(n)
+1. Traverse the entire list
+2. Goto the middle node 
+3. Unlink the middle node from the list
+4. Link the preceding node to the subsequent node
+5. Remove the link of the middle node so that the link gets removed from memory by Java's garbage collector
+
+
+

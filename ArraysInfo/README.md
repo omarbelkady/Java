@@ -80,3 +80,20 @@ To remove the entire content of an Arr List
 ```java
 nameOfArrList.clear();
 ```
+
+### How To Convert An ArrayList To An Array
+```java
+import java.util.*;
+public class Mylass{
+    public static void main(String [] args){
+        ArrayList<Integer> myList = new ArrayList<>();
+        myList.add(765);
+        myList.add(26);
+        myList.add(26);
+        myList.add(32);
+        myList.remove(3);
+        //converting the Arr List to an Array
+        myList.toArray();
+    }
+}
+```

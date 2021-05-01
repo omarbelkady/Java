@@ -640,6 +640,18 @@ public class Omar
 #### 7- String(or any obj): null
 #### 8- bool: false
 
+### Wrapper Classes In Java and their Corresponding Primitive Types
+
+1. Boolean: boolean ..... 1 bit
+2. Byte: byte       ..... 1 byte  = 8bits
+3. Character: char  ..... 2 bytes = 16bits
+4. Short: short     ..... 2 bytes = 16bits
+5. Integer: int     ..... 4 bytes = 32bits
+6. Float: float     ..... 4 bytes = 32bits
+7. Double: double   ..... 8 bytes = 32bits
+8. Long: long       ..... 8 bytes = 32bits
+
+
 
 ### Lombok Important Stuff In Java
 - Thanks to annotations I shorten commented out code to the next code

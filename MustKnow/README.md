@@ -72,7 +72,7 @@ But actually the runtime is O(n) because when we calculate runtime we drop the c
 
 
 ## Ideal when creating an Algo: super fast and scalable and take the least amount of Mem
-- However, there is always a tradeoff either I save space or I save 
+- However, there is always a tradeoff either I save space or I have save time
 
 
 ### Space Complexity

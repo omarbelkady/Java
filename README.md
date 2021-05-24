@@ -11,13 +11,34 @@ Java constants are in caps lock(my favorite key) ``static final String FAVORITE_
 	class PascalCase{}
 ```
 
-## Method is Camel Case:
+
+
+## Method Naming is Camel Case:
 ```java
 public void theBestMethod()
 {
 	logln("2526: 727225, 27736259, 27429, 27375, 746867 ARE THE BEST THINGS EVER and 557 AKA LLP Prog is also my fav!!!");
 }
 ```
+
+## Data Structures
+
+#### Primitive DS:
+1. Integer
+2. Float
+3. Char`
+4. Pointers
+
+#### Non-Primitive DS:
+1. Arrays
+2. List
+    - Linear:
+        - Stacks
+        - Queues
+    - Non-Linear:
+        - Graphs
+        - Trees
+
 
 
 ## How to compile and run Java on terminal

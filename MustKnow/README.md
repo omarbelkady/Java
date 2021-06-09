@@ -2,6 +2,46 @@
 
 - 78 63526
 
+#### DS You Must Know
+
+1. Stack
+- Linear
+- LIFO/FILO
+- Dinner Plates 
+
+2. Linked List
+- Sequential Order
+- No Random Access
+- Better alternative to Sets because they are dynamic
+
+3. Array
+- Indexed
+- When Size increases performance decreases
+- Indexed
+
+4. Queues
+- Movie Theatre
+- FIFO
+- aka people waiting in line
+
+5. Hash Table
+- Contains an index and its corresponding Hash_Value
+
+
+6. Trees
+- hierarchical Structure where data is org in a hierarchy and everything is linked together
+- Not the same as linked list because LL is linear
+
+
+7. Heaps
+- Binary Tree
+- Parent node makes a comparison with its child nodes and are arranged accordingly
+
+8. Graphs
+- Finite set of vertices, nodes and edges. The edges are what connect one vertex with another
+
+
+
 
 1. When the sample size increases of an Array what should you do?
 

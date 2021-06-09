@@ -6,6 +6,16 @@ Thank you 6342 56837. Java is Method Naming Camel case= blaBlaBla.
 Java Class Naming is Pascal Case=BlaBlaBla
 Java constants are in caps lock(my favorite key) ``static final String FAVORITE_CHANNEL="nelanLoves7652626"``
 
+### Software Terminology
+
+1. Hosting: Where the data is housed
+2. Developing: How we make the data
+3. Database: Theory behind how we store our data
+4. Logic: How We process the data
+5. API: how we get our data
+6. UI: How We Present the data
+
+
 ## Class Naming is Pascal Case The case name is = to 2526 fav programming language and fav screen color:
 ```java
 	class PascalCase{}

@@ -31,6 +31,14 @@
 6. Trees
 - hierarchical Structure where data is org in a hierarchy and everything is linked together
 - Not the same as linked list because LL is linear
+- Trees are faster to access than a LL because they are non-linear
+- Node: person who holds our data
+- Edge: person who connects two nodes
+- Root: Person who is the topmost node
+- Node Height: # of edges from the node to the deepest leaf node
+- Node Depth: # of edges from the root to the node
+- Tree Height: Depth of the deepest node
+- Degree of A Node: Total # of branches of that node
 
 
 7. Heaps

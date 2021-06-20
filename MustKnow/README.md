@@ -8,16 +8,21 @@
 - Linear
 - LIFO/FILO
 - Dinner Plates 
+- When items are pushed they are placed on the top
 
 2. Linked List
 - Sequential Order
 - No Random Access
 - Better alternative to Sets because they are dynamic
+- Chain of nodes. Every node contains data and a pointer to the subsequent node
+- Each unit is called a node
+- A Node is composed of data and a pointer
+- Last node has a null pointer i.e. the pointer is used but doesn't point to anything 
 
 3. Array
 - Indexed
 - When Size increases performance decreases
-- Indexed
+- All the elements in the DS must be of the same type
 
 4. Queues
 - Movie Theatre
@@ -47,6 +52,7 @@
 
 8. Graphs
 - Finite set of vertices, nodes and edges. The edges are what connect one vertex with another
+- Graphs are connected in a network form
 
 
 
@@ -130,6 +136,11 @@ But actually the runtime is O(n) because when we calculate runtime we drop the c
 
 - How To Find Ways to preserve memory when you have limited space
 
+### Time Complexity
+
+- Amount of time it takes for an algorithm in terms of the input size to the algo
+- Number of memory accesses performed, the number of times you compared ints, the number of nested loops are executed
+- ... or any unit related to the amount of time the algorithm will take
 
 ### Arrays:
 
@@ -257,4 +268,45 @@ O(n)
 5. Remove the link of the middle node so that the link gets removed from memory by Java's garbage collector
 
 
+### Important Algo
 
+#### Sorting
+
+1. Merge Sort
+2. Quick Sort
+3. Bucket/Insertion Sort
+4. Heap Sort
+5. Selection Sort
+6. Counting Sort
+
+
+#### Searching
+
+1. Breath First Search[Graphs]
+2. Depth First Search[Graphs]
+3. Binary Search[Linear]
+
+
+#### Divide & Conquer
+
+1. Break the problem into two or more sub problems until you can solve each one
+
+
+### Space Complexity
+
+```java
+import java.util.*;
+public class myclass{
+    public static void main(String [] args){
+        int a;
+        int b;      //O(1)
+
+        int n = 56;
+        int myArr[n]; //O(n)
+
+        int mySecArr[n][n];     //O(n^2)
+
+        //Total: O(1) + O(n) + O(n^2) ≈ O(n^2)
+    }
+}
+```

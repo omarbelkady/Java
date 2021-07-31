@@ -57,6 +57,76 @@
 ### We call the Java Program that has all the Resources for Your API a "Controller"
 
 
+#### What is a JWT(JSON Web Token)
+
+- a way for an application to transmit information 
+- i.e. a way for application A to talk to application B
+- very small and self-contained
+- very secure
+
+1. very popular when working with APIs for authorization
+
+2. application gives token to a user
+
+3. create the token
+
+4. takes the user information
+
+5. sign the token
+
+6. this signature is digital
+
+- therefore whenever the user needs to access the information 
+
+7. user sends the token as their authorization key
+
+- all a token is for two application to talk to each other
+
+    - i.e. frontend and backend || two backend applications || two applications in general
+
+    - for the purpose of exchanging information
+
+8. Successful credentials provided to the app grants the user a JWT
+    - this token holds:
+        - my info
+        - my permissions
+        - etc.
+
+9. JSON Web Token has three parts:
+    
+    - Header has two fields:
+        1. algorithm
+        2. type
+    - Payload[holds info about the user or entity the token is for]:
+        1. name
+        2. username
+        3. issue date and time
+        4. claims i.e. permissions
+    - Signature:
+        1. to take the signature you take:
+            - the encoded header
+            - encoded payload
+        2. use a secret with the algorithm
+        3. take all this good stuff and sign the token
+    
+    - the full address is encrypted and looks like this:
+        - headerkey.payloadkey.signaturekey
+
+
+#### Example Of User Model
+
+```java
+public class User{
+    private Long id;
+    private String name;
+    private String username;
+    private String password;
+    //I must set up a relationship to manage the roles
+    @ManyToMany
+    private Collection<Role> userroles = new ArrayList<>();
+}
+```
+
 #### Sample Rest Controller called StudentController
 ```java
 package com.example.demo.student;

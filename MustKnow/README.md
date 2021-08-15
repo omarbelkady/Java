@@ -4,6 +4,12 @@
 
 #### DS You Must Know
 
+##### ★★★Most Popular Data Structures★★★
+- Array
+- Linked List
+- Stack
+- Queue
+
 1. Stack
 - Linear
 - LIFO/FILO
@@ -220,6 +226,52 @@ ArrayList<E>;
 #### Searching A LL index Time C
 
 - O(n) because the val we are searching for maybe stored in the last node aka n that is worst case.
+
+
+#### Insertion Sort Implementation
+
+```java
+//Compares two adjacent items
+public class InsertionSort{
+    public void sortMyArr(int [] arrayNum){
+        int myNumber = arrayNum.length;
+        for(int begin=0; begin < myNumber; ++begin){
+            int keyVal = arrayNum[begin];
+            int beta = begin - 1;
+            while(beta >= 0 && arrayNum[beta] > keyVal)
+            {
+                arrayNum[beta+1] = arrayNum[beta];
+                beta = beta - 1;
+            }
+            arrayNum[beta + 1] = keyVal;
+        }
+    }
+
+    static void displayMyArr(int [] arrayNum){
+        int number = arrayNum.length;
+        for(int start=0; start < number; start++){
+            System.out.print(arrayNum[start] + " " );
+        }
+        System.out.println();
+    }
+
+    public static void main(String [] args){
+        int [] myArrInp = { 60, 45, 32, 47, 86, 30};
+        InsertionSort myFirstObj = new InsertionSort();
+        myFirstObj.sortMyArr(myArrInp);
+        displayMyArr(myArrInp);
+    }
+}
+
+/*
+Best Case TC: O(n) for comparison and O(1) when performing a swap
+Worst Case TC: O(n^2) for comparison and O(n^2) when performing a swap
+Average Case TC: O(n^2) for comparison and swap
+Space C: O(1) because I am adding a var
+
+
+*/
+```
 
 
 #### Insertions at the End in a LL index Time C

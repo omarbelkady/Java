@@ -9,6 +9,11 @@
  
 # Spring Boot 
 
+1. Post ====> Create
+2. Get ====> Read
+3. Put ====> Update
+4. Delete ====> Delete
+
 ## Prerequisites
 - One of the Java versions
     - <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">Java SE 8 </a>
@@ -116,15 +121,200 @@
 #### Example Of User Model
 
 ```java
+/*
+I say that this is a table within a database
+and the contstructor takes no args
+*/
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User{
+
+    //I tell Lombok that this is an id and how I want it to be generated
+    @Id
+    @GeneratedValue(strategy=AUTO)
     private Long id;
     private String name;
     private String username;
     private String password;
-    //I must set up a relationship to manage the roles
-    @ManyToMany
+    /*
+    I must set up a relationship to manage the roles
+    I define the fetch because whenever I fetch all the user
+    I want to load ALL the roles of each user
+    */
+    @ManyToMany(fetch=FetchType.EAGER)
     private Collection<Role> userroles = new ArrayList<>();
 }
+```
+
+#### Example Of The Role Model
+
+```java
+/*
+I say that this is a table within a database
+and the contstructor takes no args
+*/
+@Entity
+@Data //for getters and setters
+@NoArgsConstructor
+@AllArgsConstructor
+public class Role{
+    //I tell Lombok that this is an id and how I want it to be generated
+    @Id
+    @GeneratedValue(strategy=AUTO)
+    private Long id;
+    private String name;
+ 
+}
+```
+
+#### Part II - Repo
+
+```java
+package io.omarbelkady.userservice.repo;
+
+import io.omarbelkady.userservice.domain.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+/*
+in between the left angle bracket and right angle bracket I specify the entity
+I want to manage and in the second parameter is type of my primary key
+*/
+public interface UserRepo extends JpaRepository<User, Long>{
+
+    /*
+    I need one method and I want the return to be a User
+    SD JPA is smart enough to know to interpret 
+    this as a SELECT statement
+    */
+    User findByUsername(String username)
+}
+```
+
+```java
+//role Repository
+package io.omarbelkady.userservice.repo;
+
+import io.omarbelkady.userservice.domain.Role;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RoleRepo extends JpaRepository<Role, Long>{
+     Role findByName(String name);
+     Role saveTheRole;
+}
+//24:33 ./2:06:48
+```
+
+#### Part III Service
+
+```java
+    import io.omarbelkady.userservice.domain.User;
+    import io.omarbelkady.userservice.domain.Role;
+
+    /*
+    here is where I write a blueprint of all the methods
+    that I want to manage all my users
+    */
+    public interface UserService{
+        User saveTheUser(User user);
+        Role saveRole(Role role);
+
+        //I need a method that adds a role to a user
+        void addRoleToUser(String username, String roleName);
+
+        User getTheUser(String username);
+
+        //Returns a list of all the Users
+        List<User>getTheUser();        
+    }
+
+```
+
+### Part IV Implementation
+
+```java
+    import io.omarbelkady.userservice.service;
+    import io.omarbelkady.userservice.domain.Role;
+    import io.omarbelkady.userservice.domain.User;
+    import io.omarbelkady.userservice.repo.RoleRepo;
+    import io.omarbelkady.userservice.repo.UserRepo;
+    import lombok.RequiredArgsConstructor;
+    import lombok.extern.slf4j.Slf4j;
+    import org.springframework.stereotype.Service;
+    import org.springframework.transaction.annotation.Transactional;
+
+    import java.util.*;
+    
+    
+    /*
+    Since this is a service class I annotate with the 
+    service annotation
+
+  
+    Since I have many fields defined I must inject them
+    in the class that's why I use the RequiredArgsConstructor
+
+    Lombok will now take the two fields I have defined 
+    and pass them to my constructor
+
+    Slf4j annotation is used to log everything out to the console
+
+    */
+
+    @Service
+    @RequiredArgsConstructor
+    @Transactional
+    @Slf4j
+    public class UserServiceImplementation implements UserService{
+        
+        /*
+        
+        two repositories which communicate with JPA directly
+        
+        */
+        private final UserRepo userRepo
+        private final RoleRepo roleRepo
+
+        //Creating the loggers
+        Logger mylogger = Logger.getLogger(UserServiceImplementation.class.getName());
+
+        @Override
+        public User saveTheUser(User user){
+            mylogger.info("I am saving a new user {} to the database", user.getName());
+            return UserRepo.save(user);
+        }
+
+        @Override
+        Role saveRole(Role role){
+            mylogger.info("I am saving a new role {} to the database", role.getName());
+            return roleRepo.save(role);
+        }
+
+        @Override
+        void addRoleToUser(String username, String roleName){
+            mylogger.info("I am adding a new role {} to the user {}", roleName,username);
+            //find user by username
+            User user = userRepo.findByUsername(username);
+            Role role = roleRepo.findByName(roleName);
+
+            user.getRoles().add(role)
+        }
+
+        //return a single user from the db
+        @Override
+        public User getTheUser(String username){
+            mylogger.info("Getting the user {} from the database", username);
+            return userRepo.findByUsername(username);
+        }
+
+        //Return all the users in the db
+        @Override
+        public List<User>getTheUsers(){
+            mylogger.info("Getting All the users", username);
+            return userRepo.findAll();            
+        };        
+    }
+
 ```
 
 #### Sample Rest Controller called StudentController
@@ -221,7 +411,11 @@ public class StudentController
         this.studentService= studentService;
     }
 
-    //System.out.println("2526 56837 26265 263 3436 7864 263 227243 36557");
+    /*
+    
+    System.out.println("2526 56837 26265 263 3436 7864 263 227243 36557");
+    i.e. Making a Get Request
+    */
     @GetMapping
     public List<Student> getStudents(){
         return studentService.getStudents();
@@ -229,8 +423,9 @@ public class StudentController
 
 
 
-    //Method which will add Students I must use the Post MApping Annotation for it to work
-    //Taking the RequestBody and mapping it to a student
+    //Method which will add Students I must use the Post MApping Annotation
+    //i.e. Making a Post Request...... for it to work Taking the 
+    //RequestBody and mapping it to a student
     @PostMappping
     public void registerNewStudent(@RequestBody Student student){
         //I invoke the service
@@ -303,6 +498,50 @@ public class StudentService{
         studentRepository.save(student);
        System.out.println(student);
    }
+}
+
+```
+
+### Next I create a UserResource within the api folder
+
+```java
+package io.omarbelkady.userservice.api;
+import io.omarbelkady.userservice.service.UserService;
+import io.omarbelkady.userservice.domain.User;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.*;
+
+/*
+I annotate this class with the Rest 
+Controller annotation to tell SB that it is a controller*/
+@RestController
+@RequestMapping("/api/")
+@RequiredArgsConstructor
+public class UserResource{
+    //Now I need to inject the Service within this service
+    private final UserService userService;
+
+
+    //I want it to be a get request
+    @GetMapping("/users")
+    public ResponseEntity<List<User>>getUsers(){
+        return ResponseEntity.ok().body(userService.getUsers());
+    }
+
+    //Create a resource on the server i.e. Post Request
+    @PostMapping("/user/save")
+    public ResponseEntity<User>saveUser(@RequestBody User user){
+        return ResponseEntity.created(null).body(userService.saveUser(user));
+    }
+    //Create a resource on the server to Save a Role
+    @PostMapping("/role/save")
+    public ResponseEntity<Role>saveRole(@RequestBody Role role){
+        return ResponseEntity.ok().body(userService.saveRole(role));
+    }
 }
 
 ```

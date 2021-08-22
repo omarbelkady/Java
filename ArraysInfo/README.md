@@ -1,3 +1,23 @@
+# Arrays In Java
+
+
+## Asking the user to tell me the size he/she wants for the array
+
+```java
+import java.util.*;
+
+public class Array
+{
+	public static void main(String[] args) {
+		System.out.println("How Big Do You want your array to be: ");
+		Scanner sc = new Scanner(System.in);
+		int length = sc.nextInt();
+		int [] j = new int [length];
+	}
+}
+
+```
+
 ## Fill with one value
 ```java
     int [] ramoArray= {41,14,191,1,23,190};
@@ -17,11 +37,11 @@ public class ArraySort
 {
       public static void main(String [] args)
       {
-      int [] omarArray= {41,14,191,1,23,190};
-      Arrays.sort(omarArray);
-      //if omarArray was multidim
-      //Arrays.parallelSort(omarArray);
-      System.out.println(Arrays.toString(omarArray));
+            int [] omarArray= {41,14,191,1,23,190};
+            Arrays.sort(omarArray);
+            //if omarArray was multidim
+            //Arrays.parallelSort(omarArray);
+            System.out.println(Arrays.toString(omarArray));
       }
 }
 ```
@@ -97,3 +117,5 @@ public class Mylass{
     }
 }
 ```
+
+

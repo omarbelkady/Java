@@ -10,6 +10,17 @@
 - Stack
 - Queue
 
+##### DS Operations
+
+- Traverse: Visiting each item in the DS once AND ONLY ONCE
+- Search: Finding an item in the DS which satisfies one or more conditions
+- Insert: Adding items of the same type in the DS
+- Delete: Removing items of the same type in the DS
+- Sort: Sort the items within the DS in ascending or descending order
+- Merge: Storage of items which are in two different data file by joining them into one data file
+
+
+
 1. Stack
 - Linear
 - LIFO/FILO

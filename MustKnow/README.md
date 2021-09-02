@@ -4,11 +4,35 @@
 
 #### DS You Must Know
 
-##### ★★★Most Popular Data Structures★★★
+##### ★★★★★Most Popular Data Structures★★★★★
+
 - Array
 - Linked List
 - Stack
 - Queue
+- Binary Tree
+- Binary Search Tree
+
+##### ★★★★Operation You Can Perform On A Data Structure★★★★
+
+
+- Delete: Remove an item from the data structure
+- Insert: Add an item to the data structure at any location
+- Merge: Combining the items within data structure A and data structure B into a single one(i.e. call it C)
+- Search: Look up an item's location within the data structure
+- Sort: Arrange items within the data structure in a specific order
+- Traverse: Visit each item in the data structure to perform some operation(e.g. search/sort)
+
+
+##### Big O, Big Omega, Big Theta
+
+- O(n): A Measure of the longest amount of time for an algorithm to complete(...e.g. <=)
+    - Used in the worst case
+- Ω(n): A Measure of the shortest amount of time for an algorithm to complete(...e.g. >=)
+    - Used in the Best Case
+- Θ(n): A Measure of the average amount of time for an algorithm to complete(...e.g. ==)
+    - Used in the Average Case
+
 
 ##### DS Operations
 
@@ -22,12 +46,14 @@
 
 
 1. Stack
+
 - Linear
 - LIFO/FILO
 - Dinner Plates 
 - When items are pushed they are placed on the top
 
 2. Linked List
+
 - Sequential Order
 - No Random Access
 - Better alternative to Sets because they are dynamic
@@ -35,41 +61,88 @@
 - Each unit is called a node
 - A Node is composed of data and a pointer
 - Last node has a null pointer i.e. the pointer is used but doesn't point to anything 
+- Folders on your computer(i.e. last folder is null because it has no folder within it)
 
 3. Array
+
 - Indexed
 - When Size increases performance decreases
 - All the elements in the DS must be of the same type
+- Muffin/Egg Tray
+- Rectangular in shape
 
 4. Queues
+
 - Movie Theatre
 - FIFO
 - aka people waiting in line
+- Ordered Collection
+- Operations: add(), remove()
+    
+
 
 5. Hash Table
-- Contains an index and its corresponding Hash_Value
 
+
+- Contains an index and its corresponding Hash_Value
+- All items within it are unique
+- Cannot store null as a key nor as a value
+- First parameter within your Hash Table declaration is the data type of the key
+- Second parameter within your Hash Table declaration is the data type of the value
 
 6. Trees
-- hierarchical Structure where data is org in a hierarchy and everything is linked together
+
+- Hierarchical Structure where data is org in a hierarchy and everything is linked together
 - Not the same as linked list because LL is linear
 - Trees are faster to access than a LL because they are non-linear
 - Node: person who holds our data
+- Child Node: person who has a parent
+- Leaf Node: person who has no children
 - Edge: person who connects two nodes
 - Root: Person who is the topmost node
 - Node Height: # of edges from the node to the deepest leaf node
 - Node Depth: # of edges from the root to the node
 - Tree Height: Depth of the deepest node
 - Degree of A Node: Total # of branches of that node
+- Leaves: Person who has no children
+- Use when you want to store items in a hierarchial fashion
+- Quicker to access/search than a LL but slower than an Array
+    - Binary Tree
+        - Can Have 0,1,2 nodes
+    - Binary Search Tree:
+        - Used for sorting, getting and searching data
+        - Non-linear
+        - Arranged in some order
+        - no duplicate vals
+        - val on the left most subtree of the node is always smaller than the val on its immediate right
+- Node on the left is always less than the node on the right
 
 
-7. Heaps
+7. Heap
+
+- Special Tree Based DS
 - Binary Tree
+- Patients Being Admitted to the Hospital
+    - Patients with life-threatning situation get taken care of first
+    - Patients that don't have threatening situation wait in line
 - Parent node makes a comparison with its child nodes and are arranged accordingly
+- Two Scenarios:
+    - Key present at the root node is the greatest among all of its children and successors
+    - Key present at the root node is the smallest among all of its children and successors
 
 8. Graphs
+
 - Finite set of vertices, nodes and edges. The edges are what connect one vertex with another
 - Graphs are connected in a network form
+- Non-linear
+- Nodes are the vertices(i.e. endpoints)
+- Edges are the lines/arcs that connect one node with another node
+- Two Types:
+    - Directed
+    - Undirected
+- Simple Graph: Each edge connects to two different vertices whereby no two edges connect to the same group of vertices
+- Multigraph: An edge can connect to the same pair of vertices
+- 
 
 
 
@@ -137,7 +210,7 @@ But actually the runtime is O(n) because when we calculate runtime we drop the c
 
 1. Logarithmic growth slows down as the input size growth i.e d/dx[ln(x)] = 1/x whereas d/dx[2^n]= 2^nln(2)
 
-2. exponential growth as you can see increases at an increasing rate whereas logarithmic growth increases at a decreasing rate
+2. Exponential growth as you can see increases at an increasing rate whereas logarithmic growth increases at a decreasing rate
 
 3. However, exponential growth becomes slow sooner than logarithmic growth
 

@@ -7,12 +7,14 @@
 	- add a dependency spring-boot-starter-web
 	- make sure java version is > 1.8
  
-# Spring Boot 
+## Spring Boot 
 
 1. Post ====> Create
 2. Get ====> Read
 3. Put ====> Update
 4. Delete ====> Delete
+
+
 
 ## Prerequisites
 - One of the Java versions
@@ -55,9 +57,26 @@
 ```
 
 ## Spring Boot Application Is Composed Of Usually these three layers:
-- API Layer(usually consists of CRUD Methods (GET, POST, PUT DELETE))
-- Service Layer
-- Data Access Layer
+## 3 Layered of Architecture
+
+- Layer 1: Controller/API Layer
+    - Holds API Def and Req Body
+    - Only One that makes calls to the Service Layer
+    - Annotate any Controller Class with the @RestController Annotation
+    - This helps SB to identify this class as the API Def class
+
+- Layer 2: Service
+    - Business Logic
+    - Models the data for the Repository
+    - Transmits data from the Controller To The Repository
+    - Transmits data from the Repository back to the Controller
+    - Annotate any Service Class with the @Service Annotation
+
+
+- Layer 3: Repository
+    - Talks to the DB directly
+    - Annotate any Repository Class with the @Repository Annotation
+    
 
 ### We call the Java Program that has all the Resources for Your API a "Controller"
 
@@ -569,26 +588,43 @@ com/example/utility
 
 ## Folder Structure:
 ```
-├── .mvn
-└── src
-    ├── main
-		├── java
-    		├── com.example.ftnisthebestthingever
-				├── Application.java
-    	├── resources
-            ├── static
-            ├── templates
-        	├── application.properties
-    ├── test
-├── .gitignore
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-├── HELP.md
+
+├── /springboot_starter
+	├── /.idea
+	├── /.mvn
+	├── /docs
+	├── .gitignore
+	├── /src
+		├── /main
+		    ├── /java
+			    ├── /com.starter.springboot
+				    ├── /config ==> holds all your external configuration files 
+				    ├── /controller ==> holds all your controllers i.e. those in charge of processing 
+					incoming API req, prepare and render a view to be rendered as a response
+ 				    ├── /dto ==> the one who transmits data 
+					 with multiple attrs from cli to serv
+   				    ├── /exception
+   				    ├── /model ==> holds all your models... which are containers of your app data
+				    ├── /repository ==> implementation of all your repository classes i.e. encaps and 
+						tells SB how to store, get and search for your data
+ 				    ├── /security
+   				    ├── /service ==> implemenation of all your services classes i.e. business logic
+     				└── TravelReservationApplication
+		    └── /resources
+                ├── /static  ==> holds all your CSS, JS and any images you might have
+                ├── /templates ==> used when you want to work with FE
+                └── application.properties ==> holds db credentials(url, username, pswd) in the form of key value pairs
+	    ├── /test	   	    ==> root directory for any tests you want to run to check everything is okay
+	    ├── .gitignore
+	    ├── Dockerfile  ==> txt doc that holds all the necessary commands to build an image. Use it to run multiple commands in succession
+	    ├── HELP.md
+	    ├── LICENSE
+	    ├── mvnw
+	    ├── mvnw.cmd 
+	    ├── pom.xml ==> holds info about your project and tells Maven how to configure and build your project
+	    └── README.md ==> Provides relevant information about your project(e.g. what it is? how to run?) 
 ```
 
-## Static and Templates:
-- We use these two directories when we want to work with the FE
 
 ## The application.properties file
 - must have the connection url to your DB
@@ -604,8 +640,6 @@ com/example/utility
 - The web server which will be up and running on a specific port. Depending on the selected port, 
 - Once I have told SpringBoot the designated port I want it to run on I then go ahead to implement endpoint
 
-## What Is Pom.xml
-- This is your configuration file similar package.json, config.json, .yaml files etc.
 
 ## What are two very important dependencies in Spring Boot JPA
 - spring-boot-starter-data-jpa

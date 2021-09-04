@@ -206,6 +206,12 @@ But actually the runtime is O(n) because when we calculate runtime we drop the c
 
 3. The runtime of Binary Search Is O(log(n)) because I reduce my work in half in every step.
 
+### Hash Function
+
+- If I have an array that can store N key-val pairs. Then I will need a function that will give me an index of an element in my array
+- After I supplied it with a key 
+
+
 ### Exponential Growth: O(2^n) ... i.e. opposite of Logarithmic growth
 
 1. Logarithmic growth slows down as the input size growth i.e d/dx[ln(x)] = 1/x whereas d/dx[2^n]= 2^nln(2)
@@ -402,6 +408,32 @@ O(n)
 3. Unlink the middle node from the list
 4. Link the preceding node to the subsequent node
 5. Remove the link of the middle node so that the link gets removed from memory by Java's garbage collector
+
+## Sets in Java
+
+#### HashSet
+
+- does not maintain order
+- no duplicates
+- allowed to use null vals
+- compare using .equals() method
+- implementation of a HashMap more or less
+
+
+#### LinkedHashSet
+
+- maintains insertion order
+- no duplicates
+- allowed to use null vals
+- compare using .equals() method
+
+
+#### TreeSet
+
+- maintains sorted order
+- no duplicates
+- no null values
+- compare using .compareTo() method
 
 
 ### Important Algo

@@ -145,6 +145,21 @@
 - 
 
 
+9. Queues
+
+- FIFO DS
+- Linear
+- Pushes To The End
+- Pops From The Front
+- Part of the java.util.* package
+- Part of the collection Interface
+- Two Classes Implement the Queue Interface:
+    - Linked List
+    - Priority Queue
+- Supports all the methods in the Collection Interface
+- Element & Remove Method Throws NoSuchElementException if the queue is empty
+- Poll Method removes the head of the queue and returns it
+	- if the queue is empty the poll method call returns null
 
 
 1. When the sample size increases of an Array what should you do?

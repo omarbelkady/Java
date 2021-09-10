@@ -51,6 +51,8 @@
 - LIFO/FILO
 - Dinner Plates 
 - When items are pushed they are placed on the top
+- Only can push/pop an element from this DS at one end only
+- Requires You To Have One Reference Pointer i.e. "TOP"
 
 2. Linked List
 
@@ -76,8 +78,9 @@
 - People waiting in line in the Movie Theatre
 - Linear
 - FIFO
-- Pushes To The End
-- Pops From The Front
+- Has Side A and Side B
+- Pushes On Side A i.e. Enqueue
+- Pops On Side B i.e. Dequeue
 - Ordered Collection
 - Operations: add(), remove()
 - Part of the java.util.* package
@@ -89,6 +92,7 @@
 - Element & Remove Method Throws NoSuchElementException if the queue is empty
 - Poll Method removes the head of the queue and returns it
 	- if the queue is empty the poll method call returns null
+- Requires You To Have Two Reference Pointers i.e. "FRONT" & "REAR"
 
 
 
@@ -100,6 +104,7 @@
 - Cannot store null as a key nor as a value
 - First parameter within your Hash Table declaration is the data type of the key
 - Second parameter within your Hash Table declaration is the data type of the value
+- Restaurant Pager i.e. you give your name and they assign a number to you when a seat frees up you get an empty table
 
 6. Trees
 
@@ -127,19 +132,22 @@
         - no duplicate vals
         - val on the left most subtree of the node is always smaller than the val on its immediate right
 - Node on the left is always less than the node on the right
+- Linux File Structure
+- Classification Tree in Biology
 
 
 7. Heap
 
 - Special Tree Based DS
 - Binary Tree
-- Patients Being Admitted to the Hospital
-    - Patients with life-threatning situation get taken care of first
-    - Patients that don't have threatening situation wait in line
 - Parent node makes a comparison with its child nodes and are arranged accordingly
 - Two Scenarios:
     - Key present at the root node is the greatest among all of its children and successors
     - Key present at the root node is the smallest among all of its children and successors
+- Patients Being Admitted to the Hospital
+    - Patients with life-threatning situation get taken care of first
+    - Patients that don't have threatening situation wait in line
+
 
 8. Graphs
 
@@ -153,7 +161,7 @@
     - Undirected
 - Simple Graph: Each edge connects to two different vertices whereby no two edges connect to the same group of vertices
 - Multigraph: An edge can connect to the same pair of vertices
-- 
+- Google Maps Usage of Connecting Roads i.e. vertex  therefore, I use an algo to determine the shortest path between vertex A & B
 
 
 
@@ -208,6 +216,44 @@ But actually the runtime is O(n) because when we calculate runtime we drop the c
 - We search one index at a time and that's why its linear i.e. O(n).
 - In the worst case scenario, if the number I am looking for is at the end of the array then I have to inspect one index at a time
 - The more items I have the longer the operation will take
+
+```java
+import java.util.*;
+
+public class LinSearch{
+    
+    public static void main(String [] args){
+        int [] myArr = {18, 34, 65, 92, 32, 94, 15, 10, 16, 8, 26};  
+        int elem,elemExistsTimes=0;   
+        Scanner sc = new Scanner(System.in);  
+        System.out.println("Enter The Element You Are Hunting For: ");  
+        elem = sc.nextInt();  
+
+        for(int x = 0; x<10; x++){
+            if(myArr[x] == elem){
+                elemExistsTimes= x + 1;
+                break;
+            }
+
+            else{
+                elemExistsTimes = 0;
+            }
+        }
+
+        if(elemExistsTimes != 0)  
+        {  
+            System.out.println("I found the item at location: "+elemExistsTimes);  
+        }
+
+        else{
+            System.out.println("Not Found Man");
+        }
+    
+    }
+    
+}
+```
+
 
 ### Example: Binary Search
 

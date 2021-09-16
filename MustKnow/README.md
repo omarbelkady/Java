@@ -61,6 +61,13 @@
     - Cannot access a random element
     - Not able to be scaled i.e. not flexible
 
+```java
+import java.util.*;
+
+Stack<Integer> myStack= new Stack<Integer>();
+```
+
+
 2. Linked List
 
 - Sequential Order
@@ -71,6 +78,17 @@
 - A Node is composed of data and a pointer
 - Last node has a null pointer i.e. the pointer is used but doesn't point to anything 
 - Folders on your computer(i.e. last folder is null because it has no folder within it)
+- Node[0] = Head
+- Node[n-1] = Tail
+
+
+```java
+import java.util.*;
+/*
+How To Declare:
+LinkedList<dataType>nameOfLL = new LinkedList<dataType>() */
+LinkedList<String> mylist=new LinkedList<String>();
+```
 
 3. Array
 
@@ -79,8 +97,62 @@
 - All the elements in the DS must be of the same type
 - Muffin/Egg Tray
 - Rectangular in shape
+- Good For Storing Multiple items in it
+- Address in Memory increases by the size of the datatype you store
+- I.e. say I have 6 ints location in memory of the first is 104 second is 108 third is 112
+- because an int = 4 bytes that's why you increment by 4
+- Searching an Array by index is super fast, supply to an idx to the array and it will be super fast to locate it
+- Calc of Mem Address Runtime is: O(1)
+- Downsides: Static, failure to know size if too large: waste memory too small: array gets filled quickly
+- And If I fill it up quickly I must create a 2nd array and copy the elements of the first array into the second
 
-4. Queues
+- Cost of Lookup: O(1)
+- Cost of Insertion: O(n)
+- Cost Of Removal: O(n)
+
+1. Best Case: I remove from the end of the array and I delete that index
+2. Worst Case: I remove from the beginning of the array and shift all the items in the right one index less to fill
+3. Therefore, for the worst case it is O(n) when removing an item in the array
+
+
+- Dynamic Array DS in Java: ArrayList
+- Grows by 50% of its size everytime I add sth to it
+- synchronous aka one 7652626 thread at a time
+
+#### Declaring an array in Java
+```java
+import java.util.*;
+public class Arr{
+    public static void main(String [] args){
+        /*
+            1. declare the data type of the array
+            2. indicate that I want an array data structure by using the brackets.. MUST BE EMPtY
+            3. give it a name
+            4. use the new operator to allocate memory for the array
+            5. repeat the data type of the array
+            6. indicate the size of the array 
+
+        */
+        int [] myArr = new int[7];
+        //this output the memory location of the array
+        //System.out.println(myArr);
+
+        /*
+        if you know the vals:
+
+        */
+        int [] myArrTw = {7, 6, 5, 2, 6, 2, 6}
+
+        //proper way to output
+        System.out.println(Arrays.toString(myArr))
+    }
+}
+```
+
+4. Vector: Grows by 100% of its size everytime I add sth to it... asynchronous aka multiple threads at a time
+
+
+5. Queues
 
 - People waiting in line in the Movie Theatre
 - Linear
@@ -101,7 +173,17 @@
 	- if the queue is empty the poll method call returns null
 - Requires You To Have Two Reference Pointers i.e. "FRONT" & "REAR"
 
+```java
+//How To Declare a Priority Queue of type String
+import java.util.*;
 
+public class queueimpl{
+    public static void main(String [] args){
+        Queue<String> mypq = new PriorityQueue<>();
+    }
+}
+
+```
 
 5. Hash Table
 
@@ -112,6 +194,39 @@
 - First parameter within your Hash Table declaration is the data type of the key
 - Second parameter within your Hash Table declaration is the data type of the value
 - Restaurant Pager i.e. you give your name and they assign a number to you when a seat frees up you get an empty table
+
+```java
+/*
+How To Declare a Hash Table of type:
+- Integer for the key
+- String for the value
+*/
+
+import java.util.*;
+
+public class HashTable{
+    public static void main(String [] args){
+        Integer mystr;
+        Hashtable<Integer,String> myhashtable = new Hashtable<Integer,String>();
+        myhashtable.put(1,"Blue");
+        myhashtable.put(2,"Red");
+        myhashtable.put(3,"Yellow");
+
+        //Storage of the keys in the HashTable Set
+        Set<Integer> keys = myhashtable.keySet();
+
+        Iterator<Integer> itr = keys.iterator();
+
+
+        while (itr.hasNext()) { 
+            // Getting Key
+            mystr = itr.next();
+            System.out.println("Key: "+mystr+"\nValue: "+myhashtable.get(mystr));
+         } 
+    }
+}
+
+```
 
 6. Trees
 
@@ -146,6 +261,7 @@
         - All leaf nodes are at the same level
         - whenever one of the rules is violated, i have to rebalance and restructure my tree
         - Root node must have a minimum of two children
+        
 - Node on the left is always less than the node on the right
 - Linux File Structure
 - Classification Tree in Biology
@@ -269,6 +385,40 @@ public class LinSearch{
 }
 ```
 
+```java
+public class Main{
+    
+    public void logLn(Object o){
+        System.out.println(o);
+    }
+
+    public void log(Object o){
+        System.out.print(o);
+    }
+    
+    public void printArr(int [] arr){
+        logLn(arr[0]); //has one operation and takes constant time to run ===> O(1)
+        logLn(arr[0]); //has two operation but still O(1)
+    }
+
+    /*
+    small small will run fast but as the sample size increase e.g. 1,000,000 items then you will have it running slowly
+    
+    cost of algo: linear and is directly proportional to the size of the input therefore the runtime complexity O(n)
+    */
+    public void logging(int [] nums){
+        for(int i=0; i<nums.length; i++){
+            logLn(nums[i]);
+        }
+    }
+
+    public static void main(String [] args){
+
+    }
+}
+```
+
+
 
 ### Example: Binary Search
 
@@ -310,75 +460,6 @@ public class LinSearch{
 - Number of memory accesses performed, the number of times you compared ints, the number of nested loops are executed
 - ... or any unit related to the amount of time the algorithm will take
 
-### Arrays:
-
-- Good For Storing Multiple items in it
-- Address in Memory increases by the size of the datatype you store
-- I.e. say I have 6 ints location in memory of the first is 104 second is 108 third is 112
-- because an int = 4 bytes that's why you increment by 4
-- Searching an Array by index is super fast, supply to an idx to the array and it will be super fast to locate it
-- Calc of Mem Address Runtime is: O(1)
-- Downsides: Static, failure to know size if too large: waste memory too small: array gets filled quickly
-- And If I fill it up quickly I must create a 2nd array and copy the elements of the first array into the second
-
-- Cost of Lookup: O(1)
-- Cost of Insertion: O(n)
-- Cost Of Removal: O(n)
-
-1. Best Case: I remove from the end of the array and I delete that index
-2. Worst Case: I remove from the beginning of the array and shift all the items in the right one index less to fill
-3. Therefore, for the worst case it is O(n) when removing an item in the array
-
-#### Declaring an array in Java
-```java
-import java.util.*;
-public class Arr{
-    public static void main(String [] args){
-        /*
-            1. declare the data type of the array
-            2. indicate that I want an array data structure by using the brackets.. MUST BE EMPtY
-            3. give it a name
-            4. use the new operator to allocate memory for the array
-            5. repeat the data type of the array
-            6. indicate the size of the array 
-
-        */
-        int [] myArr = new int[7];
-        //this output the memory location of the array
-        //System.out.println(myArr);
-
-        /*
-        if you know the vals:
-
-        */
-        int [] myArrTw = {7, 6, 5, 2, 6, 2, 6}
-
-        //proper way to output
-        System.out.println(Arrays.toString(myArr))
-    }
-}
-```
-
-### When Wanting to Build A Dynamic Array Use:
-1. ArrayList: Grows by 50% of its size everytime I add sth to it ... synchronous aka one 7652626 thread at a time
-```java
-ArrayList<E>;
-//where E is the generic key type 
-//Integer keyword is the wrapper class around the native/primitive type int
-```
-2. Vector: Grows by 100% of its size everytime I add sth to it... asynchronous aka multiple threads at a time
-
-
-### LinkedList
-
-- We use a LL when wanting to store an object in sequential||7652626 order
-- LinkedList are better than arrays because they can grow/shrink auto
-- It consists of a group of nodes in seq order. Every node has two pieces of data:
-    1. value
-    2. address of the next node in the list
-- AKA every node (points to)/references the next node in the list
-- Node[0] = Head
-- Node[n-1] = Tail
 
 #### Searching A LL value Time C
 

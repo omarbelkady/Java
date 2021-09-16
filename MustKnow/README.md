@@ -53,6 +53,13 @@
 - When items are pushed they are placed on the top
 - Only can push/pop an element from this DS at one end only
 - Requires You To Have One Reference Pointer i.e. "TOP"
+- Applications:
+    - Redoing/Undoing stuff within your application
+    - Memory Management
+- Allows you to fully control how memory is allocated and deallocated
+- Pitfalls of Stack:
+    - Cannot access a random element
+    - Not able to be scaled i.e. not flexible
 
 2. Linked List
 
@@ -131,6 +138,14 @@
         - Arranged in some order
         - no duplicate vals
         - val on the left most subtree of the node is always smaller than the val on its immediate right
+    - Btree
+        - every btree has an order i.e. the number of levels
+        - A leaf in a btree the i.e. the parent to the last level in a btree(i.e. child nodes) 
+        - ...must always have more nodes than the child so as the keys(1 key... 2 child nodes, 2 keys, 3 child nodes)
+        - the keys cannot be larger than the leaf nodes
+        - All leaf nodes are at the same level
+        - whenever one of the rules is violated, i have to rebalance and restructure my tree
+        - Root node must have a minimum of two children
 - Node on the left is always less than the node on the right
 - Linux File Structure
 - Classification Tree in Biology

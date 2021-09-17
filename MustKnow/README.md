@@ -232,12 +232,13 @@ public class HashTable{
 
 - Hierarchical Structure where data is org in a hierarchy and everything is linked together
 - Not the same as linked list because LL is linear
+- Log(n) runtime complexity where n is the number of levels
 - Trees are faster to access than a LL because they are non-linear
 - Node: person who holds our data
 - Child Node: person who has a parent
 - Leaf Node: person who has no children
 - Edge: person who connects two nodes
-- Root: Person who is the topmost node
+- Root: person who is the topmost node
 - Node Height: # of edges from the node to the deepest leaf node
 - Node Depth: # of edges from the root to the node
 - Tree Height: Depth of the deepest node
@@ -245,26 +246,187 @@ public class HashTable{
 - Leaves: Person who has no children
 - Use when you want to store items in a hierarchial fashion
 - Quicker to access/search than a LL but slower than an Array
-    - Binary Tree
+    - AVL Tree:
+        - Self-balanced trees
+        - Searching, Inserting, Deleting in the worst case is logarithmic time complexity
+        - Balance factor is determined by the height of the right subtree tree
+        - ... minus the height of the left subtree
+        - I have a height of 1 in the left subtree ... I have a height of 1 in the right subtree
+        - balance factor = 0
+        - Objective: make sure every node is balanced i.e. bf = -1,0,1
+        - all nodes must be balanced ... if one node is not balanced the whole tree is unbalanced
+        - balance factor in relation to its neighboring subtree
+        - -1 means the right subtree is greater than the left subtree
+        - 1 means the left subtree is greater than the right subtree
+        - 0 means the left subtree and right subtree have equal lengths
+        - LL rotation means I inserted a node in the left subtree of the left subtree of A
+        - LR rotation means I inserted a node in the right subtree of the left subtree of A
+        - RR rotation means I inserted a node in the right subtree of the right subtree of A
+        - RL rotation means I inserted a node in the left subtree of the right subtree of A
+        - Binary Tree
         - Can Have 0,1,2 nodes
+        - right child is always larger & left child is always smaller
     - Binary Search Tree:
         - Used for sorting, getting and searching data
         - Non-linear
         - Arranged in some order
         - no duplicate vals
         - val on the left most subtree of the node is always smaller than the val on its immediate right
-    - Btree
-        - every btree has an order i.e. the number of levels
-        - A leaf in a btree the i.e. the parent to the last level in a btree(i.e. child nodes) 
+    - B-tree
+        - every b-tree has an order i.e. the number of levels
+        - Root node must have a minimum of two children
+        - A leaf in a b-tree the i.e. the parent to the last level in a b-tree(i.e. child nodes)
         - ...must always have more nodes than the child so as the keys(1 key... 2 child nodes, 2 keys, 3 child nodes)
         - the keys cannot be larger than the leaf nodes
-        - All leaf nodes are at the same level
-        - whenever one of the rules is violated, i have to rebalance and restructure my tree
-        - Root node must have a minimum of two children
-        
+        - All leaf nodes must be at the same level
+        - whenever you delete a leaf node all you have to do is do a rotation to the values
+        - if you delete a middle value you must do rebalancing
+        - whenever one of the rules is violated, I have to rebalance and restructure my tree
+        - ... by shifting the center value
+        - once you access one element in the block you have access to all the elements in the block 
+    - B*-tree
+        - Values in the middle are not essentially referred to as value
+        - they are just navigation values(go left, go down, go right)
+        - the parent is always the largest value of its left child subtree
+        - the number of values I am allowed to store at the leaf level is determined by a parameter k*
+        - so if k* = 2 that means I am allowed to have a max of 2k* elements at the leaf level
+        - ...and a minimum of 2
+        - m is the order of the tree i.e. the number of the levels
+        - B* trees have a smaller height than Btrees because all the data is stored in the leaf level
 - Node on the left is always less than the node on the right
 - Linux File Structure
 - Classification Tree in Biology
+
+- Runtime of Operations Performed on A Balanced Tree
+
+| Operation   | Runtime |
+| ----------- | ----------- |
+| Inserting   | log(n)      |
+| Deleting    | log(n)      |
+| Rebalancing | log(n)      |
+| Searching   | log(n)      |
+#### 4 Cases of AVL Trees of Balance Factors
+
+- We will never have to make more rotations than the number of levels
+- Number of level is log<sub>2</sub>(n)
+
+##### Case A
+```
+	    A(-2)
+	  /    \
+   B(-1)    C(0)          height of 3 vs height of 1 
+   /   \               ∴ BF=-2
+ D(-1)  E(0) 
+ /
+F(0)     
+```
+
+- Balance Factor of: -2
+- The left most subtree has a height that is 2 levels greater than the  right subtree
+- Perform a single right rotation
+
+```
+      B(0)
+	 /   \
+   D(0)  A(0)           
+   /     / \
+ F(0)  E(0) C(0)
+     
+```
+<br />
+<br />
+
+
+##### Case B
+```
+	 A(-2)
+	/   \
+  B(1)  C(0)
+  / \   
+D(0) E(1) 
+      \   
+       F(0)  
+```
+<br />
+<br />
+
+- Perform a single left rotation on the subtree
+- Make E the root node of the left subtree
+- Make B the left child node of E
+- Make F the right child node of E
+```
+		 A(-2)
+		/   \
+	   E    C(0)
+	 /   \  
+	B     F 
+   /
+  D    
+```
+
+
+
+
+##### Case C
+
+```
+	 A(-2)
+	/   \
+  B(1)  C(0)
+        /  \   
+      D(0) E(1) 
+             \   
+             F(0)
+```
+
+- Perform a single left rotation
+- Make A the root node of the left subtree
+- Make E the root node of the right subtree
+- Make F the child node of E
+- Make B the left child node of  A
+- Make D the right child node of  A
+
+```
+	 C(0)
+	/    \
+  A(0)   E(1)
+ /   \     \
+B(0) D(0)  F(0)  
+       
+```
+
+
+
+
+##### Case D
+
+```
+	  A
+	/  \
+   B    C
+       / \   
+      D   E 
+     /      
+    F         
+```
+
+1. Perform a single right rotation now we are in Case C
+2. That means To Solve Case D I perform a double right-left rotation
+
+```
+	  A
+	/  \
+   B    D
+       / \   
+      F   C       
+           \
+            E
+```
+
+
+
+
+
 
 
 7. Heap

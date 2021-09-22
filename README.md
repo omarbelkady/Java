@@ -36,8 +36,9 @@ public void theBestMethod()
 #### Primitive DS:
 1. Integer
 2. Float
-3. Char`
+3. Char
 4. Pointers
+
 
 #### Non-Primitive DS:
 1. Arrays

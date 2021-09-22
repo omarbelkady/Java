@@ -236,7 +236,7 @@ public class HashTable{
 - Trees are faster to access than a LL because they are non-linear
 - Node: person who holds our data
 - Child Node: person who has a parent
-- Leaf Node: person who has no children
+- Leaf: person who has no children
 - Edge: person who connects two nodes
 - Root: person who is the topmost node
 - Node Height: # of edges from the node to the deepest leaf node
@@ -446,12 +446,17 @@ B(0) D(0)  F(0)
 
 - Finite set of vertices, nodes and edges. The edges are what connect one vertex with another
 - Graphs are connected in a network form
+- Vertex: Circle
+- Edge: Arrow
 - Non-linear
 - Nodes are the vertices(i.e. endpoints)
 - Edges are the lines/arcs that connect one node with another node
 - Two Types:
     - Directed
     - Undirected
+- Traversing Algo Implementing A Graph:
+    - BFS
+    - DFS
 - Simple Graph: Each edge connects to two different vertices whereby no two edges connect to the same group of vertices
 - Multigraph: An edge can connect to the same pair of vertices
 - Google Maps Usage of Connecting Roads i.e. vertex  therefore, I use an algo to determine the shortest path between vertex A & B

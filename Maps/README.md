@@ -1,8 +1,6 @@
 
 ## Maps
 
-  
-
 - A map is an object that maps keys and values
 
 - Cannot contain the same keys
@@ -13,15 +11,11 @@
 
 - Maps are very important to know when dealing with Abstraction in OOP
 
+- Java has three types of maps: HashMap, TreeMap and LinkedHashMap
   
+<br  />
 
-### Java has three types of maps: HashMap , TreeMap and and LinkedHashMap
-
-  
-
-### Ordering:
-
-  
+### Ordering
 
 <br  />
 
@@ -115,31 +109,26 @@ public  class  Main
 }
 ```
 
-  
-
 ```java
 import java.util.*;
+
 public  class  Main
 {
 	public  static  void  main(String  args[])
 	{
-		//LHM Declaration
+		//LHM Declaration 
 
 		//LinkedHashMap<DT of Key, DT of Value> nameOfLinkedHashMap= new LinkedHashMap<DT of Key, DT of Value>();
 
 		LinkedHashMap<String,String> myLHashMap=newLinkedHashMap<String,String>();//Creating Linked HashMap.
 
 		myLHashMap.put("MW","Calculus3"); //Putting elements in Map.
-
 		myLHashMap.put("MWF","OrgCh1");
-
 		myLHashMap.put("T","DS");
-
 		myLHashMap.put("F","Music");
-
+		
 		System.out.println(myLHashMap);
 	}
-	//Output: {MW=Calculus3, MWF=OrgCh1, T=DS, F=Music}
-	//meaning Reverse Insertion Order FIFO
+
 }
 ```

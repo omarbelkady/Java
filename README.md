@@ -16,6 +16,11 @@
 6. UI: How We Present the data
 
 
+### == vs .equals()
+
+- ==: compares content and reference
+- .equals(): compares just the content
+
 ## Class Naming is Pascal Case The case name is = to 2526 fav programming language and fav screen color:
 ```java
 	class PascalCase{}
@@ -26,9 +31,9 @@
 ## Method Naming is Camel Case:
 ```java
 public void theBestMethod()
-{
-	logln("2526: 727225, 27736259, 27429, 27375, 746867 ARE THE BEST THINGS EVER and 557 AKA LLP Prog is also my fav!!!");
-}
+        {
+        logln("2526: 727225, 27736259, 27429, 27375, 746867 ARE THE BEST THINGS EVER and 557 AKA LLP Prog is also my fav!!!");
+        }
 ```
 
 ## Data Structures
@@ -43,12 +48,12 @@ public void theBestMethod()
 #### Non-Primitive DS:
 1. Arrays
 2. List
-    - Linear:
-        - Stacks
-        - Queues
-    - Non-Linear:
-        - Graphs
-        - Trees
+   - Linear:
+      - Stacks
+      - Queues
+   - Non-Linear:
+      - Graphs
+      - Trees
 
 
 
@@ -72,16 +77,16 @@ $~ java callingProgram.java MethodProgram.java
 ## What is the "this" keyword in Java and why do we use it
 ```java
 class NelanLvsBDAndCSunAndFTN{
-	int cobolfb = 2626532;
-	int pascalfb= 72722532;
-	
-	public void setVals(int cobolfb, int pascalfb){
+   int cobolfb = 2626532;
+   int pascalfb= 72722532;
+
+   public void setVals(int cobolfb, int pascalfb){
 		/*here is where the this keyword comes to play to tell java that I want to use the parameter
 		of my function aka local variables and not the instance variables(up top)
 		*/
-		this.cobolfb = cobolfb;
-		this.pascalfb = pascalfb;
-	}
+      this.cobolfb = cobolfb;
+      this.pascalfb = pascalfb;
+   }
 
 }
 ```
@@ -93,14 +98,14 @@ class NelanLvsBDAndCSunAndFTN{
 Raised when you try to call an undeclared variable
 ```java
 public class Omar{
-    public static void main(String [] args)
-    {
-        int a = 1;
-        int b= 2;
-        int c= 3;
-        mean = (a+b+c)/2;
-        System.out.println(mean);
-    }
+   public static void main(String [] args)
+   {
+      int a = 1;
+      int b= 2;
+      int c= 3;
+      mean = (a+b+c)/2;
+      System.out.println(mean);
+   }
 }
 ```
 
@@ -108,30 +113,30 @@ In line 8 we try to print to the console mean we have set the value of mean but 
 To solve we do this
 ```java
 public class Omar{
-    public static void main(String [] args)
-    {
-        int a = 1;
-        int b= 2;
-        int c= 3;
-        double mean = (a+b+c)/2;
-        System.out.println(mean);
-    }
+   public static void main(String [] args)
+   {
+      int a = 1;
+      int b= 2;
+      int c= 3;
+      double mean = (a+b+c)/2;
+      System.out.println(mean);
+   }
 }
 ```
 ### 2- cannot find symbol PART 2
 Raised when you try to call an undeclared variable
 ```java
 public class Great{
-    public static void main(String [] args)
-    {
-        the_best_method;
-    }
-    
-    public static void the_best_method()
-    {
+   public static void main(String [] args)
+   {
+      the_best_method;
+   }
+
+   public static void the_best_method()
+   {
       System.out.println("This is the best method in the world");
-    }
-    
+   }
+
 }
 ```
 
@@ -139,41 +144,41 @@ In line 4 we are incorrectly calling the_best_method but we forget the parenthes
 
 ```java
 public class Great{
-    public static void main(String [] args)
-    {
-        the_best_method();
-    }
-    
-    public static void the_best_method()
-    {
+   public static void main(String [] args)
+   {
+      the_best_method();
+   }
+
+   public static void the_best_method()
+   {
       System.out.println("This is the best method in the world");
-    }
-    
+   }
+
 }
 ```
-### 3- cannot find symbol : 
-### symbol: class Scanner 
+### 3- cannot find symbol :
+### symbol: class Scanner
 ### location: class Great
 Raised when you are using the scanner
 ```java
 public class Great{
-    public static void main(String [] args)
-    {
-        Scanner useInput= new Scanner(); // scanner is not imported
-        int l = useInput.nextInt();
-    }
+   public static void main(String [] args)
+   {
+      Scanner useInput= new Scanner(); // scanner is not imported
+      int l = useInput.nextInt();
+   }
 }
 ```
 
-In line 4 we are using the scanner but we never imported the library that enables us to use it 
+In line 4 we are using the scanner but we never imported the library that enables us to use it
 ```java
 import java.util.Scanner;
 public class Great{
-    public static void main(String [] args)
-    {
-        Scanner useInput= new Scanner(); // scanner has no default constructor
-        int l = useInput.nextInt();
-    }
+   public static void main(String [] args)
+   {
+      Scanner useInput= new Scanner(); // scanner has no default constructor
+      int l = useInput.nextInt();
+   }
 }
 ```
 
@@ -182,10 +187,10 @@ public class Great{
 
 ```java
 public class Thebest
-{     
-     public static void main(String[] args) {
-          System.out.println("Hello, world!");
-     }
+{
+   public static void main(String[] args) {
+      System.out.println("Hello, world!");
+   }
 }
 ```  
 ## SOOO, I save the file and I name it Lemon.java well, it will error because our class is Thebest so that means our file name should be Thebest.java
@@ -196,22 +201,22 @@ This error is raised when I try to write code outside of a method which is unint
 ```java
     public class Test { 
         System.out.println("Hello!");
-    
-        public static void main(String[] args) {
-            System.out.println("World!");
-        }
-    }
+
+   public static void main(String[] args) {
+      System.out.println("World!");
+   }
+}
 ```
- 
+
 To fix I just place the print Statement of hello inside of main
 
 ```java
-    public class Test { 
-        public static void main(String[] args) {
-            System.out.println("Hello!");
-	    System.out.println("World!");
-        }
-    }
+    public class Test {
+   public static void main(String[] args) {
+      System.out.println("Hello!");
+      System.out.println("World!");
+   }
+}
 ```
 
 ### 6- illegal start of expression
@@ -219,29 +224,29 @@ To fix I just place the print Statement of hello inside of main
 An "illegal start of expression" error occurs when the compiler when we start a expression before closing the previous one.
 ```java
     public class Test {
-        public static void main(String[] args) {
-            my_method();
-    
-    
-        public static void my_method() {
-            System.out.println("Hello, world!");
-        }
-    } 
+   public static void main(String[] args) {
+      my_method();
+
+
+      public static void my_method() {
+         System.out.println("Hello, world!");
+      }
+   } 
 ```
 
 To fix this piece of code, I simply add a closing curly brace for the main method. To know we are doing the right thing, just look at the lines of code before the error, there may be a missing closing paranthesis or a missing closing curly brace. This would give us what the error is.
 ```java
 public class Test
 {
-	public static void main(String[] args) 
-	{
-            my_method();
-        }   
-    
-        public static void my_method() 
-	{
-            System.out.println("Hello, EVERYONEEEE!");
-        }
+   public static void main(String[] args)
+   {
+      my_method();
+   }
+
+   public static void my_method()
+   {
+      System.out.println("Hello, EVERYONEEEE!");
+   }
 } 
 ```
 
@@ -249,12 +254,12 @@ public class Test
 
 The incompatible types error is raised when we are facing with data type errors. We can overcome this, by converting say a char to an int. We can convert a double to an integer with typecasting. BUt WE CANNOT convert between primitive types and objects. A primitive type is say a: null, undefined, boolean, number, string or char. However objects can be: Arrays, Maps, Sets, Functions, Regular Expression or Date..
 ```java
-public class Test 
+public class Test
 {
-	public static void main(String[] args) 
-	{
-		int num = "Hello, world!";
-	}
+   public static void main(String[] args)
+   {
+      int num = "Hello, world!";
+   }
 }
 ```
 The above code is an error because we are assigning the string Hello World to the variable num of type int.
@@ -263,24 +268,24 @@ Step 1: Change the String value from Hello, world! to 500
 ```java
 public class Test
 {
-	public static void main(String[] args) 
-	{
-		int num = "500";
-        }
+   public static void main(String[] args)
+   {
+      int num = "500";
+   }
 }
 ```
-	
+
 Step 2: Use parsing to convert the string to an integer
 ```java
 public class Test
 {
-	public static void main(String[] args) 
-	{
-            int num = Integer.parseInt("500");
-        }
+   public static void main(String[] args)
+   {
+      int num = Integer.parseInt("500");
+   }
 }
 ```
-	
+
 
 
 ### 8- invalid method declaration; return type required
@@ -290,16 +295,16 @@ When a method declaration does not contain a return type, this error will occur:
 ```java
 public class Test
 {
-        public static void main(String[] args) 
-	{
-		int x = getValue();
-		System.out.println(x);
-        }
-    
-        public static getValue() 
-	{
-            return 10;
-        }
+   public static void main(String[] args)
+   {
+      int x = getValue();
+      System.out.println(x);
+   }
+
+   public static getValue()
+   {
+      return 10;
+   }
 }
 
 
@@ -308,48 +313,48 @@ To fix this, simply insert the appropriate return type in the method signature a
 
 
 ```java
-public class Test 
+public class Test
 {
-        public static void main(String[] args) 
-	{
-            int x = getValue();
-            System.out.println(x);
-        }
-    
-        public static int getValue() 
-	{
-            return 10;
-        }
+   public static void main(String[] args)
+   {
+      int x = getValue();
+      System.out.println(x);
+   }
+
+   public static int getValue()
+   {
+      return 10;
+   }
 }
 ```
 ### 9-java.lang.ArrayIndexOutOfBoundsException: <X>
 
-An ArrayIndexOutOfBoundsException is thrown when an attempt is made to access an index in an array that is not valid. This means that say an array has 8 elements and we know that the number of elements in index is 7. We start counting at 0. So, if I enter a value of 8 or greater to access, this will raise an error. 
+An ArrayIndexOutOfBoundsException is thrown when an attempt is made to access an index in an array that is not valid. This means that say an array has 8 elements and we know that the number of elements in index is 7. We start counting at 0. So, if I enter a value of 8 or greater to access, this will raise an error.
 ```java
  public class Test {
-        public static void main(String[] args) {
-            int[] arr = {1, 2, 3};
-            for (int i = 0; i <= arr.length; i++) {
-                System.out.println(arr[i]);
-            }
-        }
-    }
+   public static void main(String[] args) {
+      int[] arr = {1, 2, 3};
+      for (int i = 0; i <= arr.length; i++) {
+         System.out.println(arr[i]);
+      }
+   }
+}
 ```
 The code above errored due to the for loop iteration settings. The first element is index 0 which is fine however, the function's output of arr.length of our array named arr of type int is 3. However, we are using the comparison operator of <=. This means less than or equal to. If, we change it to < it will not error. The equal means it will try to access index 3 which is the 4th item in the array which we do not have.
 ```java
 public class Test {
-        public static void main(String[] args) {
-            int[] arr = {1, 2, 3};
-            for (int i = 0; i < arr.length; i++) {
-                System.out.println(arr[i]);
-            }
-        }
+   public static void main(String[] args) {
+      int[] arr = {1, 2, 3};
+      for (int i = 0; i < arr.length; i++) {
+         System.out.println(arr[i]);
+      }
+   }
 }
 ```
 
 
-### 10- StringIndexOutOfBoundsException 
-The exception StringIndexOutOfBoundsException is thrown to the console when an attempt is made to access an index in 
+### 10- StringIndexOutOfBoundsException
+The exception StringIndexOutOfBoundsException is thrown to the console when an attempt is made to access an index in
 the String that is not valid. The only valid index of the String we can access is from 0 to the (length of the String-1). This means that if the array 8 elements. The biggest number I can access is 7 not 8. If we enter any number greater than 7 for access will throws an outofBoundsException. This is an error in runtime not compile-time. It is accepted by the compiler because it is a logical error
 
 ``` java
@@ -371,16 +376,16 @@ To fix this I simply change the String a declaration in line 7 from index -1 to 
 Therefore the bottom code is bug free
 
 ```java
-public class Test 
+public class Test
 {
-        public static void main(String[] args)
-	{
-            String str = "Hello, world!";
+   public static void main(String[] args)
+   {
+      String str = "Hello, world!";
 
-            String a = str.substring(1, 3);
-            char b = str.charAt((str.length())-1);
-            String c = str.substring(0, 6);
-        }
+      String a = str.substring(1, 3);
+      char b = str.charAt((str.length())-1);
+      String c = str.substring(0, 6);
+   }
 }
 
 ```
@@ -402,178 +407,178 @@ public class Test
 
 This errors because I have called the methods with the specified data types in the wrong order. I must call it in the right order
 ```java
-public class Omar 
-{     
-        public static void main(String[] args) {
-            omarMethod(1.0,"YOLO!", 2);
-        }
-    
-        public static void omarMethod(double a, String b, int c) {
-            System.out.println(a + " " + b + " " + c);
-        }
+public class Omar
+{
+   public static void main(String[] args) {
+      omarMethod(1.0,"YOLO!", 2);
+   }
+
+   public static void omarMethod(double a, String b, int c) {
+      System.out.println(a + " " + b + " " + c);
+   }
 }
 ```
 
 ### 12- Left out return statement
 ```java
- public class Omar 
+ public class Omar
 {
-	public static void main(String[] args) 
-	{
-		int x = doubleMyNum(5);
-		System.out.println(x);
-	}
+   public static void main(String[] args)
+   {
+      int x = doubleMyNum(5);
+      System.out.println(x);
+   }
 
-	public static int doubleMyNum(int m) 
-	{
-		int value = 2 * m;
-	}
- }
+   public static int doubleMyNum(int m)
+   {
+      int value = 2 * m;
+   }
+}
 ```
-The above code errors because I have made the function behave like a void but my 3rd keyword indicates my return type should 
+The above code errors because I have made the function behave like a void but my 3rd keyword indicates my return type should
 be of type int. To fix this, after storing the computation in a variable. I use the return keyword to return to the console. The output of the computation performed by the method.
 
 ```java
-public class Omar 
+public class Omar
 {
-	public static void main(String[] args) 
-	{
-		int x = doubleMyNum(5);
-		System.out.println(x);
-	}
+   public static void main(String[] args)
+   {
+      int x = doubleMyNum(5);
+      System.out.println(x);
+   }
 
-	public static int doubleMyNum(int m) 
-	{
-		int value = 2 * m;
-		return value;
-	}
- }
+   public static int doubleMyNum(int m)
+   {
+      int value = 2 * m;
+      return value;
+   }
+}
 ```
 
 
 ### - Left out return statement in CASE#2
 ```java
- public class Omar 
+ public class Omar
 {
-	public static void main(String[] args) 
-	{
-		int x = myAwesomeAbsVal(-5);
-		System.out.println(x);
-	}
+   public static void main(String[] args)
+   {
+      int x = myAwesomeAbsVal(-5);
+      System.out.println(x);
+   }
 
-	public static int myAwesomeAbsVal(int m) 
-	{
-		if(m<0)
-		{
-			return -m;
-		}
+   public static int myAwesomeAbsVal(int m)
+   {
+      if(m<0)
+      {
+         return -m;
+      }
 
-		if(m>0)
-		{
-			return m;
-		}
-	}
- }
+      if(m>0)
+      {
+         return m;
+      }
+   }
+}
 ```
 
 The above lines of code have an error in logic. We should switch the code to this:
  ```java
-public class Omar 
+public class Omar
 {
-	public static void main(String[] args) 
-	{
-		int x = myAwesomeAbsVal(-5);
-		System.out.println(x);
-	}
+   public static void main(String[] args)
+   {
+      int x = myAwesomeAbsVal(-5);
+      System.out.println(x);
+   }
 
-	public static int myAwesomeAbsVal(int m) 
-	{
-		if(m<0)
-		{
-			return -m;
-		}
+   public static int myAwesomeAbsVal(int m)
+   {
+      if(m<0)
+      {
+         return -m;
+      }
 
-		else
-		{
-			return m;
-		}
-	}
+      else
+      {
+         return m;
+      }
+   }
 }
 ```
 
 ### 13 - possible loss of precision
 ```java
-public class Omar 
+public class Omar
 {
-        public static void main(String[] args)
-	{
-            int theAwesomePi = 3.14159;
-            System.out.println("The value of pi is: " + theAwesomePi);
-        }
- }
+   public static void main(String[] args)
+   {
+      int theAwesomePi = 3.14159;
+      System.out.println("The value of pi is: " + theAwesomePi);
+   }
+}
 ```
 There is an error above being raised being we are store double in an integer. An integer can only store 4
 4 bytes in main memory. The value we are storing in it is a double which has a memory size of 8 bytes. The way to solve this issue. We will explictly cast the variable theAwesomePi to an int.
 ```java
-public class Omar 
+public class Omar
 {
-        public static void main(String[] args)
-	{
-            int theAwesomePi = (int)3.14159;
-            System.out.println("The value of pi is: " + theAwesomePi);
-        }
- }
+   public static void main(String[] args)
+   {
+      int theAwesomePi = (int)3.14159;
+      System.out.println("The value of pi is: " + theAwesomePi);
+   }
+}
 ```
 
 ### 14 - Reached end of file while parsing
 ```java
-public class Omar 
+public class Omar
 {
-        public static void main(String[] args)
-	{
-        	myWonderfulMethod();
-        }
-	
-	public static void myWonderfulMethod()
-	{
-		System.out.println("How Awesome do you think my Method is?");
- 	}
+   public static void main(String[] args)
+   {
+      myWonderfulMethod();
+   }
+
+   public static void myWonderfulMethod()
+   {
+      System.out.println("How Awesome do you think my Method is?");
+   }
 ```
 There is an error above being raised being we are not properly closing our class. To solve this issue we add a closing
 curly brace. After, the closing curly brace of my method.
 ```java
-public class Omar 
+public class Omar
 {
-        public static void main(String[] args)
-	{
-        	myWonderfulMethod();
-        }
-	
-	public static void myWonderfulMethod()
-	{
-		System.out.println("How Awesome do you think my Method is?");
- 	}
+   public static void main(String[] args)
+   {
+      myWonderfulMethod();
+   }
+
+   public static void myWonderfulMethod()
+   {
+      System.out.println("How Awesome do you think my Method is?");
+   }
 }
 ```
 
 ### 15 - unreachable statement
 
-An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code. 
+An "unreachable statement" error takes place when the compiler sees that it is impossible to reacha a certain statement. This is caused by the following code.
 ```java
-public class Omar 
+public class Omar
 {
-	public static void main(String[] args) 
-	{
-	    int theAwesomeNum = doubleMe(5);
-	    System.out.println(theAwesomeNum);
-	}
-    
-        public static int doubleMe(int a)
-	{
-            int doubleMe = 2 * a;
-            return doubleMe;
-            System.out.println("Returning " + doubleMe);
-        }
+   public static void main(String[] args)
+   {
+      int theAwesomeNum = doubleMe(5);
+      System.out.println(theAwesomeNum);
+   }
+
+   public static int doubleMe(int a)
+   {
+      int doubleMe = 2 * a;
+      return doubleMe;
+      System.out.println("Returning " + doubleMe);
+   }
 }
 ```
 
@@ -581,47 +586,47 @@ The compiler will generate a number of errors. The first one to be listed is tha
 This is because whenever we create a method and use the keyword return the compiler says you are done with the method therefore, we can exit out of the method and execute the next line of code.
 To fix this error I simply reverse the order of the print statement and the return statement.
 ```java
-public class Omar 
+public class Omar
 {
-	public static void main(String[] args) 
-	{
-	    int theAwesomeNum = doubleMe(5);
-	    System.out.println(theAwesomeNum);
-	}
+   public static void main(String[] args)
+   {
+      int theAwesomeNum = doubleMe(5);
+      System.out.println(theAwesomeNum);
+   }
 
-	public static int doubleMe(int a)
-	{
-	    int doubleMe = 2 * a;
-	    System.out.println("Returning " + doubleMe);
-	    return doubleMe;
-	}
+   public static int doubleMe(int a)
+   {
+      int doubleMe = 2 * a;
+      System.out.println("Returning " + doubleMe);
+      return doubleMe;
+   }
 }
 ```    
-### 16 - Variable might not have been initialized 
+### 16 - Variable might not have been initialized
 An variable might not have been initialized error is triggered when we declare a variable and specify its type but
 never give it an initial value;
 ```java
-   public class Omar 
-   {
-        public static void main(String[] args) {
-            int myNum = 16;
-            int myNum2;
-            System.out.println(myNum + myNum2);
-        }
-    } 
+   public class Omar
+{
+   public static void main(String[] args) {
+      int myNum = 16;
+      int myNum2;
+      System.out.println(myNum + myNum2);
+   }
+} 
 ```
 
 The compiler will generate the error  variable myNum2 might not have been initialized  because we declared it with
 the specified data type but never gave it an initial value. To solve this, I simply give it an initial value.
 ```java
-public class Omar 
+public class Omar
 {
-	public static void main(String[] args) 
-	{
-	    int myNum = 16;
-	    int myNum2=3;
-	    System.out.println(myNum + myNum2);
-	}
+   public static void main(String[] args)
+   {
+      int myNum = 16;
+      int myNum2=3;
+      System.out.println(myNum + myNum2);
+   }
 } 
 ```
 ### 17 - constructor X in class X cannot be applied to given types
@@ -631,34 +636,34 @@ super()
 
 ### 18 - Cannot make a static reference to the non-static method logLn(object) from the type Omar
 ```java
-public class Omar 
+public class Omar
 {
-	public void logLn(object o){
-		System.out.println(o);
-	}
+   public void logLn(object o){
+      System.out.println(o);
+   }
 
-	public static void main(String[] args) 
-	{
-	    int myNum = 16;
-	    int myNum2=3;
-	    logLn(myNum + myNum2);
-	}
+   public static void main(String[] args)
+   {
+      int myNum = 16;
+      int myNum2=3;
+      logLn(myNum + myNum2);
+   }
 }
 ```
 I am getting this error because logLn should me a static method
 ```java
-public class Omar 
+public class Omar
 {
-	public static void logLn(object o){
-		System.out.println(o);
-	}
+   public static void logLn(object o){
+      System.out.println(o);
+   }
 
-	public static void main(String[] args) 
-	{
-	    int myNum = 16;
-	    int myNum2=3;
-	    logLn(myNum + myNum2);
-	}
+   public static void main(String[] args)
+   {
+      int myNum = 16;
+      int myNum2=3;
+      logLn(myNum + myNum2);
+   }
 }
 ```
 
@@ -699,8 +704,8 @@ public void setLuckyNum(int luckyNum) {
   this.luckyNum = luckyNum;
 }
 */
-@Getter 
-@Setter 
+@Getter
+@Setter
 private int luckyNum = 3532;
 
 ```
@@ -714,7 +719,7 @@ public class Example
 ### Equals And Hash Code Annotation
 ```java
 @EqualsAndHashCode(
-   exclude={"id1", "id2"})
+        exclude={"id1", "id2"})
 public class Example {
 }
 ```

@@ -13,6 +13,36 @@
 - Binary Tree
 - Binary Search Tree
 
+##### Things You Must Know To Understand Java
+- Abstract
+- Arrays And ArrayList
+- Collections
+- Conditionals
+- Default
+- Enum
+- Exception Handling
+- Final Keyword
+- Generics
+- Interfaces
+- Loops
+- Maps
+- OOP(Abstraction, Encapsulation, Inheritance, Polymorphism)
+- Passing By Value Vs. Passing By Reference
+- Reference Types Vs Primitive Types
+- Sets
+- Static
+- ToString & Equals & Hashcode
+
+
+
+
+
+ 
+
+  
+
+
+
 ##### ★★★★Operation You Can Perform On A Data Structure★★★★
 
 

@@ -6,12 +6,18 @@
 
 ##### ★★★★★Most Popular Data Structures★★★★★
 
-- Array
-- Linked List
-- Stack
-- Queue
-- Binary Tree
-- Binary Search Tree
+- Array [Linear and Non-Primitive]
+
+- Char [Primitive]
+- Double [Primitive]
+- Float [Primitive]
+- Graph [Non-Linear and Non-Primitive]
+- Integer [Primitive]
+- Linked List [Linear and Non-Primitive]
+- Stack [Linear and Non-Primitive]
+- String [Primitive]
+- Tree [Non-Linear and Non-Primitive]
+- Queue [Linear and Non-Primitive]
 
 ##### Things You Must Know To Understand Java
 - Abstract
@@ -33,17 +39,9 @@
 - Static
 - ToString & Equals & Hashcode
 
+<br />
 
-
-
-
- 
-
-  
-
-
-
-##### ★★★★Operation You Can Perform On A Data Structure★★★★
+##### ★★★★Operations You Can Perform On A Data Structure★★★★
 
 
 - Delete: Remove an item from the data structure
@@ -75,7 +73,7 @@
 
 
 
-1. Stack
+1. **Stack**
 
 - Linear
 - LIFO/FILO
@@ -98,7 +96,7 @@ Stack<Integer> myStack= new Stack<Integer>();
 ```
 
 
-2. Linked List
+2. **Linked List**
 
 - Sequential Order
 - No Random Access
@@ -120,7 +118,7 @@ LinkedList<dataType>nameOfLL = new LinkedList<dataType>() */
 LinkedList<String> mylist=new LinkedList<String>();
 ```
 
-3. Array
+3. **Array**
 
 - Indexed
 - When Size increases performance decreases
@@ -179,10 +177,10 @@ public class Arr{
 }
 ```
 
-4. Vector: Grows by 100% of its size everytime I add sth to it... asynchronous aka multiple threads at a time
+4. **Vector** : Grows by 100% of its size everytime I add sth to it... asynchronous aka multiple threads at a time
 
 
-5. Queues
+5. **Queues**
 
 - People waiting in line in the Movie Theatre
 - Linear
@@ -215,7 +213,7 @@ public class queueimpl{
 
 ```
 
-5. Hash Table
+6. **Hash Table**
 
 
 - Contains an index and its corresponding Hash_Value
@@ -258,7 +256,7 @@ public class HashTable{
 
 ```
 
-6. Trees
+7.**Trees**
 
 - Hierarchical Structure where data is org in a hierarchy and everything is linked together
 - Not the same as linked list because LL is linear
@@ -459,7 +457,7 @@ B(0) D(0)  F(0)
 
 
 
-7. Heap
+8.**Heap**
 
 - Special Tree Based DS
 - Binary Tree
@@ -472,7 +470,7 @@ B(0) D(0)  F(0)
     - Patients that don't have threatening situation wait in line
 
 
-8. Graphs
+9.**Graphs**
 
 - Finite set of vertices, nodes and edges. The edges are what connect one vertex with another
 - Graphs are connected in a network form
@@ -481,14 +479,25 @@ B(0) D(0)  F(0)
 - Non-linear
 - Nodes are the vertices(i.e. endpoints)
 - Edges are the lines/arcs that connect one node with another node
-- Two Types:
-    - Directed
-    - Undirected
+- Types:
+    - **Directed**: no particular direction and two-way relation
+      - e.g. Friends on Facebook
+    - **Undirected**: Particular Direction and one-way relation
+      - e.g. who you're following on Twitter
+    - **Unweighted**: Every edge has no particular weight
+    - **Weighted**: Each edge has a respective value this is referred to as weight
+      - e.g. distance between cities
+- **Note** A (directed/undirected )graph is independent of being weighted or not 
+- We can have:
+  - Direct Weighted Graphs
+  - Direct Unweighted Graphs
+  - Undirected Weighted Graphs
+  - Undirected Unweighted Graphs
 - Traversing Algo Implementing A Graph:
     - BFS
     - DFS
 - Simple Graph: Each edge connects to two different vertices whereby no two edges connect to the same group of vertices
-- Multigraph: An edge can connect to the same pair of vertices
+- Multi-graph: An edge can connect to the same pair of vertices
 - Google Maps Usage of Connecting Roads i.e. vertex  therefore, I use an algo to determine the shortest path between vertex A & B
 
 

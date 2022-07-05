@@ -457,7 +457,7 @@ B(0) D(0)  F(0)
 
 
 
-8.**Heap**
+8. **Heap**
 
 - Special Tree Based DS
 - Binary Tree
@@ -470,7 +470,7 @@ B(0) D(0)  F(0)
     - Patients that don't have threatening situation wait in line
 
 
-9.**Graphs**
+9. **Graphs**
 
 - Finite set of vertices, nodes and edges. The edges are what connect one vertex with another
 - Graphs are connected in a network form
@@ -493,29 +493,53 @@ B(0) D(0)  F(0)
   - Direct Unweighted Graphs
   - Undirected Weighted Graphs
   - Undirected Unweighted Graphs
-- Traversing Algo Implementing A Graph:
+## Important Algorithms
+- Graph Algorithms:
     - BFS
     - DFS
+    - Dijkstra(Shortest Path)
 - Simple Graph: Each edge connects to two different vertices whereby no two edges connect to the same group of vertices
 - Multi-graph: An edge can connect to the same pair of vertices
 - Google Maps Usage of Connecting Roads i.e. vertex  therefore, I use an algo to determine the shortest path between vertex A & B
 
+### Sorting
+- Bubble Sort
+- Bucket/Insertion Sort 
+- Counting Sort
+- Heap Sort
+- Merge Sort
+- Quick Sort
+- Selection Sort
+
+
+
+<br />
+
+## Search Algorithms
+
+1. Breath First Search[Graphs]
+2. Depth First Search[Graphs]
+3. Binary Search[Linear]
+4. Linear Search
+
+**Other**
+- Recursive Algorithms
+- Hashing Algorithms
+- Randomized Algorithms
 
 
 
 1. When the sample size increases of an Array what should you do?
-
-- Use A Linked List DS because it increases performance and isn't slow as the sample size increases
+   - Use A Linked List DS because it increases performance and isn't slow as the sample size increases
 
 2. For Loop Runtime: O(n) where n is the size of the input
 
 3. Function with 1 operation: O(1)
 
 4. Say I have a print statement before a for loop and after what's the runtime:
-
-- Print statement: O(1)
-- For Loop: O(n)
-- Print statement: O(1)
+   - Print statement: O(1)
+   - For Loop: O(n)
+   - Print statement: O(1)
 
 Total: O(1+n+1)= O(n+2)
 
@@ -795,23 +819,9 @@ O(n)
 - compare using .compareTo() method
 
 
-### Important Algo
-
-#### Sorting
-
-1. Merge Sort
-2. Quick Sort
-3. Bucket/Insertion Sort
-4. Heap Sort
-5. Selection Sort
-6. Counting Sort
 
 
-#### Searching
 
-1. Breath First Search[Graphs]
-2. Depth First Search[Graphs]
-3. Binary Search[Linear]
 
 
 #### Divide & Conquer

@@ -504,7 +504,15 @@ B(0) D(0)  F(0)
 
 ### Sorting
 - Bubble Sort
-- Bucket/Insertion Sort 
+- Bucket/Insertion Sort
+  - Runtime: O(n^2) ... ie terrible
+  - useful when paired with other more complex sorting algo
+  - i.e. Quicksort, Merge Sort
+  - good for ordering a small sample size
+  - Step 1: iterate from the 2nd array to the nth array over the array
+  - Step 2: compare the element which you are at with its parent/predecessor
+  - Step 3: if the key is less than its predecessor compare it to the preceding elements
+  - Step 4: Move the greater element up one spot to give space for the modified element
 - Counting Sort
 - Heap Sort
 - Merge Sort
@@ -701,6 +709,9 @@ public class Main{
 - O(n) because the val we are searching for maybe stored in the last node aka n that is worst case.
 
 
+
+
+
 #### Insertion Sort Implementation
 
 ```java
@@ -745,6 +756,52 @@ Space C: O(1) because I am adding a var
 
 */
 ```
+
+
+#### Selection Sort Implementation
+
+```java
+import java.util.*;
+
+public class Selectionso {
+    public static void Selectionso(int myArr[])
+    {
+        for(int i=0;i<myArr.length-1;i++)
+        {
+            int position = i;
+            for(int j=i+1;j<=myArr.length-1;j++)
+            {
+                if(myArr[position] > myArr[j])
+                {
+                    position = j;
+                }
+            }
+            //perform a swap
+            int myTempVar = myArr[position];
+            myArr[position] = myArr[i];
+            myArr[i] = myTempVar;
+        }
+    }
+
+    public static void PrintMyArray(int myArr[])
+    {
+        for(int i=0; i<myArr.length;i++)
+        {
+            System.out.print(myArr[i]+ " ");
+        }
+        System.out.println();
+    }
+
+
+    public static void main(String [] args)
+    {
+        int thisArr [] = {16,12, 7, 19, 30};
+        Selectionso(thisArr);
+        PrintMyArray(thisArr);
+    }
+}
+```
+
 
 
 #### Insertions at the End in a LL index Time C

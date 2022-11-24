@@ -766,20 +766,29 @@ import java.util.*;
 public class Selectionso {
     public static void Selectionso(int myArr[])
     {
-        for(int i=0;i<myArr.length-1;i++)
-        {
-            int position = i;
-            for(int j=i+1;j<=myArr.length-1;j++)
-            {
-                if(myArr[position] > myArr[j])
-                {
-                    position = j;
+        /*
+            0. take an unsorted num of elements within an array
+            1. find the minimum and place it on its own
+            2. find the second min and place it after the min in the other array
+            3. repeat till you have one left(i.e. largest) and place it at the end of the array
+         */
+        int arr_size = myArr.length;
+        for(int x=0;x<arr_size-1;x++){
+                int min_pos = x;
+                for(int y = x+1; y<arr_size ; y++) {
+                    if (myArr[y] < myArr[min_pos]) {
+                        min_pos = y;
+                    }
                 }
-            }
-            //perform a swap
-            int myTempVar = myArr[position];
-            myArr[position] = myArr[i];
-            myArr[i] = myTempVar;
+                    
+                /*
+                switch the min 
+                item with the 
+                first item
+                 */
+                int temporary = myArr[min_pos];
+                myArr[min_pos] = myArr[x];
+                myArr[x] = temporary;
         }
     }
 
@@ -802,6 +811,119 @@ public class Selectionso {
 }
 ```
 
+#### Merge Sort Implementation
+
+```java
+public class MergeSort
+{
+	// Merges two subarrays of arr[].
+	// First subarray is arr[left half..middle index]
+	// Second subarray is arr[middle+1..right half]
+	void merge(int arr[], int l, int m, int r)
+	{
+		// Find sizes of two subarrays to be merged
+		int n1 = m - l + 1;
+		int n2 = r - m;
+
+		/* Creating two temporary arrays */
+		int L[] = new int [n1];
+		int R[] = new int [n2];
+
+		/*
+		Copy the 
+		info into 
+		temporary arrays
+		*/
+		for (int i=0; i<n1; ++i)
+			L[i] = arr[l + i];
+		for (int j=0; j<n2; ++j)
+			R[j] = arr[m + 1+ j];
+
+
+		// Initializing the indexes of the two subarrays
+		int i = 0, j = 0;
+
+		// Initial index of merged subarray array
+		int k = l;
+		while (i < n1 && j < n2)
+		{
+			if (L[i] <= R[j])
+			{
+				arr[k] = L[i];
+				i++;
+			}
+			else
+			{
+				arr[k] = R[j];
+				j++;
+			}
+			k++;
+		}
+
+		/* Copy remaining elements of L[] if any */
+		while (i < n1)
+		{
+			arr[k] = L[i];
+			i++;
+			k++;
+		}
+
+		/* Copy remaining elements of R[] if any */
+		while (j < n2)
+		{
+			arr[k] = R[j];
+			j++;
+			k++;
+		}
+	}
+
+	// Main function that sorts arr[l..r] using
+	// merge()
+	void sort(int arr[], int l, int r)
+	{
+		if (l < r)
+		{
+			// Find the middle point
+			int m = (l+r)/2;
+
+			// Sort first and second halves
+			sort(arr, l, m);
+			sort(arr , m+1, r);
+
+			// Merge the sorted halves
+			merge(arr, l, m, r);
+		}
+	}
+
+	/* A utility function to print array of size n */
+	static void printArray(int arr[])
+	{
+		int n = arr.length;
+		for (int i=0; i<n; ++i){
+		    System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+	}
+
+
+	public static void main(String args[])
+	{
+		int arr[] = {12, 11, 13, 5, 6, 7};
+
+		System.out.println("Array That I passed In: ");
+		printArray(arr);
+
+
+        System.out.println(" ");
+		MergeSort obj = new MergeSort();
+		obj.sort(arr, 0, arr.length-1);
+
+		System.out.println("The Sorted array:");
+		printArray(arr);
+	}
+}
+
+```
 
 
 #### Insertions at the End in a LL index Time C

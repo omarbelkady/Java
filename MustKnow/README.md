@@ -710,6 +710,53 @@ public class Main{
 
 
 
+#### Bubble Sort Implementation
+
+```java
+/*
+ 
+ 1. Compare the first two elements if the first is
+ bigger than the second swap
+ 
+ 2. compare the rest and if the second is less than
+ the first move the second to the left of the first
+  
+ */
+
+
+public class BubbleSort{
+
+    public static void bubbleSort(int [] arr){
+        int arrsize = arr.length;
+        for(int s=0;s<arrsize-1;s++){
+            for(int t=0;t<arrsize-s-1;t++){
+                if(arr[t]>arr[t+1]){
+                    int temporary = arr[t];
+                    arr[t]=arr[t+1];
+                    arr[t+1]= temporary;
+                }
+            }
+        }
+    }
+
+    public static void main(String [] args){
+        int myarr[] ={3,60,35,2,45,320,5};
+        System.out.println("Before Bubble Sort");
+        for(int x=0; x<myarr.length; x++){
+            System.out.print(myarr[x] + " ");
+        }
+        System.out.println("\n");
+        bubbleSort(myarr);
+        System.out.println("After Bubble Sort");
+        for(int y=0;y<myarr.length;y++){
+            System.out.print(myarr[y] + " ");
+        }
+    }
+}
+```
+
+<br />
+
 
 
 #### Insertion Sort Implementation
@@ -757,59 +804,7 @@ Space C: O(1) because I am adding a var
 */
 ```
 
-
-#### Selection Sort Implementation
-
-```java
-import java.util.*;
-
-public class Selectionso {
-    public static void Selectionso(int myArr[])
-    {
-        /*
-            0. take an unsorted num of elements within an array
-            1. find the minimum and place it on its own
-            2. find the second min and place it after the min in the other array
-            3. repeat till you have one left(i.e. largest) and place it at the end of the array
-         */
-        int arr_size = myArr.length;
-        for(int x=0;x<arr_size-1;x++){
-                int min_pos = x;
-                for(int y = x+1; y<arr_size ; y++) {
-                    if (myArr[y] < myArr[min_pos]) {
-                        min_pos = y;
-                    }
-                }
-                    
-                /*
-                switch the min 
-                item with the 
-                first item
-                 */
-                int temporary = myArr[min_pos];
-                myArr[min_pos] = myArr[x];
-                myArr[x] = temporary;
-        }
-    }
-
-    public static void PrintMyArray(int myArr[])
-    {
-        for(int i=0; i<myArr.length;i++)
-        {
-            System.out.print(myArr[i]+ " ");
-        }
-        System.out.println();
-    }
-
-
-    public static void main(String [] args)
-    {
-        int thisArr [] = {16,12, 7, 19, 30};
-        Selectionso(thisArr);
-        PrintMyArray(thisArr);
-    }
-}
-```
+<br />
 
 #### Merge Sort Implementation
 
@@ -924,6 +919,66 @@ public class MergeSort
 }
 
 ```
+
+<br />
+
+
+#### Selection Sort Implementation
+
+```java
+import java.util.*;
+
+public class Selectionso {
+    public static void Selectionso(int myArr[])
+    {
+        /*
+            0. take an unsorted num of elements within an array
+            1. find the minimum and place it on its own
+            2. find the second min and place it after the min in the other array
+            3. repeat till you have one left(i.e. largest) and place it at the end of the array
+         */
+        int arr_size = myArr.length;
+        for(int x=0;x<arr_size-1;x++){
+                int min_pos = x;
+                for(int y = x+1; y<arr_size ; y++) {
+                    if (myArr[y] < myArr[min_pos]) {
+                        min_pos = y;
+                    }
+                }
+                    
+                /*
+                switch the min 
+                item with the 
+                first item
+                 */
+                int temporary = myArr[min_pos];
+                myArr[min_pos] = myArr[x];
+                myArr[x] = temporary;
+        }
+    }
+
+    public static void PrintMyArray(int myArr[])
+    {
+        for(int i=0; i<myArr.length;i++)
+        {
+            System.out.print(myArr[i]+ " ");
+        }
+        System.out.println();
+    }
+
+
+    public static void main(String [] args)
+    {
+        int thisArr [] = {16,12, 7, 19, 30};
+        Selectionso(thisArr);
+        PrintMyArray(thisArr);
+    }
+}
+```
+
+
+<br />
+
 
 
 #### Insertions at the End in a LL index Time C

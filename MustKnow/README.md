@@ -19,6 +19,27 @@
 - Tree [Non-Linear and Non-Primitive]
 - Queue [Linear and Non-Primitive]
 
+##### Backend Roadmap
+```mermaid
+graph TD;
+    START/FINISH-- Containerization --> Docker;
+	Docker -- CI/CD Tools --> Gitlab;
+	Gitlab -- VCS --> GitHub/BitBucket;
+	GitHub/BitBucket -- Frameworks --> Express/Flask/Laravel/RubyOnRails;
+	Express/Flask/Laravel/RubyOnRails -- Prog_Lang --> Java/Python/Ruby/C#/NodeJS/Rust/PHP;
+	Java/Python/Ruby/C#/NodeJS/Rust/PHP -- Archi Pattern --> Microservices/Monolithic/Serverless/SOA;
+	Microservices/Monolithic/Serverless/SOA -- APIs --> REST/JSON/SOAP;
+	REST/JSON/SOAP  -- Caching--> Client/Server/CDN; 
+	Client/Server/CDN -- Testing --> 
+	Integration/Unit/Functional;
+	Integration/Unit/Functional -- Database -- SQL --> MYSQL/Postgres;
+	Integration/Unit/Functional -- Database -- NoSQL --> MongoDB;
+	MongoDB --> START/FINISH
+	MYSQL/Postgres --> START/FINISH
+
+```	
+
+
 ##### Things You Must Know To Understand Java
 - Abstract
 - Arrays And ArrayList
@@ -60,6 +81,8 @@
     - Used in the Best Case
 - Θ(n): A Measure of the average amount of time for an algorithm to complete(...e.g. ==)
     - Used in the Average Case
+
+
 
 
 ##### DS Operations

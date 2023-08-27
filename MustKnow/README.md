@@ -525,6 +525,66 @@ B(0) D(0)  F(0)
 - Multi-graph: An edge can connect to the same pair of vertices
 - Google Maps Usage of Connecting Roads i.e. vertex  therefore, I use an algo to determine the shortest path between vertex A & B
 
+
+```java
+//basic example
+
+import java.util.*;
+
+class Graph {
+    private int V; // Number of vertices
+    private LinkedList<Integer>[] adjList; // Array of adjacency lists
+    
+    // Constructor
+    public Graph(int V) {
+        this.V = V;
+        adjList = new LinkedList[V];
+        
+        for (int i = 0; i < V; i++) {
+            adjList[i] = new LinkedList<Integer>();
+        }
+    }
+    
+    // Add an edge to the graph
+    public void addEdge(int src, int dest) {
+        adjList[src].add(dest);
+        adjList[dest].add(src); // Uncomment this line for undirected graph
+    }
+    
+    // Print the graph
+    public void printGraph() {
+        for (int i = 0; i < V; i++) {
+            System.out.print("Vertex " + i + " is connected to: ");
+            for (int neighbor : adjList[i]) {
+                System.out.print(neighbor + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a graph with 5 vertices
+        Graph graph = new Graph(5);
+        
+        // Add edges
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 4);
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 3);
+        graph.addEdge(1, 4);
+        graph.addEdge(2, 3);
+        graph.addEdge(3, 4);
+        
+        // Print the graph
+        graph.printGraph();
+    }
+}
+
+```
+
+
 ### Sorting
 - Bubble Sort
 - Bucket/Insertion Sort
